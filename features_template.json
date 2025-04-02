@@ -1,0 +1,21 @@
+{
+    "features": [
+        {
+            "type": "upload",
+            "label": "העלאת קובץ"
+        },
+        {
+            "type": "reminder",
+            "label": "תזכורת"
+        },
+        {
+            "type": "external_link",
+            "label": "קישור חיצוני",
+            "url": "https://www.gov.il"
+        },
+        {
+            "type": "form",
+            "label": "טופס"
+        }
+    ]
+}

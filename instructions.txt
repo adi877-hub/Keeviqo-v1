@@ -1,0 +1,39 @@
+
+# Additional Instructions for Devin:
+
+## Languages:
+- System must fully support Hebrew (RTL layout)
+- All texts, labels, forms, notifications – in Hebrew
+- Also build support for future multilingual expansion
+
+## UX & Navigation:
+- Create beautiful, intuitive dashboard
+- Every category card should include its subcategories and all related features
+- Add a floating "back" button for easy navigation
+- Enable clear path from dashboard > category > subcategory > action
+
+## Features to implement:
+- Upload field (for documents, images)
+- Smart reminder system (configurable: daily, weekly, monthly)
+- Link integration (government and others)
+- Form builder per subcategory
+- QR generator per user profile
+- Emergency mode: display ICE contacts and vital data
+- Personal assistant area (AI-based suggestion engine – can be placeholder)
+- Smart scan (upload document > auto-categorize > auto-fill metadata)
+- Contact form (send to admin email)
+- Payment integration: PayPal, Cardcom/Stripe
+- Auto-receipt creation with serial numbers
+- Role-based access (admin/user/guest)
+- Self-delete (user can delete profile fully)
+- Analytics area for user insights
+- Government connection-ready (API-ready architecture)
+
+## Mobile + Accessibility:
+- Mobile responsive design
+- Accessible font sizes, color contrasts
+- Fast loading, light frontend
+
+## Business logic:
+- System must allow freemium model: free plan + paid premium
+- Structure backend to support CRM integration in future

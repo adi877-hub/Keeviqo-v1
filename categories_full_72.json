@@ -1,0 +1,58 @@
+{
+    "categories": [
+        {
+            "name": "בריאות",
+            "subcategories": [
+                {
+                    "name": "קופת חולים",
+                    "features": [
+                        {
+                            "type": "upload",
+                            "label": "העלאת מסמך רפואי"
+                        },
+                        {
+                            "type": "reminder",
+                            "label": "תזכורת לחידוש תרופות"
+                        },
+                        {
+                            "type": "external_link",
+                            "label": "שירותים של כללית",
+                            "url": "https://www.clalit.co.il"
+                        },
+                        {
+                            "type": "form",
+                            "label": "טופס החזר כספי"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "רכב ותחבורה",
+            "subcategories": [
+                {
+                    "name": "משרד הרישוי",
+                    "features": [
+                        {
+                            "type": "upload",
+                            "label": "העלאת רישיון"
+                        },
+                        {
+                            "type": "reminder",
+                            "label": "תזכורת לטסט"
+                        },
+                        {
+                            "type": "external_link",
+                            "label": "חידוש רישיון",
+                            "url": "https://www.gov.il/he/service/renew_driving_license"
+                        },
+                        {
+                            "type": "form",
+                            "label": "בקשה להעברת בעלות"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

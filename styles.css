@@ -1,0 +1,26 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.category-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.feature-button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+.feature-upload { background-color: #1976D2; }
+.feature-reminder { background-color: #388E3C; }
+.feature-external_link { background-color: #7B1FA2; }
+.feature-form { background-color: #F57C00; }
