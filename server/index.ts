@@ -4,7 +4,6 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import dotenv from 'dotenv';
-import { fileURLToPath } from 'url';
 
 import categoryRoutes from './routes/categories';
 import subcategoryRoutes from './routes/subcategories';
@@ -21,12 +20,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-let dirName;
-if (typeof __dirname === 'undefined') {
-  dirName = path.dirname(fileURLToPath(import.meta.url));
-} else {
-  dirName = __dirname;
-}
+const rootDir = process.cwd();
 
 app.use(cors());
 app.use(express.json());
@@ -53,16 +47,16 @@ app.use('/api/qr', qrRoutes);
 app.use('/api/user/emergency-contacts', emergencyRoutes);
 app.use('/api/external-systems', externalSystemsRoutes);
 
-app.use('/uploads', express.static(path.join(dirName, '../uploads')));
+app.use('/uploads', express.static(path.join(rootDir, 'uploads')));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-app.use(express.static(path.join(dirName, '../dist')));
+app.use(express.static(path.join(rootDir, 'dist')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(dirName, '../dist/index.html'));
+  res.sendFile(path.join(rootDir, 'dist/index.html'));
 });
 
 app.listen(port, () => {
