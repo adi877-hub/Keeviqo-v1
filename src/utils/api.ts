@@ -216,3 +216,42 @@ export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promi
 export async function getEmergencyContacts(): Promise<EmergencyContact[]> {
   return fetchFromAPI<EmergencyContact[]>('/user/emergency-contacts');
 }
+
+export interface MedicalInfo {
+  bloodType: string;
+  allergies: string[];
+  medications: string[];
+  conditions: string[];
+  doctorName: string;
+  doctorPhone: string;
+  insuranceProvider: string;
+  insuranceNumber: string;
+}
+
+export interface EmergencyData {
+  user: {
+    name: string;
+    id: string;
+    dateOfBirth: string;
+    address: string;
+    phone: string;
+  };
+  medicalInfo: MedicalInfo;
+  documents: {
+    id: number;
+    name: string;
+    type: string;
+    url: string;
+  }[];
+}
+
+export async function getUserEmergencyData(): Promise<EmergencyData> {
+  return fetchFromAPI<EmergencyData>('/user/emergency-data');
+}
+
+export async function updateEmergencyData(data: Partial<EmergencyData>): Promise<EmergencyData> {
+  return fetchFromAPI<EmergencyData>('/user/emergency-data', {
+    method: 'PUT',
+    body: JSON.stringify(data),
+  });
+}
