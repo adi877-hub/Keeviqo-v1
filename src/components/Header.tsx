@@ -6,7 +6,7 @@ import { useTheme } from '../contexts/ThemeContext';
 function Header() {
   const { t } = useTranslation();
   const [location, setLocation] = useLocation();
-  const { theme } = useTheme();
+  useTheme();
   
   const navItems = [
     { path: '/', label: t('nav.home') },
