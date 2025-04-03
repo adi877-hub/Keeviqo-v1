@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'wouter';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
+import SmartSearch from './SmartSearch';
 
 function Header() {
   const { t } = useTranslation();
@@ -30,6 +31,10 @@ function Header() {
           >
             Keeviqo
           </div>
+        </div>
+        
+        <div className="w-full md:w-1/2 lg:w-1/3 mb-4 md:mb-0 md:mx-4">
+          <SmartSearch />
         </div>
         
         <nav className="flex flex-wrap justify-center">
