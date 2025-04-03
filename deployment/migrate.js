@@ -6,20 +6,20 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: globalThis.process.env.DATABASE_URL,
 });
 
 const db = drizzle(pool);
 
 async function runMigrations() {
-  console.log('Running database migrations...');
+  globalThis.console.log('Running database migrations...');
   
   try {
     await migrate(db, { migrationsFolder: './drizzle' });
-    console.log('Migrations completed successfully!');
+    globalThis.console.log('Migrations completed successfully!');
   } catch (error) {
-    console.error('Migration failed:', error);
-    process.exit(1);
+    globalThis.console.error('Migration failed:', error);
+    globalThis.process.exit(1);
   } finally {
     await pool.end();
   }

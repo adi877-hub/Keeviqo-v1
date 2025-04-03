@@ -5,8 +5,8 @@ dotenv.config();
 
 pm2.connect((err) => {
   if (err) {
-    console.error('Error connecting to PM2:', err);
-    process.exit(1);
+    globalThis.console.error('Error connecting to PM2:', err);
+    globalThis.process.exit(1);
   }
 
   pm2.start({
@@ -17,31 +17,31 @@ pm2.connect((err) => {
     max_memory_restart: '500M',
     env: {
       NODE_ENV: 'production',
-      PORT: process.env.PORT || 3000,
+      PORT: globalThis.process.env.PORT || 3000,
     },
     merge_logs: true,
     log_date_format: 'YYYY-MM-DD HH:mm:ss',
   }, (err) => {
     if (err) {
-      console.error('Error starting application with PM2:', err);
+      globalThis.console.error('Error starting application with PM2:', err);
       pm2.disconnect();
-      process.exit(1);
+      globalThis.process.exit(1);
     }
 
     pm2.dump((err) => {
       if (err) {
-        console.error('Error saving PM2 configuration:', err);
+        globalThis.console.error('Error saving PM2 configuration:', err);
       } else {
-        console.log('PM2 configuration saved successfully');
+        globalThis.console.log('PM2 configuration saved successfully');
       }
 
       pm2.startup('systemd', (err, result) => {
         if (err) {
-          console.error('Error setting up PM2 startup:', err);
+          globalThis.console.error('Error setting up PM2 startup:', err);
         } else {
-          console.log('PM2 startup setup successfully');
-          console.log('Run the following command to complete setup:');
-          console.log(result);
+          globalThis.console.log('PM2 startup setup successfully');
+          globalThis.console.log('Run the following command to complete setup:');
+          globalThis.console.log(result);
         }
 
         pm2.disconnect();
