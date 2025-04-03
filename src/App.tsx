@@ -16,7 +16,7 @@ import FAQPage from './pages/static/FAQPage';
 import QRCodePage from './pages/static/QRCodePage';
 import PaymentPage from './pages/static/PaymentPage';
 import ProfilePage from './pages/static/ProfilePage';
-import EmergencyModePage from '@src/pages/EmergencyModePage';
+import EmergencyModePage from './pages/EmergencyModePage';
 import { ThemeProvider } from './contexts/ThemeContext';
 import ThemeToggle from './components/ui/ThemeToggle';
 import Header from './components/Header';
