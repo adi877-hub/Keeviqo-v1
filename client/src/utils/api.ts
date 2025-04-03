@@ -134,5 +134,5 @@ export async function submitFormData(data: Record<string, unknown>, featureId: n
 }
 
 export async function fetchFormData(featureId: number): Promise<FormDataResponse[]> {
-  return fetchFromAPI<any[]>(`/forms/feature/${featureId}`);
+  return fetchFromAPI<FormDataResponse[]>(`/forms/feature/${featureId}`);
 }

@@ -11,7 +11,7 @@ const router = express.Router();
  * Get all government partners (admin only)
  * GET /api/government-partners
  */
-router.get('/', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.get('/', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partners = await db.query.governmentPartners.findMany({
       with: {
@@ -30,7 +30,7 @@ router.get('/', authenticate as any, authorize(['admin']) as any, async (req: Au
  * Get a specific government partner (admin only)
  * GET /api/government-partners/:id
  */
-router.get('/:id', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.get('/:id', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.id);
     
@@ -56,7 +56,7 @@ router.get('/:id', authenticate as any, authorize(['admin']) as any, async (req:
  * Create a new government partner (admin only)
  * POST /api/government-partners
  */
-router.post('/', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.post('/', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const { name, description, country, region, contactEmail, contactPhone, website, type } = req.body;
     
