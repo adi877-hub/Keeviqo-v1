@@ -17,7 +17,7 @@ export const categories = pgTable('categories', {
   description: text('description'),
   smartFeatures: text('smart_features'),
   includes: text('includes'),
-  parentId: integer('parent_id'),
+  parentId: integer('parent_id'), // Will be handled in relations
   createdAt: timestamp('created_at').defaultNow(),
 });
 
@@ -74,6 +74,7 @@ export const categoriesRelations = relations(categories, ({ many, one }) => ({
   parent: one(categories, {
     fields: [categories.parentId],
     references: [categories.id],
+    relationName: 'parentCategory',
   }),
 }));
 
@@ -81,6 +82,7 @@ export const subcategoriesRelations = relations(subcategories, ({ many, one }) =
   category: one(categories, {
     fields: [subcategories.categoryId],
     references: [categories.id],
+    relationName: 'categoryToSubcategory',
   }),
   features: many(features),
 }));
@@ -89,6 +91,7 @@ export const featuresRelations = relations(features, ({ many, one }) => ({
   subcategory: one(subcategories, {
     fields: [features.subcategoryId],
     references: [subcategories.id],
+    relationName: 'subcategoryToFeature',
   }),
   documents: many(documents),
   reminders: many(reminders),
@@ -107,15 +110,16 @@ export const emergencyContacts = pgTable('emergency_contacts', {
 });
 
 export const userRelations = relations(users, ({ many }) => ({
-  documents: many(documents),
-  reminders: many(reminders),
-  formData: many(formData),
-  emergencyContacts: many(emergencyContacts),
+  documents: many(documents, { relationName: 'userDocuments' }),
+  reminders: many(reminders, { relationName: 'userReminders' }),
+  formData: many(formData, { relationName: 'userFormData' }),
+  emergencyContacts: many(emergencyContacts, { relationName: 'userEmergencyContacts' }),
 }));
 
 export const emergencyContactsRelations = relations(emergencyContacts, ({ one }) => ({
   user: one(users, {
     fields: [emergencyContacts.userId],
     references: [users.id],
+    relationName: 'emergencyContactUser',
   }),
 }));
