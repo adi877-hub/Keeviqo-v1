@@ -1,7 +1,7 @@
 import { describe, test, expect, beforeAll, afterAll } from '@jest/globals';
-import { setupTestDatabase, teardownTestDatabase } from './setup';
+import { setupTestDatabase, teardownTestDatabase } from './setup.js';
 import request from 'supertest';
-import app from '../server/index';
+import app from '../server/index.js';
 
 describe('Server API', () => {
   beforeAll(async () => {
