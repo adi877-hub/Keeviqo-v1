@@ -44,7 +44,7 @@ export function generateToken(userId: number, uuid: string, role: string): strin
 export function verifyToken(token: string): JwtPayload | null {
   try {
     return jwt.verify(token, JWT_SECRET as jwt.Secret) as JwtPayload;
-  } catch (error) {
+  } catch {
     return null;
   }
 }
