@@ -29,7 +29,7 @@ router.post('/register', async (req, res) => {
     });
     
     if (existingUser) {
-      return res.status(400)on({ error: 'User already exists' });
+      return res.status(400).json({ error: 'User already exists' });
     }
     
     const passwordSalt = await generateSalt();
@@ -60,33 +60,31 @@ router.post('/register', async (req, res) => {
       dataEncryptionKeyId: encryptionKey.id
     }).returning();
     
-    const _otp = await createOTP(user.id, 'email', 'verification');
-    
+    await createOTP(user?.id ?? 0, 'email', 'verification');
     
     createAuditLog(
-      user.id,
+      user?.id ?? 0,
       'register',
       'user',
-      user.id.toString(),
+      (user?.id ?? 0).toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { email: user.email },
-      'info'
+      { email: user?.email ?? '' }
     ).catch(err => console.error('Failed to create audit log:', err));
     
-    res.status(201)on({
+    res.status(201).json({
       message: 'User registered successfully',
       user: {
-        id: user.id,
+        id: user?.id ?? 0,
         uuid: user.uuid,
         name: user.name,
-        email: user.email,
+        email: user?.email ?? '',
         role: user.role
       }
     });
   } catch (error) {
     console.error('Registration error:', error);
-    res.status(500)on({ error: 'Registration failed' });
+    res.status(500).json({ error: 'Registration failed' });
   }
 });
 
@@ -103,11 +101,11 @@ router.post('/login', async (req, res) => {
     });
     
     if (!user) {
-      return res.status(401)on({ error: 'Invalid credentials' });
+      return res.status(401).json({ error: 'Invalid credentials' });
     }
     
     if (user.lockedUntil && new Date(user.lockedUntil.toString()) > new Date()) {
-      return res.status(401)on({ 
+      return res.status(401).json({ 
         error: 'Account is locked. Please try again later or reset your password.' 
       });
     }
@@ -130,9 +128,9 @@ router.post('/login', async (req, res) => {
           loginAttempts, 
           lockedUntil 
         })
-        .where(eq(schema.users.id, user.id));
+        .where(eq(schema.users.id, user?.id ?? 0));
       
-      return res.status(401)on({ error: 'Invalid credentials' });
+      return res.status(401).json({ error: 'Invalid credentials' });
     }
     
     await db
@@ -142,46 +140,44 @@ router.post('/login', async (req, res) => {
         lockedUntil: null,
         lastLogin: new Date()
       })
-      .where(eq(schema.users.id, user.id));
+      .where(eq(schema.users.id, user?.id ?? 0));
     
     if (user.twoFactorEnabled) {
-      const _otp = await createOTP(user.id, 'app', 'login');
+      await createOTP(user?.id ?? 0, 'app', 'login');
       
-      
-      return res.status(200)on({
+      return res.status(200).json({
         message: 'OTP sent for verification',
-        userId: user.id,
+        userId: user?.id ?? 0,
         requiresOTP: true
       });
     }
     
-    const token = generateToken(user.id, user.uuid || '', user.role || 'user');
+    const token = generateToken(user?.id ?? 0, user.uuid || '', user.role || 'user');
     
     createAuditLog(
-      user.id,
+      user?.id ?? 0,
       'login',
       'user',
-      user.id.toString(),
+      (user?.id ?? 0).toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { email: user.email },
-      'info'
+      { email: user?.email ?? '' }
     ).catch(err => console.error('Failed to create audit log:', err));
     
-    res.status(200)on({
+    res.status(200).json({
       message: 'Login successful',
       token,
       user: {
-        id: user.id,
+        id: user?.id ?? 0,
         uuid: user.uuid,
         name: user.name,
-        email: user.email,
+        email: user?.email ?? '',
         role: user.role
       }
     });
   } catch (error) {
     console.error('Login error:', error);
-    res.status(500)on({ error: 'Login failed' });
+    res.status(500).json({ error: 'Login failed' });
   }
 });
 
@@ -194,13 +190,13 @@ router.post('/verify-otp', async (req, res) => {
     const { userId, otp, purpose } = req.body;
     
     if (!userId || !otp || !purpose) {
-      return res.status(400)on({ error: 'Missing required fields' });
+      return res.status(400).json({ error: 'Missing required fields' });
     }
     
     const isValid = await verifyOTP(userId, otp, purpose);
     
     if (!isValid) {
-      return res.status(401)on({ error: 'Invalid or expired OTP' });
+      return res.status(401).json({ error: 'Invalid or expired OTP' });
     }
     
     const user = await db.query.users.findFirst({
@@ -208,7 +204,7 @@ router.post('/verify-otp', async (req, res) => {
     });
     
     if (!user) {
-      return res.status(404)on({ error: 'User not found' });
+      return res.status(404).json({ error: 'User not found' });
     }
     
     if (purpose === 'verification') {
@@ -217,43 +213,42 @@ router.post('/verify-otp', async (req, res) => {
         .set({ emailVerified: true })
         .where(eq(schema.users.id, userId));
       
-      return res.status(200)on({ message: 'Email verified successfully' });
+      return res.status(200).json({ message: 'Email verified successfully' });
     } else if (purpose === 'login') {
-      const token = generateToken(user.id, user.uuid || '', user.role || 'user');
+      const token = generateToken(user?.id ?? 0, user.uuid || '', user.role || 'user');
       
       createAuditLog(
-        user.id,
+        user?.id ?? 0,
         'login_with_otp',
         'user',
-        user.id.toString(),
+        (user?.id ?? 0).toString(),
         req.ip || '0.0.0.0',
         req.headers['user-agent'] || 'unknown',
-        { email: user.email },
-        'info'
+        { email: user?.email ?? '' }
       ).catch(err => console.error('Failed to create audit log:', err));
       
-      return res.status(200)on({
+      return res.status(200).json({
         message: 'Login successful',
         token,
         user: {
-          id: user.id,
-          uuid: user.uuid,
-          name: user.name,
-          email: user.email,
-          role: user.role
+          id: user?.id ?? 0,
+          uuid: user?.uuid ?? '',
+          name: user?.name ?? '',
+          email: user?.email ?? '',
+          role: user?.role ?? 'user'
         }
       });
     } else if (purpose === 'password_reset') {
-      return res.status(200)on({ 
+      return res.status(200).json({ 
         message: 'OTP verified. You can now reset your password',
         resetToken: otp
       });
     }
     
-    res.status(400)on({ error: 'Invalid OTP purpose' });
+    res.status(400).json({ error: 'Invalid OTP purpose' });
   } catch (error) {
     console.error('OTP verification error:', error);
-    res.status(500)on({ error: 'OTP verification failed' });
+    res.status(500).json({ error: 'OTP verification failed' });
   }
 });
 
@@ -270,27 +265,25 @@ router.post('/forgot-password', async (req, res) => {
     });
     
     if (!user) {
-      return res.status(200)on({ message: 'If your email is registered, you will receive a password reset link' });
+      return res.status(200).json({ message: 'If your email is registered, you will receive a password reset link' });
     }
     
-    const _otp = await createOTP(user.id, 'email', 'password_reset', 60); // 60 minutes expiry
-    
+    await createOTP(user?.id ?? 0, 'email', 'password_reset', 60); // 60 minutes expiry
     
     createAuditLog(
-      user.id,
+      user?.id ?? 0,
       'password_reset_request',
       'user',
-      user.id.toString(),
+      (user?.id ?? 0).toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { email: user.email },
-      'info'
+      { email: user?.email ?? '' }
     ).catch(err => console.error('Failed to create audit log:', err));
     
-    res.status(200)on({ message: 'If your email is registered, you will receive a password reset link' });
+    res.status(200).json({ message: 'If your email is registered, you will receive a password reset link' });
   } catch (error) {
     console.error('Password reset request error:', error);
-    res.status(500)on({ error: 'Password reset request failed' });
+    res.status(500).json({ error: 'Password reset request failed' });
   }
 });
 
@@ -305,7 +298,7 @@ router.post('/reset-password', async (req, res) => {
     const isValid = await verifyOTP(userId, resetToken, 'password_reset');
     
     if (!isValid) {
-      return res.status(401)on({ error: 'Invalid or expired reset token' });
+      return res.status(401).json({ error: 'Invalid or expired reset token' });
     }
     
     const passwordSalt = await generateSalt();
@@ -328,14 +321,13 @@ router.post('/reset-password', async (req, res) => {
       userId.toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      {},
-      'warning'
+      {}
     ).catch(err => console.error('Failed to create audit log:', err));
     
-    res.status(200)on({ message: 'Password reset successful' });
+    res.status(200).json({ message: 'Password reset successful' });
   } catch (error) {
     console.error('Password reset error:', error);
-    res.status(500)on({ error: 'Password reset failed' });
+    res.status(500).json({ error: 'Password reset failed' });
   }
 });
 
@@ -346,13 +338,13 @@ router.post('/reset-password', async (req, res) => {
 router.get('/me', authenticate, (req: AuthRequest, res) => {
   try {
     if (!req.user) {
-      return res.status(401)on({ error: 'Authentication required' });
+      return res.status(401).json({ error: 'Authentication required' });
     }
     
-    res.status(200)on({ user: req.user });
+    res.status(200).json({ user: req.user });
   } catch (error) {
     console.error('Get user error:', error);
-    res.status(500)on({ error: 'Failed to get user information' });
+    res.status(500).json({ error: 'Failed to get user information' });
   }
 });
 
@@ -363,24 +355,23 @@ router.get('/me', authenticate, (req: AuthRequest, res) => {
 router.post('/logout', authenticate, (req: AuthRequest, res) => {
   try {
     if (!req.user) {
-      return res.status(401)on({ error: 'Authentication required' });
+      return res.status(401).json({ error: 'Authentication required' });
     }
     
     createAuditLog(
-      req.user.id,
+      req.user?.id ?? 0,
       'logout',
       'user',
-      req.user.id.toString(),
+      (req.user?.id ?? 0).toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      {},
-      'info'
+      {}
     ).catch(err => console.error('Failed to create audit log:', err));
     
-    res.status(200)on({ message: 'Logout successful' });
+    res.status(200).json({ message: 'Logout successful' });
   } catch (error) {
     console.error('Logout error:', error);
-    res.status(500)on({ error: 'Logout failed' });
+    res.status(500).json({ error: 'Logout failed' });
   }
 });
 
