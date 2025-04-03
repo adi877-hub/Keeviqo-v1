@@ -42,18 +42,18 @@ const defaultValues = {
  * @param {string} env - The current environment (development, production)
  * @returns {boolean} - Whether all required variables are set
  */
-export function validateEnv(env = process.env.NODE_ENV || 'development') {
+export function validateEnv(env = globalThis.process.env.NODE_ENV || 'development') {
   const required = requiredVars[env] || requiredVars.development;
   const missing = [];
 
   for (const variable of required) {
-    if (!process.env[variable]) {
+    if (!globalThis.process.env[variable]) {
       missing.push(variable);
     }
   }
 
   if (missing.length > 0) {
-    console.error(`Missing required environment variables for ${env} environment: ${missing.join(', ')}`);
+    globalThis.console.error(`Missing required environment variables for ${env} environment: ${missing.join(', ')}`);
     return false;
   }
 
@@ -65,12 +65,12 @@ export function validateEnv(env = process.env.NODE_ENV || 'development') {
  * @returns {object} - The current environment configuration
  */
 export function getConfig() {
-  const env = process.env.NODE_ENV || 'development';
+  const env = globalThis.process.env.NODE_ENV || 'development';
   
   if (env === 'development') {
     for (const [key, value] of Object.entries(defaultValues.development)) {
-      if (!process.env[key]) {
-        process.env[key] = value;
+      if (!globalThis.process.env[key]) {
+        globalThis.process.env[key] = value;
       }
     }
   }
@@ -79,9 +79,9 @@ export function getConfig() {
   
   return {
     env,
-    port: process.env.PORT,
-    databaseUrl: process.env.DATABASE_URL,
-    sessionSecret: process.env.SESSION_SECRET,
+    port: globalThis.process.env.PORT,
+    databaseUrl: globalThis.process.env.DATABASE_URL,
+    sessionSecret: globalThis.process.env.SESSION_SECRET,
     isProduction: env === 'production',
     isDevelopment: env === 'development',
   };
@@ -104,17 +104,17 @@ export function createEnvFile(targetPath, env = 'development') {
   }
   
   fs.writeFileSync(targetPath, content);
-  console.log(`Created sample .env file at ${targetPath}`);
+  globalThis.console.log(`Created sample .env file at ${targetPath}`);
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const env = process.env.NODE_ENV || 'development';
+if (globalThis.process.argv[1] === fileURLToPath(import.meta.url)) {
+  const env = globalThis.process.env.NODE_ENV || 'development';
   
   if (validateEnv(env)) {
-    console.log(`Environment validation successful for ${env} environment.`);
+    globalThis.console.log(`Environment validation successful for ${env} environment.`);
   } else {
-    console.error(`Environment validation failed for ${env} environment.`);
-    process.exit(1);
+    globalThis.console.error(`Environment validation failed for ${env} environment.`);
+    globalThis.process.exit(1);
   }
 }
 
