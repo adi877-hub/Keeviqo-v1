@@ -2,8 +2,8 @@ import express from 'express';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
-import { db } from '../utils/db';
-import * as schema from '../../shared/schema';
+import { db } from '../utils/db.js';
+import * as schema from '../../shared/schema.js';
 import { eq } from 'drizzle-orm';
 
 const storage = multer.diskStorage({

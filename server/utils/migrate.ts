@@ -1,7 +1,8 @@
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
-import { Pool } from 'pg';
-import * as schema from '../../shared/schema';
+import pkg from 'pg';
+const { Pool } = pkg;
+import * as schema from '../../shared/schema.js';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';

@@ -6,12 +6,12 @@ import session from 'express-session';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 
-import categoryRoutes from './routes/categories';
-import subcategoryRoutes from './routes/subcategories';
-import featureRoutes from './routes/features';
-import uploadRoutes from './routes/uploads';
-import reminderRoutes from './routes/reminders';
-import formRoutes from './routes/forms';
+import categoryRoutes from './routes/categories.js';
+import subcategoryRoutes from './routes/subcategories.js';
+import featureRoutes from './routes/features.js';
+import uploadRoutes from './routes/uploads.js';
+import reminderRoutes from './routes/reminders.js';
+import formRoutes from './routes/forms.js';
 
 dotenv.config();
 
