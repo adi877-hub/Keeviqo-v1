@@ -149,7 +149,7 @@ function ContactPage() {
           <div className="mb-6">
             <h3 className="font-semibold text-lg mb-2 text-right">{t('contact.info.email.title')}</h3>
             <p className="text-right">
-              <a href="mailto:info@keeviqo.com" className="text-blue-500 hover:underline">
+              <a href="mailto:keeviqo.contact@gmail.com" className="text-blue-500 hover:underline">
                 {t('contact.info.email.address')}
               </a>
             </p>
