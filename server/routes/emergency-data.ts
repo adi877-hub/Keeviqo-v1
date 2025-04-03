@@ -1,7 +1,7 @@
 import express from 'express';
 import { db } from '../utils/db.js';
 import * as schema from '../../shared/schema.js';
-import { eq } from 'drizzle-orm/pg-core';
+import { eq } from 'drizzle-orm';
 
 const router = express.Router();
 
