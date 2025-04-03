@@ -7,7 +7,7 @@ interface ExternalSystemLinksProps {
   userId?: number;
 }
 
-function ExternalSystemLinks({ category, userId }: ExternalSystemLinksProps) {
+function ExternalSystemLinks({ category }: ExternalSystemLinksProps) {
   const { t } = useTranslation();
   const [links, setLinks] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);

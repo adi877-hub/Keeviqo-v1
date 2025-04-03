@@ -17,7 +17,7 @@ export const categories = pgTable('categories', {
   description: text('description'),
   smartFeatures: text('smart_features'),
   includes: text('includes'),
-  parentId: integer('parent_id').references((): any => categories.id),
+  parentId: integer('parent_id'),
   createdAt: timestamp('created_at').defaultNow(),
 });
 

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { processPayment, generateInvoice, PaymentData } from '../utils/api';
+import { processPayment, generateInvoice, PaymentData, PaymentResponse } from '../utils/api';
 
 interface PaymentProcessorProps {
   amount: number;
   description: string;
-  onSuccess?: (data: any) => void;
+  onSuccess?: (data: PaymentResponse) => void;
   onError?: (error: string) => void;
 }
 
@@ -48,13 +48,13 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       };
 
       const response = await processPayment(paymentData);
-      setPaymentId(response.paymentId);
+      setPaymentId(response.id);
       setSuccess(true);
       
       if (onSuccess) {
         onSuccess(response);
       }
-    } catch (err) {
+    } catch {
       const errorMessage = t('payment.error');
       setError(errorMessage);
       
@@ -73,12 +73,12 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       const invoiceData = await generateInvoice(paymentId);
       
       const link = document.createElement('a');
-      link.href = invoiceData.invoiceUrl;
+      link.href = invoiceData.url;
       link.download = 'keeviqo-invoice.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    } catch (err) {
+    } catch {
       setError(t('payment.invoiceError'));
     }
   };

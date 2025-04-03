@@ -1,5 +1,5 @@
-import { db } from './db.js';
-import * as schema from '../../shared/schema.js';
+import { db } from './db';
+import * as schema from '../../shared/schema';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
