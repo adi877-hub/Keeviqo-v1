@@ -59,7 +59,7 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
   try {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      res.status(401)on({ error: 'Authentication required' });
+      res.status(401).json({ error: 'Authentication required' });
       return;
     }
 
@@ -67,7 +67,7 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
     const payload = verifyToken(token);
 
     if (!payload) {
-      res.status(401)on({ error: 'Invalid or expired token' });
+      res.status(401).json({ error: 'Invalid or expired token' });
       return;
     }
 
@@ -84,14 +84,13 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
       payload.userId.toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { path: req.path, method: req.method },
-      'info'
+      { path: req.path, method: req.method }
     ).catch(err => console.error('Failed to create audit log:', err));
 
     next();
   } catch (error) {
     console.error('Authentication error:', error);
-    res.status(500)on({ error: 'Authentication failed' });
+    res.status(500).json({ error: 'Authentication failed' });
   }
 }
 
@@ -102,12 +101,12 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
 export function authorize(roles: string[]): (req: AuthRequest, res: Response, next: NextFunction) => void {
   return (req: AuthRequest, res: Response, next: NextFunction): void => {
     if (!req.user) {
-      res.status(401)on({ error: 'Authentication required' });
+      res.status(401).json({ error: 'Authentication required' });
       return;
     }
 
     if (!roles.includes(req.user.role)) {
-      res.status(403)on({ error: 'Insufficient permissions' });
+      res.status(403).json({ error: 'Insufficient permissions' });
       return;
     }
 
@@ -126,7 +125,7 @@ export async function authenticatePartner(req: PartnerRequest, res: Response, ne
     const timestamp = req.headers['x-timestamp'] as string;
 
     if (!apiKey || !signature || !timestamp) {
-      res.status(401)on({ error: 'Partner authentication required' });
+      res.status(401).json({ error: 'Partner authentication required' });
       return;
     }
 
@@ -135,7 +134,7 @@ export async function authenticatePartner(req: PartnerRequest, res: Response, ne
     });
 
     if (!partner || !partner.active || partner.status !== 'active') {
-      res.status(401)on({ error: 'Invalid API key or inactive partner' });
+      res.status(401).json({ error: 'Invalid API key or inactive partner' });
       return;
     }
 
@@ -151,13 +150,13 @@ export async function authenticatePartner(req: PartnerRequest, res: Response, ne
     
     if (signatureBuffer.length !== expectedBuffer.length || 
         !crypto.timingSafeEqual(signatureBuffer, expectedBuffer)) {
-      res.status(401)on({ error: 'Invalid signature' });
+      res.status(401).json({ error: 'Invalid signature' });
       return;
     }
 
     const timestampNum = parseInt(timestamp);
     if (isNaN(timestampNum)) {
-      res.status(401)on({ error: 'Invalid timestamp format' });
+      res.status(401).json({ error: 'Invalid timestamp format' });
       return;
     }
     
@@ -166,7 +165,7 @@ export async function authenticatePartner(req: PartnerRequest, res: Response, ne
     const fiveMinutes = 5 * 60 * 1000;
 
     if (Math.abs(now.getTime() - requestTime.getTime()) > fiveMinutes) {
-      res.status(401)on({ error: 'Request timestamp expired' });
+      res.status(401).json({ error: 'Request timestamp expired' });
       return;
     }
 
@@ -184,14 +183,13 @@ export async function authenticatePartner(req: PartnerRequest, res: Response, ne
         method: req.method, 
         partnerId: partner.id, 
         partnerName: partner.name || 'Unknown Partner' 
-      },
-      'info'
+      }
     ).catch(err => console.error('Failed to create audit log:', err));
 
     next();
   } catch (error) {
     console.error('Partner authentication error:', error);
-    res.status(500)on({ error: 'Partner authentication failed' });
+    res.status(500).json({ error: 'Partner authentication failed' });
   }
 }
 
@@ -205,7 +203,7 @@ export async function emergencyAccess(req: EmergencyRequest, res: Response, next
     const userId = parseInt(req.params.userId);
 
     if (!emergencyToken || isNaN(userId)) {
-      res.status(401)on({ error: 'Emergency access token required' });
+      res.status(401).json({ error: 'Emergency access token required' });
       return;
     }
 
@@ -214,14 +212,14 @@ export async function emergencyAccess(req: EmergencyRequest, res: Response, next
     });
 
     if (!user) {
-      res.status(404)on({ error: 'User not found' });
+      res.status(404).json({ error: 'User not found' });
       return;
     }
 
     const isValidEmergencyToken = emergencyToken === `emergency-${user.uuid || ''}`;
 
     if (!isValidEmergencyToken) {
-      res.status(401)on({ error: 'Invalid emergency token' });
+      res.status(401).json({ error: 'Invalid emergency token' });
       return;
     }
 
@@ -242,13 +240,12 @@ export async function emergencyAccess(req: EmergencyRequest, res: Response, next
         method: req.method,
         userId: user.id,
         userName: user.name || 'Unknown User'
-      },
-      'warning' // Higher severity for emergency access
+      }
     ).catch(err => console.error('Failed to create audit log:', err));
 
     next();
   } catch (error) {
     console.error('Emergency access error:', error);
-    res.status(500)on({ error: 'Emergency access failed' });
+    res.status(500).json({ error: 'Emergency access failed' });
   }
 }
