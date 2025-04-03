@@ -83,11 +83,11 @@ export function authenticate(req: AuthRequest, res: Response, next: NextFunction
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
       { path: req.path, method: req.method }
-    ).catch(err => console.error('Failed to create audit log:', err));
+    ).catch(err => globalThis.console.error('Failed to create audit log:', err));
 
     next();
   } catch (error) {
-    console.error('Authentication error:', error);
+    globalThis.console.error('Authentication error:', error);
     res.status(500).json({ error: 'Authentication failed' });
   }
 }
@@ -182,11 +182,11 @@ export async function authenticatePartner(req: PartnerRequest, res: Response, ne
         partnerId: partner.id, 
         partnerName: partner.name || 'Unknown Partner' 
       }
-    ).catch(err => console.error('Failed to create audit log:', err));
+    ).catch(err => globalThis.console.error('Failed to create audit log:', err));
 
     next();
   } catch (error) {
-    console.error('Partner authentication error:', error);
+    globalThis.console.error('Partner authentication error:', error);
     res.status(500).json({ error: 'Partner authentication failed' });
   }
 }
@@ -239,11 +239,11 @@ export async function emergencyAccess(req: EmergencyRequest, res: Response, next
         userId: user.id,
         userName: user.name || 'Unknown User'
       }
-    ).catch(err => console.error('Failed to create audit log:', err));
+    ).catch(err => globalThis.console.error('Failed to create audit log:', err));
 
     next();
   } catch (error) {
-    console.error('Emergency access error:', error);
+    globalThis.console.error('Emergency access error:', error);
     res.status(500).json({ error: 'Emergency access failed' });
   }
 }
