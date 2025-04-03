@@ -1,5 +1,4 @@
 import express from 'express';
-import { db } from '../utils/db';
 
 const router = express.Router();
 
@@ -76,7 +75,7 @@ router.get('/:category', async (req, res) => {
     
     res.json(links);
   } catch (error) {
-    console.error('Error fetching external system links:', error);
+    globalThis.console.error('Error fetching external system links:', error);
     res.status(500).json({ error: 'Failed to fetch external system links' });
   }
 });
