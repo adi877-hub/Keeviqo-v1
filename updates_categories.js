@@ -59,4 +59,4 @@ categories.forEach(category => {
 // שמירת הקובץ המעודכן
 fs.writeFileSync('./categories.json', JSON.stringify(categories, null, 2));
 
-console.log(`Updated ${updatedCount} categories with smart features.`);
+globalThis.console.log(`Updated ${updatedCount} categories with smart features.`);
