@@ -112,3 +112,87 @@ export async function submitFormData(data: Record<string, any>, featureId: numbe
 export async function fetchFormData(featureId: number): Promise<any[]> {
   return fetchFromAPI<any[]>(`/forms/feature/${featureId}`);
 }
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+export async function sendContactForm(data: ContactFormData): Promise<any> {
+  return fetchFromAPI('/contact', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+export interface PaymentData {
+  amount: number;
+  currency: string;
+  method: 'paypal' | 'stripe';
+  description: string;
+  customerInfo: {
+    name: string;
+    email: string;
+  };
+}
+
+export async function processPayment(data: PaymentData): Promise<any> {
+  return fetchFromAPI('/payments/process', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+export async function generateQRCode(data: string): Promise<any> {
+  return fetchFromAPI('/qr/generate', {
+    method: 'POST',
+    body: JSON.stringify({ data }),
+  });
+}
+
+export interface UserProfile {
+  id: number;
+  name: string;
+  email: string;
+  preferences: {
+    theme: 'light' | 'dark';
+    language: 'he' | 'en';
+  };
+}
+
+export async function getUserProfile(): Promise<UserProfile> {
+  return fetchFromAPI<UserProfile>('/user/profile');
+}
+
+export async function updateUserProfile(data: Partial<UserProfile>): Promise<UserProfile> {
+  return fetchFromAPI<UserProfile>('/user/profile', {
+    method: 'PUT',
+    body: JSON.stringify(data),
+  });
+}
+
+export async function setUserTheme(theme: 'light' | 'dark'): Promise<any> {
+  return fetchFromAPI('/user/theme', {
+    method: 'POST',
+    body: JSON.stringify({ theme }),
+  });
+}
+
+export async function setUserLanguage(language: 'he' | 'en'): Promise<any> {
+  return fetchFromAPI('/user/language', {
+    method: 'POST',
+    body: JSON.stringify({ language }),
+  });
+}
+
+export async function generateInvoice(paymentId: number): Promise<any> {
+  return fetchFromAPI(`/payments/${paymentId}/invoice`, {
+    method: 'POST',
+  });
+}
+
+export async function getExternalSystemLinks(category: string): Promise<string[]> {
+  return fetchFromAPI<string[]>(`/external-systems/${category}`);
+}

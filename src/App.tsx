@@ -7,20 +7,43 @@ import UploadFeature from './pages/features/UploadFeature';
 import ReminderFeature from './pages/features/ReminderFeature';
 import ExternalLinkFeature from './pages/features/ExternalLinkFeature';
 import FormFeature from './pages/features/FormFeature';
+import AboutPage from './pages/static/AboutPage';
+import PrivacyPolicyPage from './pages/static/PrivacyPolicyPage';
+import TermsPage from './pages/static/TermsPage';
+import ContactPage from './pages/static/ContactPage';
+import FAQPage from './pages/static/FAQPage';
+import QRCodePage from './pages/static/QRCodePage';
+import { ThemeProvider } from './contexts/ThemeContext';
+import ThemeToggle from './components/ui/ThemeToggle';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Switch>
-        <Route path="/" component={Dashboard} />
-        <Route path="/category/:id" component={CategoryPage} />
-        <Route path="/subcategory/:id" component={SubcategoryPage} />
-        <Route path="/feature/upload/:id" component={UploadFeature} />
-        <Route path="/feature/reminder/:id" component={ReminderFeature} />
-        <Route path="/feature/external_link/:id" component={ExternalLinkFeature} />
-        <Route path="/feature/form/:id" component={FormFeature} />
-      </Switch>
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+        <ThemeToggle />
+        <Header />
+        <main className="container mx-auto py-6 px-4 flex-grow">
+          <Switch>
+            <Route path="/" component={Dashboard} />
+            <Route path="/category/:id" component={CategoryPage} />
+            <Route path="/subcategory/:id" component={SubcategoryPage} />
+            <Route path="/feature/upload/:id" component={UploadFeature} />
+            <Route path="/feature/reminder/:id" component={ReminderFeature} />
+            <Route path="/feature/external_link/:id" component={ExternalLinkFeature} />
+            <Route path="/feature/form/:id" component={FormFeature} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/privacy" component={PrivacyPolicyPage} />
+            <Route path="/terms" component={TermsPage} />
+            <Route path="/contact" component={ContactPage} />
+            <Route path="/faq" component={FAQPage} />
+            <Route path="/qrcode" component={QRCodePage} />
+          </Switch>
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
