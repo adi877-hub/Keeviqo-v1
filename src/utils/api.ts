@@ -196,3 +196,23 @@ export async function generateInvoice(paymentId: number): Promise<any> {
 export async function getExternalSystemLinks(category: string): Promise<string[]> {
   return fetchFromAPI<string[]>(`/external-systems/${category}`);
 }
+
+export interface EmergencyContact {
+  id?: number;
+  name: string;
+  email: string;
+  phone: string;
+  relationship: string;
+  accessLevel: 'basic' | 'medical' | 'full';
+}
+
+export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<any> {
+  return fetchFromAPI('/user/emergency-contacts', {
+    method: 'POST',
+    body: JSON.stringify({ contacts }),
+  });
+}
+
+export async function getEmergencyContacts(): Promise<EmergencyContact[]> {
+  return fetchFromAPI<EmergencyContact[]>('/user/emergency-contacts');
+}

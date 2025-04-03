@@ -17,7 +17,7 @@ export const categories = pgTable('categories', {
   description: text('description'),
   smartFeatures: text('smart_features'),
   includes: text('includes'),
-  parentId: integer('parent_id').references(() => categories.id),
+  parentId: integer('parent_id').references((): any => categories.id),
   createdAt: timestamp('created_at').defaultNow(),
 });
 
@@ -93,4 +93,29 @@ export const featuresRelations = relations(features, ({ many, one }) => ({
   documents: many(documents),
   reminders: many(reminders),
   formData: many(formData),
+}));
+
+export const emergencyContacts = pgTable('emergency_contacts', {
+  id: serial('id').primaryKey(),
+  userId: integer('user_id').references(() => users.id),
+  name: varchar('name', { length: 255 }),
+  email: varchar('email', { length: 255 }),
+  phone: varchar('phone', { length: 50 }),
+  relationship: varchar('relationship', { length: 100 }),
+  accessLevel: varchar('access_level', { length: 20 }).default('basic'),
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
+export const userRelations = relations(users, ({ many }) => ({
+  documents: many(documents),
+  reminders: many(reminders),
+  formData: many(formData),
+  emergencyContacts: many(emergencyContacts),
+}));
+
+export const emergencyContactsRelations = relations(emergencyContacts, ({ one }) => ({
+  user: one(users, {
+    fields: [emergencyContacts.userId],
+    references: [users.id],
+  }),
 }));
