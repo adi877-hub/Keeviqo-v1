@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "types": ["node", "vite/client"],
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "paths": {
       "@/*": ["./client/src/*", "./src/*"],
       "@shared/*": ["./shared/*"]
