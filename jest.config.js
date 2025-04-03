@@ -11,7 +11,7 @@ export default {
       presets: ['@babel/preset-env']
     }]
   },
-  extensionsToTreatAsEsm: ['.ts', '.tsx', '.js', '.jsx'],
+  extensionsToTreatAsEsm: ['.ts', '.tsx', '.jsx'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
     '^@/(.*)$': '<rootDir>/src/$1',
