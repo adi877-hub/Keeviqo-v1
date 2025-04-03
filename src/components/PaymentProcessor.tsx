@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { processPayment, generateInvoice, PaymentData, PaymentResponse, InvoiceResponse } from '../utils/api';
+import { processPayment, generateInvoice, PaymentData, PaymentResponse } from '../utils/api';
 
 interface PaymentProcessorProps {
   amount: number;
@@ -54,7 +54,7 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       if (onSuccess) {
         onSuccess(response);
       }
-    } catch (error) {
+    } catch (_error) {
       const errorMessage = t('payment.error');
       setError(errorMessage);
       
@@ -78,7 +78,7 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    } catch (error) {
+    } catch (_error) {
       setError(t('payment.invoiceError'));
     }
   };
