@@ -25,7 +25,7 @@ export async function teardownTestDatabase() {
   console.log('Test database connection closed');
 }
 
-if (process.argv[1] === import.meta.url) {
+if (typeof require !== 'undefined' && require.main === module) {
   setupTestDatabase()
     .then((success) => {
       if (success) {
