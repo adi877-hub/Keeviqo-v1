@@ -33,7 +33,7 @@ function ContactPage() {
         subject: '',
         message: '',
       });
-    } catch (err) {
+    } catch (_error) {
       setStatus('error');
       setError(t('contact.form.error'));
     }

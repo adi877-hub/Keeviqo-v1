@@ -4,9 +4,7 @@ import { db } from '../utils/db';
 import * as schema from '../../shared/schema';
 import { eq } from 'drizzle-orm';
 import { createAuditLog } from '../utils/security';
-import { GovernmentPartner, PartnerRequest, EmergencyRequest, EmergencyUser } from '../../shared/types';
-
-type IpAddress = string;
+import { PartnerRequest, EmergencyRequest } from '../../shared/types';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'keeviqo-jwt-secret-key';
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '24h';

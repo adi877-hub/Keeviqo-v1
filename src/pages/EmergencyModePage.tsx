@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'wouter';
-import { getUserEmergencyData, getEmergencyContacts, EmergencyContact, EmergencyData, MedicalInfo } from '../utils/api';
+import { getUserEmergencyData, getEmergencyContacts, EmergencyContact, EmergencyData } from '../utils/api';
 
 function EmergencyModePage() {
   const { t } = useTranslation();
