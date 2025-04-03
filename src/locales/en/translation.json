@@ -1,0 +1,368 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No",
+    "error": "Error",
+    "success": "Success"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "about": "About",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "footer": {
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "description": "Keeviqo is a personal information management platform that helps you organize all your documents, reminders, and important information in one place.",
+    "rights": "All rights reserved"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Keeviqo",
+    "categories": "Categories",
+    "recentDocuments": "Recent Documents",
+    "upcomingReminders": "Upcoming Reminders",
+    "quickActions": "Quick Actions"
+  },
+  "category": {
+    "smartFeatures": "Smart Features",
+    "includes": "Includes",
+    "subcategories": "Subcategories",
+    "actions": "Available Actions"
+  },
+  "feature": {
+    "upload": "Upload Document",
+    "reminder": "Set Reminder",
+    "external_link": "External Link",
+    "form": "Form",
+    "uploadSuccess": "Document uploaded successfully",
+    "uploadError": "Error uploading document",
+    "reminderSuccess": "Reminder created successfully",
+    "reminderError": "Error creating reminder",
+    "formSuccess": "Form submitted successfully",
+    "formError": "Error submitting form"
+  },
+  "upload": {
+    "title": "Upload Document",
+    "selectFile": "Select File",
+    "dragDrop": "Drag and drop file here",
+    "fileSelected": "File selected",
+    "fileSize": "File size",
+    "fileType": "File type",
+    "addMetadata": "Add Metadata",
+    "description": "Description",
+    "tags": "Tags",
+    "date": "Date",
+    "upload": "Upload",
+    "uploading": "Uploading..."
+  },
+  "reminder": {
+    "title": "Set Reminder",
+    "name": "Reminder Name",
+    "description": "Description",
+    "date": "Date",
+    "time": "Time",
+    "frequency": "Frequency",
+    "once": "Once",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "notification": "Notification",
+    "email": "Email",
+    "sms": "SMS",
+    "both": "Both",
+    "create": "Create Reminder",
+    "creating": "Creating reminder...",
+    "upcoming": "Upcoming Reminders",
+    "past": "Past Reminders",
+    "markComplete": "Mark as Complete",
+    "delete": "Delete Reminder"
+  },
+  "form": {
+    "title": "Form",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "required": "Required field",
+    "optional": "Optional",
+    "invalidInput": "Invalid input"
+  },
+  "about": {
+    "title": "About Keeviqo",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Keeviqo's mission is to simplify personal information management and reduce the mental load of managing documents, reminders, and important information. We believe that everyone deserves tools to help them organize their lives efficiently and intuitively."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "We envision a world where personal information management is simple, secure, and accessible to everyone. Keeviqo is designed to be the most comprehensive platform for managing all aspects of personal life, from health and finances to legal documents and family memories."
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Keeviqo was founded out of personal frustration with the scattered nature of important information. Our founders experienced the challenges of managing documents, reminders, and personal information, and decided to create a comprehensive solution that addresses the needs of people in all walks of life."
+    },
+    "team": {
+      "title": "Our Team",
+      "member1": {
+        "name": "Israel Israeli",
+        "role": "Founder & CEO"
+      },
+      "member2": {
+        "name": "Sarah Cohen",
+        "role": "CTO"
+      },
+      "member3": {
+        "name": "David Levy",
+        "role": "Product Manager"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions or feedback? We'd love to hear from you.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Error sending message. Please try again later."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "info@keeviqo.com",
+      "phone": "+972-3-123-4567",
+      "address": "123 Herzl Street, Tel Aviv, Israel",
+      "hours": "Working hours: Mon-Fri 9:00-18:00"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "introduction": "This Privacy Policy explains how Keeviqo collects, uses, and protects your personal information.",
+    "collection": {
+      "title": "Information Collection",
+      "description": "We collect personal information when you register for the service, use the application, or contact our support."
+    },
+    "use": {
+      "title": "Information Use",
+      "description": "We use your information to provide and improve our services, communicate with you, and send you important updates."
+    },
+    "sharing": {
+      "title": "Information Sharing",
+      "description": "We do not sell or rent your personal information to third parties. We may share information with service providers who help us operate the service."
+    },
+    "security": {
+      "title": "Information Security",
+      "description": "We take reasonable security measures to protect your personal information from unauthorized access, use, or disclosure."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "We use cookies to improve your experience, analyze site usage, and personalize content and advertisements."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "description": "You have certain rights regarding your personal information, including the right to access, correct, delete, and object to processing."
+    },
+    "changes": {
+      "title": "Policy Changes",
+      "description": "We may update this Privacy Policy from time to time. We will notify you of significant changes through a prominent notice on the site or by email."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have questions about our Privacy Policy, please contact us at privacy@keeviqo.com."
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last Updated",
+    "introduction": "These Terms of Use constitute a legal agreement between you and Keeviqo.",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "description": "By accessing or using Keeviqo services, you agree to these terms."
+    },
+    "account": {
+      "title": "User Account",
+      "description": "You are responsible for maintaining the confidentiality of your password and for all activities that occur under your account."
+    },
+    "use": {
+      "title": "Service Use",
+      "description": "You agree to use the service only for lawful purposes and in accordance with these terms."
+    },
+    "content": {
+      "title": "User Content",
+      "description": "You retain all rights to the content you upload to the service, but grant us a license to use it to provide the service."
+    },
+    "termination": {
+      "title": "Termination",
+      "description": "We may terminate or suspend your access to the service for any reason, including breach of these terms."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "description": "The service is provided 'as is' and 'as available', without warranties of any kind."
+    },
+    "limitation": {
+      "title": "Limitation of Liability",
+      "description": "In no event shall Keeviqo be liable for indirect, incidental, special, consequential, or punitive damages."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "description": "We may change these terms at any time. Your continued use of the service after such changes constitutes your acceptance of the updated terms."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No results found for your search.",
+    "items": {
+      "q1": "What is Keeviqo?",
+      "a1": "Keeviqo is a personal information management platform that helps you organize all your documents, reminders, and important information in one place. It offers 72 different life categories, each with unique features tailored to the specific needs of that area.",
+      "q2": "Is Keeviqo free?",
+      "a2": "Keeviqo offers a basic free plan with limited access to features. Premium plans are available with more storage, advanced features, and improved support.",
+      "q3": "How does Keeviqo keep my information secure?",
+      "a3": "We use advanced encryption, two-factor authentication, and additional security methods to protect your information. All data is stored on secure servers with regular backups.",
+      "q4": "Can I share information with others?",
+      "a4": "Yes, Keeviqo allows you to share specific documents and information with family, friends, or professionals. You control who can see what and for how long.",
+      "q5": "What happens if I lose access to my account?",
+      "a5": "Keeviqo offers account recovery options, including password reset email and the option to set up emergency contacts who can help you regain access if needed.",
+      "q6": "Can I export my data from Keeviqo?",
+      "a6": "Yes, you can export all your data at any time in common formats like PDF, CSV, or ZIP.",
+      "q7": "Does Keeviqo work on all devices?",
+      "a7": "Yes, Keeviqo is a responsive platform that works on computers, tablets, and mobile phones. We also have dedicated apps for iOS and Android.",
+      "q8": "How can I get help if I have a problem?",
+      "a8": "You can contact our support through the 'Contact Us' form, email support@keeviqo.com, or chat with a support representative during business hours."
+    }
+  },
+  "qrcode": {
+    "title": "QR Code Generator",
+    "generator": {
+      "title": "Create QR Code",
+      "description": "Enter text or URL to create a custom QR code."
+    },
+    "dataLabel": "Text or URL",
+    "placeholder": "Enter text or URL here...",
+    "generate": "Generate QR Code",
+    "generating": "Generating QR Code...",
+    "download": "Download QR Code",
+    "error": {
+      "emptyData": "Please enter text or URL",
+      "generation": "Error generating QR code. Please try again."
+    },
+    "howto": {
+      "title": "How to Use QR Codes",
+      "step1": "1. Enter the text, URL, or other information you want to encode.",
+      "step2": "2. Click 'Generate QR Code' to create the code.",
+      "step3": "3. Download the QR code or share it directly.",
+      "step4": "4. Others can scan the code with any standard QR scanner."
+    },
+    "tips": {
+      "title": "Useful Tips",
+      "item1": "Use shorter URLs for easier-to-scan QR codes.",
+      "item2": "Test your QR code with several different scanners to ensure it works properly.",
+      "item3": "Print QR codes large enough to be easily scanned."
+    },
+    "examples": {
+      "title": "Usage Examples",
+      "personal": {
+        "title": "Personal Profile",
+        "description": "Share your contact details or Keeviqo profile with others."
+      },
+      "document": {
+        "title": "Document Access",
+        "description": "Provide quick access to important documents."
+      },
+      "emergency": {
+        "title": "Emergency Information",
+        "description": "Provide access to vital medical information in case of emergency."
+      }
+    }
+  },
+  "payment": {
+    "title": "Payment",
+    "pageTitle": "Plans & Payments",
+    "choosePlan": "Choose the plan that's right for you:",
+    "amount": "Amount",
+    "method": "Payment Method",
+    "name": "Full Name",
+    "email": "Email Address",
+    "pay": "Pay Now",
+    "processing": "Processing payment...",
+    "success": "Payment successful!",
+    "error": "Error processing payment. Please try again.",
+    "invoiceError": "Error generating invoice. Please try again later.",
+    "generateInvoice": "Generate Invoice",
+    "selectPlan": "Select Plan",
+    "changePlan": "Change Plan",
+    "subscriptionTo": "Subscription to",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "feature1": "Access to 10 categories",
+        "feature2": "5GB storage",
+        "feature3": "Basic support"
+      },
+      "premium": {
+        "name": "Premium",
+        "feature1": "Access to all 72 categories",
+        "feature2": "50GB storage",
+        "feature3": "Priority support",
+        "feature4": "Advanced sharing"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "feature1": "Access to all 72 categories",
+        "feature2": "Unlimited storage",
+        "feature3": "24/7 VIP support",
+        "feature4": "Advanced sharing",
+        "feature5": "Organizational management tools"
+      }
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "settings": "Profile Settings",
+    "name": "Full Name",
+    "email": "Email Address",
+    "preferences": "Preferences",
+    "language": "Language",
+    "theme": "Theme",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode",
+    "saveSuccess": "Profile saved successfully!",
+    "fetchError": "Error loading profile. Please try again later.",
+    "updateError": "Error updating profile. Please try again later.",
+    "shareProfile": "Share Profile",
+    "shareDescription": "Share your profile with others using a QR code.",
+    "qrCode": "Your Profile QR Code",
+    "emergencyAccess": "Emergency Access",
+    "emergencyDescription": "Set up emergency contacts who can access vital information if needed.",
+    "setupEmergency": "Set Up Emergency Access",
+    "emergencyWarning": "Warning: Emergency contacts will be able to access information you designate as 'vital' in case of emergency. Choose people you trust."
+  }
+}
