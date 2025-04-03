@@ -2,7 +2,7 @@ import express from 'express';
 
 const router = express.Router();
 
-import { EmergencyData, EmergencyUser, MedicalInfo, EmergencyDocument } from '../../shared/types';
+import { EmergencyData } from '../../shared/types';
 
 router.get('/', async (req, res) => {
   try {

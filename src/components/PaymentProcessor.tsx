@@ -54,7 +54,7 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       if (onSuccess) {
         onSuccess(response);
       }
-    } catch (err) {
+    } catch (_error) {
       const errorMessage = t('payment.error');
       setError(errorMessage);
       
@@ -78,7 +78,7 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    } catch (err) {
+    } catch (_error) {
       setError(t('payment.invoiceError'));
     }
   };

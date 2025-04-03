@@ -224,7 +224,7 @@ export async function emergencyAccess(req: EmergencyRequest, res: Response, next
     }
 
     req.emergencyUser = {
-      id: user.id,
+      id: user.id.toString(),
       uuid: user.uuid || ''
     };
 

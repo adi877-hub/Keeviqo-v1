@@ -28,7 +28,7 @@ export interface PartnerRequest extends Request {
 
 export interface EmergencyUser {
   name: string;
-  id: string;
+  id: string; // Using string to match the toString() conversion in middleware
   dateOfBirth: string;
   address: string;
   phone: string;
@@ -59,5 +59,8 @@ export interface EmergencyData {
 }
 
 export interface EmergencyRequest extends Request {
-  emergencyUser?: EmergencyUser;
+  emergencyUser?: {
+    id: string;
+    uuid: string;
+  };
 }

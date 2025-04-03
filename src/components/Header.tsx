@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'wouter';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '../contexts/ThemeContext';
 import SmartSearch from './SmartSearch';
 
 function Header() {
   const { t } = useTranslation();
   const [location, setLocation] = useLocation();
-  const { theme } = useTheme();
   
   const navItems = [
     { path: '/', label: t('nav.home') },
