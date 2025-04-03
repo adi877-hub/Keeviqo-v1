@@ -1,3 +1,3 @@
-const util = require('util');
-global.TextEncoder = util.TextEncoder;
-global.TextDecoder = util.TextDecoder;
+import { TextDecoder, TextEncoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
