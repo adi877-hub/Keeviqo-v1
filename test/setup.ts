@@ -5,6 +5,7 @@ dotenv.config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/keeviqo_test',
+  user: process.env.NODE_ENV === 'test' ? 'postgres' : undefined,
 });
 
 export async function setupTestDatabase() {
