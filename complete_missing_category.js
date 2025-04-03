@@ -20,7 +20,7 @@ categories.forEach(category => {
   if (smartFeaturesUpdates[category.id]) {
     category.smartFeatures = smartFeaturesUpdates[category.id];
     updatedCount++;
-    console.log(`Updated smart features for category: ${category.id} - ${category.name}`);
+    globalThis.console.log(`Updated smart features for category: ${category.id} - ${category.name}`);
   }
   
   // עדכון includes אם צריך
