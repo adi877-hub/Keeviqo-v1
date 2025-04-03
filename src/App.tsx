@@ -13,6 +13,7 @@ import TermsPage from './pages/static/TermsPage';
 import ContactPage from './pages/static/ContactPage';
 import FAQPage from './pages/static/FAQPage';
 import QRCodePage from './pages/static/QRCodePage';
+import PaymentPage from './pages/static/PaymentPage';
 import { ThemeProvider } from './contexts/ThemeContext';
 import ThemeToggle from './components/ui/ThemeToggle';
 import Header from './components/Header';
@@ -39,6 +40,7 @@ function App() {
             <Route path="/contact" component={ContactPage} />
             <Route path="/faq" component={FAQPage} />
             <Route path="/qrcode" component={QRCodePage} />
+            <Route path="/payment" component={PaymentPage} />
           </Switch>
         </main>
         <Footer />

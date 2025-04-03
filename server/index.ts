@@ -12,6 +12,7 @@ import featureRoutes from './routes/features.js';
 import uploadRoutes from './routes/uploads.js';
 import reminderRoutes from './routes/reminders.js';
 import formRoutes from './routes/forms.js';
+import qrRoutes from './routes/qrcode.js';
 
 dotenv.config();
 
@@ -40,6 +41,9 @@ app.use('/api/features', featureRoutes);
 app.use('/api/uploads', uploadRoutes);
 app.use('/api/reminders', reminderRoutes);
 app.use('/api/forms', formRoutes);
+app.use('/api/qr', qrRoutes);
+
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
