@@ -35,7 +35,7 @@ function QRCodeGenerator({
 
     try {
       const response = await generateQRCode(value);
-      setQrCodeUrl(response.qrCodeUrl);
+      setQrCodeUrl(response.url); // Using url instead of qrCodeUrl
     } catch (err) {
       setError(t('qrcode.error.generation'));
       console.error('QR code generation error:', err);

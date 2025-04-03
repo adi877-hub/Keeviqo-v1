@@ -48,7 +48,7 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       };
 
       const response = await processPayment(paymentData);
-      setPaymentId(response.paymentId);
+      setPaymentId(response.id); // Using id instead of paymentId
       setSuccess(true);
       
       if (onSuccess) {
@@ -73,7 +73,7 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       const invoiceData = await generateInvoice(paymentId);
       
       const link = document.createElement('a');
-      link.href = invoiceData.invoiceUrl;
+      link.href = invoiceData.downloadUrl; // Using downloadUrl instead of invoiceUrl
       link.download = 'keeviqo-invoice.pdf';
       document.body.appendChild(link);
       link.click();
