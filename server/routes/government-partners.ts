@@ -541,7 +541,7 @@ router.post('/verify-document', authenticatePartner, async (req: PartnerRequest,
  * User endpoint to authorize a government service
  * POST /api/government-partners/authorize-service
  */
-router.post('/authorize-service', authenticate as any, async (req: AuthRequest, res) => {
+router.post('/authorize-service', authenticate, async (req: AuthRequest, res) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Authentication required' });
@@ -575,13 +575,13 @@ router.post('/authorize-service', authenticate as any, async (req: AuthRequest, 
     const allowedScopes = service.requiredScopes || [];
     const scopesArray: string[] = [];
     if (Array.isArray(allowedScopes)) {
-      for (const scope of allowedScopes as unknown[]) {
+      for (const scope of allowedScopes) {
         scopesArray.push(String(scope));
       }
     } else if (typeof allowedScopes === 'string') {
       scopesArray.push(allowedScopes);
     }
-    const invalidScopes = scopes.filter((scope: string) => !scopesArray.includes(scope));
+    const invalidScopes = scopes.filter((scope) => !scopesArray.includes(String(scope)));
     
     if (invalidScopes.length > 0) {
       return res.status(400).json({ 
@@ -596,7 +596,7 @@ router.post('/authorize-service', authenticate as any, async (req: AuthRequest, 
     const [authorization] = await db.insert(schema.userServiceAuthorizations).values({
       userId: req.user.id,
       serviceId,
-      scopes: Array.isArray(scopes) ? scopes.map((scope: unknown) => String(scope)) : [String(scopes)],
+      scopes: Array.isArray(scopes) ? scopes.map((scope) => String(scope)) : [String(scopes)],
       expiresAt,
       active: true
     }).returning();
@@ -611,7 +611,7 @@ router.post('/authorize-service', authenticate as any, async (req: AuthRequest, 
       { 
         serviceName: service.name || 'Unknown Service',
         partnerName: service.partner?.name || 'Unknown Partner',
-        scopes: Array.isArray(scopes) ? scopes.map((scope: unknown) => String(scope)) : [String(scopes)],
+        scopes: Array.isArray(scopes) ? scopes.map((scope) => String(scope)) : [String(scopes)],
         expiresAt: expiresAt.toISOString()
       },
       'warning'
@@ -631,7 +631,7 @@ router.post('/authorize-service', authenticate as any, async (req: AuthRequest, 
  * User endpoint to revoke a government service authorization
  * DELETE /api/government-partners/revoke-authorization/:authorizationId
  */
-router.delete('/revoke-authorization/:authorizationId', authenticate as any, async (req: AuthRequest, res) => {
+router.delete('/revoke-authorization/:authorizationId', authenticate, async (req: AuthRequest, res) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Authentication required' });
@@ -691,7 +691,7 @@ router.delete('/revoke-authorization/:authorizationId', authenticate as any, asy
  * User endpoint to get all authorized government services
  * GET /api/government-partners/my-authorizations
  */
-router.get('/my-authorizations', authenticate as any, async (req: AuthRequest, res) => {
+router.get('/my-authorizations', authenticate, async (req: AuthRequest, res) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Authentication required' });
