@@ -67,9 +67,18 @@ apt-get install -y nginx postgresql postgresql-contrib nodejs npm certbot python
 2. **Setup PostgreSQL Database**
 
 ```bash
-sudo -u postgres psql -c "CREATE USER keeviqo_user WITH PASSWORD 'secure_password';"
-sudo -u postgres psql -c "CREATE DATABASE keeviqo_prod OWNER keeviqo_user;"
-sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE keeviqo_prod TO keeviqo_user;"
+# Create a .env.deploy file with your database credentials
+cat > .env.deploy << EOL
+DB_USER=keeviqo_user
+DB_PASSWORD=your_secure_password_here
+DB_NAME=keeviqo_prod
+EOL
+
+# Setup the database using environment variables
+source .env.deploy
+sudo -u postgres psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
+sudo -u postgres psql -c "CREATE DATABASE $DB_NAME OWNER $DB_USER;"
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;"
 ```
 
 3. **Clone Repository**
@@ -93,9 +102,11 @@ Create a `.env` file with the following content:
 ```
 NODE_ENV=production
 PORT=3000
-DATABASE_URL=postgres://keeviqo_user:secure_password@localhost:5432/keeviqo_prod
-SESSION_SECRET=keeviqo_production_secret
+DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@localhost:5432/${DB_NAME}
+SESSION_SECRET=your_session_secret_here
 ```
+
+Make sure to replace `your_session_secret_here` with a strong, unique secret value.
 
 6. **Setup Nginx and SSL**
 
@@ -185,13 +196,16 @@ If you encounter issues during deployment:
 It's recommended to set up regular database backups:
 
 ```bash
-# Create a backup script
+# Create a backup script using environment variables
 cat > /etc/cron.daily/backup-keeviqo << EOL
 #!/bin/bash
+# Load environment variables
+source /var/www/keeviqo/.env.deploy
+
 BACKUP_DIR="/var/backups/keeviqo"
 mkdir -p \$BACKUP_DIR
 DATE=\$(date +%Y-%m-%d)
-pg_dump -U keeviqo_user keeviqo_prod > \$BACKUP_DIR/keeviqo-\$DATE.sql
+pg_dump -U \$DB_USER \$DB_NAME > \$BACKUP_DIR/keeviqo-\$DATE.sql
 find \$BACKUP_DIR -type f -name "keeviqo-*.sql" -mtime +7 -delete
 EOL
 

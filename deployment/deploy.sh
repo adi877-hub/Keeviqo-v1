@@ -3,13 +3,18 @@ set -e
 
 echo "Starting Keeviqo deployment process..."
 
-APP_NAME="keeviqo"
-DEPLOY_DIR="/var/www/$APP_NAME"
-REPO_URL="https://github.com/adi877-hub/Keeviqo-v1.git"
-BRANCH="main"
-DB_NAME="keeviqo_prod"
-DB_USER="keeviqo_user"
-DOMAIN="keeviqo.com"
+if [ ! -f ".env.deploy" ]; then
+    echo "Error: .env.deploy file not found. Please create it with the required variables."
+    echo "Required variables: APP_NAME, DEPLOY_DIR, REPO_URL, BRANCH, DB_NAME, DB_USER, DB_PASSWORD, DOMAIN, SESSION_SECRET"
+    exit 1
+fi
+
+source .env.deploy
+
+if [ -z "$APP_NAME" ] || [ -z "$DEPLOY_DIR" ] || [ -z "$REPO_URL" ] || [ -z "$BRANCH" ] || [ -z "$DB_NAME" ] || [ -z "$DB_USER" ] || [ -z "$DB_PASSWORD" ] || [ -z "$DOMAIN" ] || [ -z "$SESSION_SECRET" ]; then
+    echo "Error: Missing required environment variables in .env.deploy file."
+    exit 1
+fi
 
 if [ "$(id -u)" -ne 0 ]; then
     echo "This script must be run as root" 
@@ -24,7 +29,7 @@ echo "Installing dependencies..."
 apt-get install -y nginx postgresql postgresql-contrib nodejs npm certbot python3-certbot-nginx git
 
 echo "Setting up PostgreSQL database..."
-sudo -u postgres psql -c "CREATE USER $DB_USER WITH PASSWORD 'secure_password';"
+sudo -u postgres psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
 sudo -u postgres psql -c "CREATE DATABASE $DB_NAME OWNER $DB_USER;"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;"
 
@@ -48,8 +53,8 @@ echo "Setting up environment variables..."
 cat > $DEPLOY_DIR/.env << EOL
 NODE_ENV=production
 PORT=3000
-DATABASE_URL=postgres://$DB_USER:secure_password@localhost:5432/$DB_NAME
-SESSION_SECRET=keeviqo_production_secret
+DATABASE_URL=postgres://$DB_USER:$DB_PASSWORD@localhost:5432/$DB_NAME
+SESSION_SECRET=$SESSION_SECRET
 EOL
 
 echo "Configuring Nginx..."
