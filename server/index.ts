@@ -14,6 +14,7 @@ import reminderRoutes from './routes/reminders.js';
 import formRoutes from './routes/forms.js';
 import qrRoutes from './routes/qrcode.js';
 import emergencyRoutes from './routes/emergency.js';
+import externalSystemsRoutes from './routes/external-systems.js';
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ app.use('/api/reminders', reminderRoutes);
 app.use('/api/forms', formRoutes);
 app.use('/api/qr', qrRoutes);
 app.use('/api/user/emergency-contacts', emergencyRoutes);
+app.use('/api/external-systems', externalSystemsRoutes);
 
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
