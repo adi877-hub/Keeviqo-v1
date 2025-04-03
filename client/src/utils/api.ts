@@ -62,7 +62,18 @@ export async function fetchFeature(id: number): Promise<Feature> {
   return fetchFromAPI<Feature>(`/features/${id}`);
 }
 
-export async function uploadDocument(file: File, featureId: number, metadata?: Record<string, any>): Promise<any> {
+export interface UploadResponse {
+  id: number;
+  name: string;
+  path: string;
+  mimeType: string;
+  size: number;
+  featureId: number;
+  userId?: number;
+  createdAt: string;
+}
+
+export async function uploadDocument(file: File, featureId: number, metadata?: Record<string, unknown>): Promise<UploadResponse> {
   const formData = new FormData();
   formData.append('file', file);
   formData.append('featureId', featureId.toString());
@@ -88,27 +99,40 @@ export interface Reminder {
   completed?: boolean;
 }
 
-export async function createReminder(reminder: Reminder): Promise<any> {
+export interface ReminderResponse extends Reminder {
+  id: number;
+  createdAt: string;
+}
+
+export async function createReminder(reminder: Reminder): Promise<ReminderResponse> {
   return fetchFromAPI('/reminders', {
     method: 'POST',
     body: JSON.stringify(reminder),
   });
 }
 
-export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<any> {
+export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<ReminderResponse> {
   return fetchFromAPI(`/reminders/${id}`, {
     method: 'PUT',
     body: JSON.stringify(reminder),
   });
 }
 
-export async function submitFormData(data: Record<string, any>, featureId: number): Promise<any> {
+export interface FormDataResponse {
+  id: number;
+  data: Record<string, unknown>;
+  featureId: number;
+  userId?: number;
+  createdAt: string;
+}
+
+export async function submitFormData(data: Record<string, unknown>, featureId: number): Promise<FormDataResponse> {
   return fetchFromAPI('/forms', {
     method: 'POST',
     body: JSON.stringify({ data, featureId }),
   });
 }
 
-export async function fetchFormData(featureId: number): Promise<any[]> {
+export async function fetchFormData(featureId: number): Promise<FormDataResponse[]> {
   return fetchFromAPI<any[]>(`/forms/feature/${featureId}`);
 }
