@@ -19,24 +19,48 @@ fi
 echo "📦 Installing dependencies..."
 npm install
 
-if [ ! -f .env ]; then
-    echo "Creating .env file..."
-    cat > .env << EOF
+if [ ! -f .env.example ]; then
+    echo "Creating .env.example file..."
+    cat > .env.example << EOF
 PORT=3000
-DATABASE_URL=postgres://postgres:postgres@localhost:5432/keeviqo
-TEST_DATABASE_URL=postgres://postgres:postgres@localhost:5432/keeviqo_test
-SESSION_SECRET=keeviqo-dev-secret-$(openssl rand -hex 12)
+DATABASE_URL=postgres://username:password@localhost:5432/keeviqo
+TEST_DATABASE_URL=postgres://username:password@localhost:5432/keeviqo_test
+SESSION_SECRET=your-session-secret-here
 NODE_ENV=development
 EOF
 fi
 
+if [ ! -f .env ]; then
+    echo "Setting up environment variables..."
+    echo "Please enter your PostgreSQL username (default: postgres):"
+    read PG_USER
+    PG_USER=${PG_USER:-postgres}
+    
+    echo "Please enter your PostgreSQL password:"
+    read -s PG_PASSWORD
+    
+    SESSION_SECRET=$(openssl rand -hex 24)
+    
+    echo "Creating .env file..."
+    cat > .env << EOF
+PORT=3000
+DATABASE_URL=postgres://${PG_USER}:${PG_PASSWORD}@localhost:5432/keeviqo
+TEST_DATABASE_URL=postgres://${PG_USER}:${PG_PASSWORD}@localhost:5432/keeviqo_test
+SESSION_SECRET=${SESSION_SECRET}
+NODE_ENV=development
+EOF
+    echo ".env file created successfully!"
+fi
+
 echo "🗄️ Setting up PostgreSQL database..."
+DB_USER=$(grep DATABASE_URL .env | cut -d'/' -f3 | cut -d':' -f1)
+
 if sudo -u postgres psql -lqt | cut -d \| -f 1 | grep -qw keeviqo; then
     echo "Database 'keeviqo' already exists"
 else
     echo "Creating database 'keeviqo'..."
     sudo -u postgres psql -c "CREATE DATABASE keeviqo;"
-    sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE keeviqo TO postgres;"
+    sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE keeviqo TO ${DB_USER};"
 fi
 
 if sudo -u postgres psql -lqt | cut -d \| -f 1 | grep -qw keeviqo_test; then
@@ -44,7 +68,7 @@ if sudo -u postgres psql -lqt | cut -d \| -f 1 | grep -qw keeviqo_test; then
 else
     echo "Creating database 'keeviqo_test'..."
     sudo -u postgres psql -c "CREATE DATABASE keeviqo_test;"
-    sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE keeviqo_test TO postgres;"
+    sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE keeviqo_test TO ${DB_USER};"
 fi
 
 if [ ! -d "uploads" ]; then
@@ -82,5 +106,3 @@ echo "- npm run test    : Run tests"
 echo "- npm run lint    : Run ESLint"
 echo ""
 echo "To access the application, open http://localhost:3000 in your browser"
-
-chmod +x setup-local-dev.sh
