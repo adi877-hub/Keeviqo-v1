@@ -104,6 +104,8 @@
     "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.27.0",
     "@eslint/js": "^9.23.0",
     "@jest/globals": "^29.7.0",
     "@replit/vite-plugin-cartographer": "^0.0.11",

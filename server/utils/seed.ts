@@ -2,13 +2,12 @@ import { db } from './db';
 import * as schema from '../../shared/schema';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = process.cwd();
 
 async function seedCategories() {
   try {
-    const categoriesData = JSON.parse(fs.readFileSync(path.join(__dirname, '../../categories.json'), 'utf-8'));
+    const categoriesData = JSON.parse(fs.readFileSync(path.join(rootDir, 'categories.json'), 'utf-8'));
     
     for (const category of categoriesData) {
       await db.insert(schema.categories).values({

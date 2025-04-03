@@ -5,11 +5,10 @@ const { Pool } = pkg;
 import * as schema from '../../shared/schema';
 import dotenv from 'dotenv';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
 dotenv.config();
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = process.cwd();
 
 async function runMigration() {
   console.log('Starting database migration...');
@@ -21,7 +20,7 @@ async function runMigration() {
   const db = drizzle(pool, { schema });
   
   try {
-    await migrate(db, { migrationsFolder: path.join(__dirname, '../../drizzle') });
+    await migrate(db, { migrationsFolder: path.join(rootDir, 'drizzle') });
     console.log('Migration completed successfully');
     
     await pool.end();
