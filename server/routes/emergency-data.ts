@@ -2,9 +2,11 @@ import express from 'express';
 
 const router = express.Router();
 
+import { EmergencyData, EmergencyUser, MedicalInfo, EmergencyDocument } from '../../shared/types';
+
 router.get('/', async (req, res) => {
   try {
-    const emergencyData = {
+    const emergencyData: EmergencyData = {
       user: {
         name: 'דוד כהן',
         id: '123456789',

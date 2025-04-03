@@ -60,26 +60,30 @@ router.post('/register', async (req, res) => {
       dataEncryptionKeyId: encryptionKey.id
     }).returning();
     
-    await createOTP(user?.id ?? 0, 'email', 'verification');
+    if (!user?.id) {
+      throw new Error('User creation failed');
+    }
+
+    await createOTP(user.id, 'email', 'verification');
     
     createAuditLog(
-      user?.id ?? 0,
+      user.id,
       'register',
       'user',
-      (user?.id ?? 0).toString(),
+      user.id.toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { email: user?.email ?? '' }
+      { email: user.email || '' }
     ).catch(err => console.error('Failed to create audit log:', err));
     
     res.status(201).json({
       message: 'User registered successfully',
       user: {
-        id: user?.id ?? 0,
-        uuid: user.uuid,
-        name: user.name,
-        email: user?.email ?? '',
-        role: user.role
+        id: user.id,
+        uuid: user.uuid || '',
+        name: user.name || '',
+        email: user.email || '',
+        role: user.role || 'user'
       }
     });
   } catch (error) {
@@ -115,11 +119,11 @@ router.post('/login', async (req, res) => {
     if (!isPasswordValid) {
       const loginAttempts = (user.loginAttempts || 0) + 1;
       
-      let lockedUntil = null;
+      let lockedUntil: Date | null = null;
       if (loginAttempts >= 5) {
         const lockTime = new Date();
         lockTime.setMinutes(lockTime.getMinutes() + 30); // Lock for 30 minutes
-        lockedUntil = lockTime as unknown as null;
+        lockedUntil = lockTime;
       }
       
       await db
@@ -142,37 +146,45 @@ router.post('/login', async (req, res) => {
       })
       .where(eq(schema.users.id, user?.id ?? 0));
     
+    if (!user?.id) {
+      throw new Error('User ID is required');
+    }
+
     if (user.twoFactorEnabled) {
-      await createOTP(user?.id ?? 0, 'app', 'login');
+      await createOTP(user.id, 'app', 'login');
       
       return res.status(200).json({
         message: 'OTP sent for verification',
-        userId: user?.id ?? 0,
+        userId: user.id,
         requiresOTP: true
       });
     }
     
-    const token = generateToken(user?.id ?? 0, user.uuid || '', user.role || 'user');
+    if (!user?.id) {
+      throw new Error('User ID is required');
+    }
+
+    const token = generateToken(user.id, user.uuid || '', user.role || 'user');
     
     createAuditLog(
-      user?.id ?? 0,
+      user.id,
       'login',
       'user',
-      (user?.id ?? 0).toString(),
+      user.id.toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { email: user?.email ?? '' }
+      { email: user.email || '' }
     ).catch(err => console.error('Failed to create audit log:', err));
     
     res.status(200).json({
       message: 'Login successful',
       token,
       user: {
-        id: user?.id ?? 0,
-        uuid: user.uuid,
-        name: user.name,
-        email: user?.email ?? '',
-        role: user.role
+        id: user.id,
+        uuid: user.uuid || '',
+        name: user.name || '',
+        email: user.email || '',
+        role: user.role || 'user'
       }
     });
   } catch (error) {
@@ -215,27 +227,35 @@ router.post('/verify-otp', async (req, res) => {
       
       return res.status(200).json({ message: 'Email verified successfully' });
     } else if (purpose === 'login') {
-      const token = generateToken(user?.id ?? 0, user.uuid || '', user.role || 'user');
+      if (!user?.id) {
+        throw new Error('User ID is required');
+      }
+
+      const token = generateToken(user.id, user.uuid || '', user.role || 'user');
       
       createAuditLog(
-        user?.id ?? 0,
+        user.id,
         'login_with_otp',
         'user',
-        (user?.id ?? 0).toString(),
+        user.id.toString(),
         req.ip || '0.0.0.0',
         req.headers['user-agent'] || 'unknown',
-        { email: user?.email ?? '' }
+        { email: user.email || '' }
       ).catch(err => console.error('Failed to create audit log:', err));
       
+      if (!user?.id) {
+        throw new Error('User ID is required');
+      }
+
       return res.status(200).json({
         message: 'Login successful',
         token,
         user: {
-          id: user?.id ?? 0,
-          uuid: user?.uuid ?? '',
-          name: user?.name ?? '',
-          email: user?.email ?? '',
-          role: user?.role ?? 'user'
+          id: user.id,
+          uuid: user.uuid || '',
+          name: user.name || '',
+          email: user.email || '',
+          role: user.role || 'user'
         }
       });
     } else if (purpose === 'password_reset') {
@@ -268,16 +288,20 @@ router.post('/forgot-password', async (req, res) => {
       return res.status(200).json({ message: 'If your email is registered, you will receive a password reset link' });
     }
     
-    await createOTP(user?.id ?? 0, 'email', 'password_reset', 60); // 60 minutes expiry
+    if (!user?.id) {
+      throw new Error('User ID is required');
+    }
+
+    await createOTP(user.id, 'email', 'password_reset', 60); // 60 minutes expiry
     
     createAuditLog(
-      user?.id ?? 0,
+      user.id,
       'password_reset_request',
       'user',
-      (user?.id ?? 0).toString(),
+      user.id.toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
-      { email: user?.email ?? '' }
+      { email: user.email || '' }
     ).catch(err => console.error('Failed to create audit log:', err));
     
     res.status(200).json({ message: 'If your email is registered, you will receive a password reset link' });
@@ -354,15 +378,15 @@ router.get('/me', authenticate, (req: AuthRequest, res) => {
  */
 router.post('/logout', authenticate, (req: AuthRequest, res) => {
   try {
-    if (!req.user) {
+    if (!req.user?.id) {
       return res.status(401).json({ error: 'Authentication required' });
     }
     
     createAuditLog(
-      req.user?.id ?? 0,
+      req.user.id,
       'logout',
       'user',
-      (req.user?.id ?? 0).toString(),
+      req.user.id.toString(),
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
       {}

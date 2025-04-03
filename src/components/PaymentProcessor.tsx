@@ -5,7 +5,7 @@ import { processPayment, generateInvoice, PaymentData } from '../utils/api';
 interface PaymentProcessorProps {
   amount: number;
   description: string;
-  onSuccess?: (data: any) => void;
+  onSuccess?: (data: { id: number; status: string; amount: number; currency: string }) => void;
   onError?: (error: string) => void;
 }
 

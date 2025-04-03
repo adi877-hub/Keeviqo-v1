@@ -27,8 +27,35 @@ export interface PartnerRequest extends Request {
 }
 
 export interface EmergencyUser {
+  name: string;
+  id: string;
+  dateOfBirth: string;
+  address: string;
+  phone: string;
+}
+
+export interface MedicalInfo {
+  bloodType: string;
+  allergies: string[];
+  medications: string[];
+  conditions: string[];
+  doctorName: string;
+  doctorPhone: string;
+  insuranceProvider: string;
+  insuranceNumber: string;
+}
+
+export interface EmergencyDocument {
   id: number;
-  uuid: string;
+  name: string;
+  type: string;
+  url: string;
+}
+
+export interface EmergencyData {
+  user: EmergencyUser;
+  medicalInfo: MedicalInfo;
+  documents: EmergencyDocument[];
 }
 
 export interface EmergencyRequest extends Request {
