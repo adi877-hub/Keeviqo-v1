@@ -107,7 +107,7 @@ router.post('/', authenticate, authorize(['admin']), async (req: AuthRequest, re
  * Update a government partner (admin only)
  * PUT /api/government-partners/:id
  */
-router.put('/:id', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.put('/:id', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.id);
     const { name, description, country, region, contactEmail, contactPhone, website, type, status, active } = req.body;
@@ -166,7 +166,7 @@ router.put('/:id', authenticate as any, authorize(['admin']) as any, async (req:
  * Regenerate API credentials for a government partner (admin only)
  * POST /api/government-partners/:id/regenerate-credentials
  */
-router.post('/:id/regenerate-credentials', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.post('/:id/regenerate-credentials', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.id);
     
@@ -218,7 +218,7 @@ router.post('/:id/regenerate-credentials', authenticate as any, authorize(['admi
  * Delete a government partner (admin only)
  * DELETE /api/government-partners/:id
  */
-router.delete('/:id', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.delete('/:id', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.id);
     
@@ -257,7 +257,7 @@ router.delete('/:id', authenticate as any, authorize(['admin']) as any, async (r
  * Add a service to a government partner (admin only)
  * POST /api/government-partners/:id/services
  */
-router.post('/:id/services', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.post('/:id/services', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.id);
     const { name, description, apiEndpoint, category, requiredScopes, dataFields } = req.body;
@@ -312,7 +312,7 @@ router.post('/:id/services', authenticate as any, authorize(['admin']) as any, a
  * Update a government service (admin only)
  * PUT /api/government-partners/:partnerId/services/:serviceId
  */
-router.put('/:partnerId/services/:serviceId', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.put('/:partnerId/services/:serviceId', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.partnerId);
     const serviceId = parseInt(req.params.serviceId);
