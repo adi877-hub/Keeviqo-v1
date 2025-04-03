@@ -4,6 +4,7 @@ import * as schema from '../../shared/schema.js';
 import { eq, and } from 'drizzle-orm';
 import { authenticatePartner, authenticate, authorize, AuthRequest } from '../middleware/auth.js';
 import { generateAPIKey, generateAPISecret, createAuditLog } from '../utils/security.js';
+import { PartnerRequest } from '../../shared/types.js';
 
 const router = express.Router();
 
@@ -374,7 +375,7 @@ router.put('/:partnerId/services/:serviceId', authenticate, authorize(['admin'])
  * Delete a government service (admin only)
  * DELETE /api/government-partners/:partnerId/services/:serviceId
  */
-router.delete('/:partnerId/services/:serviceId', authenticate as any, authorize(['admin']) as any, async (req: AuthRequest, res) => {
+router.delete('/:partnerId/services/:serviceId', authenticate, authorize(['admin']), async (req: AuthRequest, res) => {
   try {
     const partnerId = parseInt(req.params.partnerId);
     const serviceId = parseInt(req.params.serviceId);
@@ -420,10 +421,10 @@ router.delete('/:partnerId/services/:serviceId', authenticate as any, authorize(
  * Partner API endpoint to verify user identity
  * POST /api/government-partners/verify-identity
  */
-router.post('/verify-identity', authenticatePartner as any, async (req, res) => {
+router.post('/verify-identity', authenticatePartner, async (req: PartnerRequest, res) => {
   try {
     const { userId, identityData } = req.body;
-    const partner = (req as any).partner;
+    const partner = req.partner;
     
     if (!userId || !identityData) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -442,8 +443,8 @@ router.post('/verify-identity', authenticatePartner as any, async (req, res) => 
       verified: true,
       verificationId: `VER-${Date.now()}-${userId}`,
       timestamp: new Date(),
-      partnerId: partner.id,
-      partnerName: partner.name
+      partnerId: partner?.id || 0,
+      partnerName: partner?.name || 'Unknown Partner'
     };
     
     createAuditLog(
@@ -454,8 +455,8 @@ router.post('/verify-identity', authenticatePartner as any, async (req, res) => 
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
       { 
-        partnerId: partner.id,
-        partnerName: partner.name,
+        partnerId: partner?.id || 0,
+        partnerName: partner?.name || 'Unknown Partner',
         verificationResult
       },
       'warning'
@@ -475,10 +476,10 @@ router.post('/verify-identity', authenticatePartner as any, async (req, res) => 
  * Partner API endpoint to submit document verification
  * POST /api/government-partners/verify-document
  */
-router.post('/verify-document', authenticatePartner as any, async (req, res) => {
+router.post('/verify-document', authenticatePartner, async (req: PartnerRequest, res) => {
   try {
     const { userId, documentId, verificationResult } = req.body;
-    const partner = (req as any).partner;
+    const partner = req.partner;
     
     if (!userId || !documentId || !verificationResult) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -504,7 +505,7 @@ router.post('/verify-document', authenticatePartner as any, async (req, res) => 
       .set({
         verificationStatus: verificationResult.status,
         verificationDetails: verificationResult,
-        verifiedBy: partner.id,
+        verifiedBy: partner?.id || 0,
         verifiedAt: new Date()
       })
       .where(eq(schema.documents.id, documentId))
@@ -518,8 +519,8 @@ router.post('/verify-document', authenticatePartner as any, async (req, res) => 
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
       { 
-        partnerId: partner.id,
-        partnerName: partner.name,
+        partnerId: partner?.id || 0,
+        partnerName: partner?.name || 'Unknown Partner',
         documentName: document.name,
         verificationStatus: verificationResult.status
       },
@@ -572,7 +573,7 @@ router.post('/authorize-service', authenticate as any, async (req: AuthRequest, 
     }
     
     const allowedScopes = service.requiredScopes || [];
-    let scopesArray: string[] = [];
+    const scopesArray: string[] = [];
     if (Array.isArray(allowedScopes)) {
       for (const scope of allowedScopes as unknown[]) {
         scopesArray.push(String(scope));
@@ -721,14 +722,14 @@ router.get('/my-authorizations', authenticate as any, async (req: AuthRequest, r
  * Partner API endpoint to check if a user has authorized a service
  * GET /api/government-partners/check-authorization
  */
-router.get('/check-authorization', authenticatePartner as any, async (req, res) => {
+router.get('/check-authorization', authenticatePartner, async (req: PartnerRequest, res) => {
   try {
     const { userId, serviceId, requiredScopes } = req.query as { 
       userId?: string, 
       serviceId?: string, 
       requiredScopes?: string 
     };
-    const partner = (req as any).partner;
+    const partner = req.partner;
     
     if (!userId || !serviceId) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -737,7 +738,7 @@ router.get('/check-authorization', authenticatePartner as any, async (req, res) 
     const service = await db.query.governmentServices.findFirst({
       where: and(
         eq(schema.governmentServices.id, parseInt(serviceId as string)),
-        eq(schema.governmentServices.partnerId, partner.id)
+        eq(schema.governmentServices.partnerId, partner?.id || 0)
       ),
       with: {
         partner: true
@@ -776,7 +777,7 @@ router.get('/check-authorization', authenticatePartner as any, async (req, res) 
       
       const authorizedScopes = authorization.scopes || [];
       
-      let authorizedScopesArray: string[] = [];
+      const authorizedScopesArray: string[] = [];
       if (Array.isArray(authorizedScopes)) {
         for (const scope of authorizedScopes as unknown[]) {
           authorizedScopesArray.push(String(scope));
@@ -803,8 +804,8 @@ router.get('/check-authorization', authenticatePartner as any, async (req, res) 
       req.ip || '0.0.0.0',
       req.headers['user-agent'] || 'unknown',
       { 
-        partnerId: partner.id,
-        partnerName: partner.name || 'Unknown Partner',
+        partnerId: partner?.id || 0,
+        partnerName: partner?.name || 'Unknown Partner',
         serviceName: service.name || 'Unknown Service'
       },
       'info'

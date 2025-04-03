@@ -62,7 +62,18 @@ export async function fetchFeature(id: number): Promise<Feature> {
   return fetchFromAPI<Feature>(`/features/${id}`);
 }
 
-export async function uploadDocument(file: File, featureId: number, metadata?: Record<string, any>): Promise<any> {
+export interface UploadResponse {
+  id: number;
+  name: string;
+  path: string;
+  mimeType: string;
+  size: number;
+  featureId: number;
+  userId?: number;
+  createdAt: string;
+}
+
+export async function uploadDocument(file: File, featureId: number, metadata?: Record<string, unknown>): Promise<UploadResponse> {
   const formData = new FormData();
   formData.append('file', file);
   formData.append('featureId', featureId.toString());
@@ -88,29 +99,42 @@ export interface Reminder {
   completed?: boolean;
 }
 
-export async function createReminder(reminder: Reminder): Promise<any> {
+export interface ReminderResponse extends Reminder {
+  id: number;
+  createdAt: string;
+}
+
+export async function createReminder(reminder: Reminder): Promise<ReminderResponse> {
   return fetchFromAPI('/reminders', {
     method: 'POST',
     body: JSON.stringify(reminder),
   });
 }
 
-export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<any> {
+export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<ReminderResponse> {
   return fetchFromAPI(`/reminders/${id}`, {
     method: 'PUT',
     body: JSON.stringify(reminder),
   });
 }
 
-export async function submitFormData(data: Record<string, any>, featureId: number): Promise<any> {
+export interface FormDataResponse {
+  id: number;
+  data: Record<string, unknown>;
+  featureId: number;
+  userId?: number;
+  createdAt: string;
+}
+
+export async function submitFormData(data: Record<string, unknown>, featureId: number): Promise<FormDataResponse> {
   return fetchFromAPI('/forms', {
     method: 'POST',
     body: JSON.stringify({ data, featureId }),
   });
 }
 
-export async function fetchFormData(featureId: number): Promise<any[]> {
-  return fetchFromAPI<any[]>(`/forms/feature/${featureId}`);
+export async function fetchFormData(featureId: number): Promise<FormDataResponse[]> {
+  return fetchFromAPI<FormDataResponse[]>(`/forms/feature/${featureId}`);
 }
 
 export interface ContactFormData {
@@ -120,7 +144,14 @@ export interface ContactFormData {
   message: string;
 }
 
-export async function sendContactForm(data: ContactFormData): Promise<any> {
+export interface ContactFormResponse {
+  id: number;
+  status: string;
+  message: string;
+  createdAt: string;
+}
+
+export async function sendContactForm(data: ContactFormData): Promise<ContactFormResponse> {
   return fetchFromAPI('/contact', {
     method: 'POST',
     body: JSON.stringify(data),
@@ -138,14 +169,30 @@ export interface PaymentData {
   };
 }
 
-export async function processPayment(data: PaymentData): Promise<any> {
+export interface PaymentResponse {
+  id: number;
+  status: string;
+  transactionId: string;
+  amount: number;
+  currency: string;
+  createdAt: string;
+}
+
+export async function processPayment(data: PaymentData): Promise<PaymentResponse> {
   return fetchFromAPI('/payments/process', {
     method: 'POST',
     body: JSON.stringify(data),
   });
 }
 
-export async function generateQRCode(data: string): Promise<any> {
+export interface QRCodeResponse {
+  id: number;
+  url: string;
+  data: string;
+  createdAt: string;
+}
+
+export async function generateQRCode(data: string): Promise<QRCodeResponse> {
   return fetchFromAPI('/qr/generate', {
     method: 'POST',
     body: JSON.stringify({ data }),
@@ -173,21 +220,41 @@ export async function updateUserProfile(data: Partial<UserProfile>): Promise<Use
   });
 }
 
-export async function setUserTheme(theme: 'light' | 'dark'): Promise<any> {
+export interface ThemeResponse {
+  success: boolean;
+  theme: 'light' | 'dark';
+  userId: number;
+}
+
+export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
   return fetchFromAPI('/user/theme', {
     method: 'POST',
     body: JSON.stringify({ theme }),
   });
 }
 
-export async function setUserLanguage(language: 'he' | 'en'): Promise<any> {
+export interface LanguageResponse {
+  success: boolean;
+  language: 'he' | 'en';
+  userId: number;
+}
+
+export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
   return fetchFromAPI('/user/language', {
     method: 'POST',
     body: JSON.stringify({ language }),
   });
 }
 
-export async function generateInvoice(paymentId: number): Promise<any> {
+export interface InvoiceResponse {
+  id: number;
+  paymentId: number;
+  invoiceNumber: string;
+  downloadUrl: string;
+  createdAt: string;
+}
+
+export async function generateInvoice(paymentId: number): Promise<InvoiceResponse> {
   return fetchFromAPI(`/payments/${paymentId}/invoice`, {
     method: 'POST',
   });
@@ -206,7 +273,13 @@ export interface EmergencyContact {
   accessLevel: 'basic' | 'medical' | 'full';
 }
 
-export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<any> {
+export interface EmergencyContactResponse {
+  success: boolean;
+  message: string;
+  contacts: EmergencyContact[];
+}
+
+export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
   return fetchFromAPI('/user/emergency-contacts', {
     method: 'POST',
     body: JSON.stringify({ contacts }),
