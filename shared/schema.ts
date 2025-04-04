@@ -263,6 +263,35 @@ export const userServiceAuthorizationsRelations = relations(userServiceAuthoriza
   }),
 }));
 
+export const notifications = pgTable('notifications', {
+  id: serial('id').primaryKey(),
+  userId: integer('user_id').references(() => users.id),
+  subject: varchar('subject', { length: 255 }),
+  message: text('message'),
+  sentViaEmail: boolean('sent_via_email').default(false),
+  sentViaWhatsApp: boolean('sent_via_whatsapp').default(false),
+  category: varchar('category', { length: 100 }),
+  priority: varchar('priority', { length: 20 }).default('medium'),
+  read: boolean('read').default(false),
+  readAt: timestamp('read_at'),
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
+export const userPreferences = pgTable('user_preferences', {
+  id: serial('id').primaryKey(),
+  userId: integer('user_id').references(() => users.id).unique(),
+  theme: varchar('theme', { length: 20 }).default('light'),
+  language: varchar('language', { length: 10 }).default('he'),
+  emailNotifications: boolean('email_notifications').default(true),
+  whatsappNotifications: boolean('whatsapp_notifications').default(true),
+  notificationCategories: json('notification_categories'),
+  quietHoursEnabled: boolean('quiet_hours_enabled').default(false),
+  quietHoursStart: varchar('quiet_hours_start', { length: 5 }).default('22:00'),
+  quietHoursEnd: varchar('quiet_hours_end', { length: 5 }).default('08:00'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
 export const updatedUserRelations = relations(users, ({ many, one }) => ({
   documents: many(documents),
   reminders: many(reminders),
@@ -271,8 +300,27 @@ export const updatedUserRelations = relations(users, ({ many, one }) => ({
   serviceAuthorizations: many(userServiceAuthorizations),
   auditLogs: many(auditLogs),
   otpCodes: many(otpCodes),
+  notifications: many(notifications),
+  preferences: one(userPreferences, {
+    fields: [users.id],
+    references: [userPreferences.userId],
+  }),
   encryptionKey: one(encryptionKeys, {
     fields: [users.dataEncryptionKeyId],
     references: [encryptionKeys.id],
+  }),
+}));
+
+export const notificationsRelations = relations(notifications, ({ one }) => ({
+  user: one(users, {
+    fields: [notifications.userId],
+    references: [users.id],
+  }),
+}));
+
+export const userPreferencesRelations = relations(userPreferences, ({ one }) => ({
+  user: one(users, {
+    fields: [userPreferences.userId],
+    references: [users.id],
   }),
 }));
