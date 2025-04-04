@@ -1,4 +1,3 @@
-
 const API_BASE_URL = '/api';
 
 async function fetchFromAPI<T>(endpoint: string, options?: RequestInit): Promise<T> {
@@ -105,20 +104,13 @@ export interface ReminderResponse extends Reminder {
 }
 
 export async function createReminder(reminder: Reminder): Promise<ReminderResponse> {
-
-  return fetchFromAPI('/reminders', {
-
   return fetchFromAPI<ReminderResponse>('/reminders', {
-
     method: 'POST',
     body: JSON.stringify(reminder),
   });
 }
 
 export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<ReminderResponse> {
-
-  return fetchFromAPI(`/reminders/${id}`, {
-
   return fetchFromAPI<ReminderResponse>(`/reminders/${id}`, {
     method: 'PUT',
     body: JSON.stringify(reminder),
@@ -134,11 +126,7 @@ export interface FormDataResponse {
 }
 
 export async function submitFormData(data: Record<string, unknown>, featureId: number): Promise<FormDataResponse> {
-
-  return fetchFromAPI('/forms', {
-
   return fetchFromAPI<FormDataResponse>('/forms', {
-
     method: 'POST',
     body: JSON.stringify({ data, featureId }),
   });
@@ -163,11 +151,7 @@ export interface ContactFormResponse {
 }
 
 export async function sendContactForm(data: ContactFormData): Promise<ContactFormResponse> {
-
-  return fetchFromAPI('/contact', {
-
   return fetchFromAPI<ContactFormResponse>('/contact', {
-
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -190,19 +174,12 @@ export interface PaymentResponse {
   transactionId: string;
   amount: number;
   currency: string;
-
-
   method: string;
-
   createdAt: string;
 }
 
 export async function processPayment(data: PaymentData): Promise<PaymentResponse> {
-
-  return fetchFromAPI('/payments/process', {
-
   return fetchFromAPI<PaymentResponse>('/payments/process', {
-
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -216,11 +193,7 @@ export interface QRCodeResponse {
 }
 
 export async function generateQRCode(data: string): Promise<QRCodeResponse> {
-
-  return fetchFromAPI('/qr/generate', {
-
   return fetchFromAPI<QRCodeResponse>('/qr/generate', {
-
     method: 'POST',
     body: JSON.stringify({ data }),
   });
@@ -251,18 +224,11 @@ export interface ThemeResponse {
   success: boolean;
   theme: 'light' | 'dark';
   userId: number;
-
-}
-
-export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
-  return fetchFromAPI('/user/theme', {
-
-updatedAt: string;
+  updatedAt: string;
 }
 
 export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
   return fetchFromAPI<ThemeResponse>('/user/theme', {
-
     method: 'POST',
     body: JSON.stringify({ theme }),
   });
@@ -272,18 +238,11 @@ export interface LanguageResponse {
   success: boolean;
   language: 'he' | 'en';
   userId: number;
-
-}
-
-export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
-  return fetchFromAPI('/user/language', {
-
   updatedAt: string;
 }
 
 export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
   return fetchFromAPI<LanguageResponse>('/user/language', {
-
     method: 'POST',
     body: JSON.stringify({ language }),
   });
@@ -291,24 +250,15 @@ export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageRe
 
 export interface InvoiceResponse {
   id: number;
-
   paymentId: number;
   invoiceNumber: string;
   downloadUrl: string;
-
-  invoiceNumber: string;
-  paymentId: number;
   url: string;
-
   createdAt: string;
 }
 
 export async function generateInvoice(paymentId: number): Promise<InvoiceResponse> {
-
-  return fetchFromAPI(`/payments/${paymentId}/invoice`, {
-
   return fetchFromAPI<InvoiceResponse>(`/payments/${paymentId}/invoice`, {
-
     method: 'POST',
   });
 }
@@ -328,14 +278,7 @@ export interface EmergencyContact {
 
 export interface EmergencyContactResponse {
   success: boolean;
-
   message: string;
-  contacts: EmergencyContact[];
-}
-
-export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
-  return fetchFromAPI('/user/emergency-contacts', {
-
   contacts: EmergencyContact[];
   userId: number;
   updatedAt: string;
@@ -343,7 +286,6 @@ export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promi
 
 export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
   return fetchFromAPI<EmergencyContactResponse>('/user/emergency-contacts', {
-
     method: 'POST',
     body: JSON.stringify({ contacts }),
   });
@@ -389,5 +331,217 @@ export async function updateEmergencyData(data: Partial<EmergencyData>): Promise
   return fetchFromAPI<EmergencyData>('/user/emergency-data', {
     method: 'PUT',
     body: JSON.stringify(data),
+  });
+}
+
+export interface AnalyticsData {
+  userActivity: {
+    date: string;
+    logins: number;
+    documentUploads: number;
+    formSubmissions: number;
+    reminderCreations: number;
+  }[];
+  featureUsage: {
+    name: string;
+    value: number;
+  }[];
+  categoryUsage: {
+    name: string;
+    value: number;
+  }[];
+  userGrowth: {
+    date: string;
+    totalUsers: number;
+    activeUsers: number;
+  }[];
+  usersByRole: {
+    name: string;
+    value: number;
+  }[];
+  usersByCountry: {
+    name: string;
+    value: number;
+  }[];
+}
+
+export async function fetchAnalyticsData(timeRange: 'day' | 'week' | 'month' | 'year'): Promise<AnalyticsData> {
+  return fetchFromAPI<AnalyticsData>(`/analytics?timeRange=${timeRange}`);
+}
+
+export interface SearchResult {
+  id: number;
+  type: 'category' | 'subcategory' | 'document' | 'reminder' | 'form';
+  title: string;
+  description?: string;
+  path: string;
+  relevance: number;
+  category?: string;
+  lastUpdated?: string;
+}
+
+export interface SearchOptions {
+  typoTolerance?: boolean;
+  categories?: number[];
+  dateRange?: {
+    start: string;
+    end: string;
+  };
+  sortBy?: 'relevance' | 'date' | 'title';
+  limit?: number;
+}
+
+export async function searchContent(
+  query: string, 
+  options: SearchOptions = { typoTolerance: true }
+): Promise<SearchResult[]> {
+  return fetchFromAPI<SearchResult[]>('/search', {
+    method: 'POST',
+    body: JSON.stringify({ query, options }),
+  });
+}
+
+
+export interface ContextAwareReminder {
+  title: string;
+  description?: string;
+  frequency: 'daily' | 'weekly' | 'monthly' | 'yearly' | 'once' | 'context_based';
+  date: string;
+  priority: 'low' | 'medium' | 'high';
+  contextTriggers?: string[];
+  category?: string;
+  relatedDocuments?: number[];
+}
+
+export interface ReminderWithId extends ContextAwareReminder {
+  id: number;
+  completed: boolean;
+}
+
+export interface UserContext {
+  recentCategories: string[];
+  upcomingEvents: {
+    title: string;
+    date: string;
+    category: string;
+  }[];
+  documentUpdates: {
+    documentId: number;
+    name: string;
+    category: string;
+    lastUpdated: string;
+  }[];
+  seasonalEvents: string[];
+  locationBasedSuggestions: string[];
+}
+
+export async function createContextAwareReminder(reminder: ContextAwareReminder): Promise<ReminderWithId> {
+  return fetchFromAPI<ReminderWithId>('/reminders/context-aware', {
+    method: 'POST',
+    body: JSON.stringify(reminder),
+  });
+}
+
+export async function getUserReminders(): Promise<ReminderWithId[]> {
+  return fetchFromAPI<ReminderWithId[]>('/reminders/user');
+}
+
+export async function deleteReminder(id: number): Promise<{ success: boolean }> {
+  return fetchFromAPI<{ success: boolean }>(`/reminders/${id}`, {
+    method: 'DELETE',
+  });
+}
+
+export async function analyzeUserContext(): Promise<UserContext> {
+  return fetchFromAPI<UserContext>('/user/context');
+}
+
+export interface Document {
+  id: number;
+  name: string;
+  path: string;
+  mimeType: string;
+  size: number;
+  category: string;
+  lastAccessed: string;
+  createdAt: string;
+  metadata?: Record<string, unknown>;
+}
+
+export async function getUserDocuments(): Promise<Document[]> {
+  return fetchFromAPI<Document[]>('/documents/user');
+}
+
+export async function archiveDocument(documentId: number): Promise<{ success: boolean }> {
+  return fetchFromAPI<{ success: boolean }>(`/documents/${documentId}/archive`, {
+    method: 'POST',
+  });
+}
+
+export async function deleteDocument(documentId: number): Promise<{ success: boolean }> {
+  return fetchFromAPI<{ success: boolean }>(`/documents/${documentId}`, {
+    method: 'DELETE',
+  });
+}
+
+export async function restoreDocument(documentId: number): Promise<{ success: boolean }> {
+  return fetchFromAPI<{ success: boolean }>(`/documents/${documentId}/restore`, {
+    method: 'POST',
+  });
+}
+
+export interface ConversationLog {
+  id: number;
+  title: string;
+  content: string;
+  summary?: string;
+  recordingUrl?: string;
+  date: string;
+  category?: string;
+  tags?: string[];
+  createdAt: string;
+}
+
+export async function saveConversationLog(log: Omit<ConversationLog, 'id' | 'createdAt'>): Promise<ConversationLog> {
+  return fetchFromAPI<ConversationLog>('/conversation-logs', {
+    method: 'POST',
+    body: JSON.stringify(log),
+  });
+}
+
+export async function generateConversationSummary(logId: number): Promise<{ summary: string }> {
+  return fetchFromAPI<{ summary: string }>(`/conversation-logs/${logId}/summary`, {
+    method: 'POST',
+  });
+}
+
+export interface ShareLink {
+  id: number;
+  url: string;
+  expiresAt: string;
+  accessCount: number;
+  maxAccess?: number;
+  categories?: number[];
+  documents?: number[];
+  createdAt: string;
+}
+
+export async function createShareLink(
+  data: { 
+    categories?: number[]; 
+    documents?: number[]; 
+    expiresIn?: number; 
+    maxAccess?: number;
+  }
+): Promise<ShareLink> {
+  return fetchFromAPI<ShareLink>('/share', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+export async function revokeShareLink(linkId: number): Promise<{ success: boolean }> {
+  return fetchFromAPI<{ success: boolean }>(`/share/${linkId}/revoke`, {
+    method: 'POST',
   });
 }

@@ -49,8 +49,6 @@ export const categories = pgTable('categories', {
 
   parentId: integer('parent_id'), // Self-reference handled in relations
 
-  parentId: integer('parent_id'), // Will be handled in relations
-
   createdAt: timestamp('created_at').defaultNow(),
 });
 
@@ -90,11 +88,12 @@ export const reminders = pgTable('reminders', {
   id: serial('id').primaryKey(),
   title: varchar('title', { length: 255 }),
   description: text('description'),
-  frequency: varchar('frequency', { length: 20 }), // daily, weekly, monthly
+  frequency: varchar('frequency', { length: 20 }), // daily, weekly, monthly, yearly, once, context_based
   date: timestamp('date'),
   userId: integer('user_id').references(() => users.id),
   featureId: integer('feature_id').references(() => features.id),
   completed: boolean('completed').default(false),
+  metadata: json('metadata'), // For priority, contextTriggers, category, relatedDocuments
   createdAt: timestamp('created_at').defaultNow(),
 });
 
