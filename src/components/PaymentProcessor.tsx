@@ -5,7 +5,11 @@ import { processPayment, generateInvoice, PaymentData, PaymentResponse } from '.
 interface PaymentProcessorProps {
   amount: number;
   description: string;
+
+  onSuccess?: (data: { id: number; status: string; amount: number; currency: string }) => void;
+
   onSuccess?: (data: PaymentResponse) => void;
+
   onError?: (error: string) => void;
 }
 
@@ -48,7 +52,11 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       };
 
       const response = await processPayment(paymentData);
+
+      setPaymentId(response.id); // Using id instead of paymentId
+
       setPaymentId(response.id);
+
       setSuccess(true);
       
       if (onSuccess) {
@@ -73,7 +81,11 @@ function PaymentProcessor({ amount, description, onSuccess, onError }: PaymentPr
       const invoiceData = await generateInvoice(paymentId);
       
       const link = document.createElement('a');
+
+      link.href = invoiceData.downloadUrl; // Using downloadUrl instead of invoiceUrl
+
       link.href = invoiceData.url;
+
       link.download = 'keeviqo-invoice.pdf';
       document.body.appendChild(link);
       link.click();

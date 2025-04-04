@@ -16,6 +16,7 @@ import FAQPage from './pages/static/FAQPage';
 import QRCodePage from './pages/static/QRCodePage';
 import PaymentPage from './pages/static/PaymentPage';
 import ProfilePage from './pages/static/ProfilePage';
+import EmergencyModePage from './pages/EmergencyModePage';
 import { ThemeProvider } from './contexts/ThemeContext';
 import ThemeToggle from './components/ui/ThemeToggle';
 import Header from './components/Header';
@@ -51,6 +52,7 @@ function App() {
             <Route path="/qrcode" component={QRCodePage} />
             <Route path="/payment" component={PaymentPage} />
             <Route path="/profile" component={ProfilePage} />
+            <Route path="/emergency" component={EmergencyModePage} />
           </Switch>
         </main>
         <Footer />
