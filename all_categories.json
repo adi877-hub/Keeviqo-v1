@@ -1,0 +1,4468 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "בריאות",
+      "icon": "health_and_safety",
+      "description": "ניהול מידע רפואי, ביטוחים, ותיעוד בדיקות",
+      "subcategories": [
+        {
+          "id": "1-1",
+          "name": "קופת חולים",
+          "features": [
+            {
+              "id": "1-1-1",
+              "type": "upload",
+              "label": "העלאת מסמך רפואי"
+            },
+            {
+              "id": "1-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש תרופות"
+            },
+            {
+              "id": "1-1-3",
+              "type": "external_link",
+              "label": "שירותים של קופת חולים",
+              "url": "https://www.clalit.co.il"
+            },
+            {
+              "id": "1-1-4",
+              "type": "form",
+              "label": "טופס החזר כספי"
+            }
+          ]
+        },
+        {
+          "id": "1-2",
+          "name": "ביטוח בריאות",
+          "features": [
+            {
+              "id": "1-2-1",
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח"
+            },
+            {
+              "id": "1-2-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש ביטוח"
+            },
+            {
+              "id": "1-2-3",
+              "type": "external_link",
+              "label": "אתר חברת הביטוח",
+              "url": "https://www.harel-group.co.il"
+            },
+            {
+              "id": "1-2-4",
+              "type": "form",
+              "label": "טופס תביעה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "רכב ותחבורה",
+      "icon": "directions_car",
+      "description": "ניהול מסמכי רכב, רישיונות, וביטוחים",
+      "subcategories": [
+        {
+          "id": "2-1",
+          "name": "משרד הרישוי",
+          "features": [
+            {
+              "id": "2-1-1",
+              "type": "upload",
+              "label": "העלאת רישיון"
+            },
+            {
+              "id": "2-1-2",
+              "type": "reminder",
+              "label": "תזכורת לטסט"
+            },
+            {
+              "id": "2-1-3",
+              "type": "external_link",
+              "label": "חידוש רישיון",
+              "url": "https://www.gov.il/he/service/renew_driving_license"
+            },
+            {
+              "id": "2-1-4",
+              "type": "form",
+              "label": "בקשה להעברת בעלות"
+            }
+          ]
+        },
+        {
+          "id": "2-2",
+          "name": "ביטוח רכב",
+          "features": [
+            {
+              "id": "2-2-1",
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח"
+            },
+            {
+              "id": "2-2-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש ביטוח"
+            },
+            {
+              "id": "2-2-3",
+              "type": "external_link",
+              "label": "אתר חברת הביטוח",
+              "url": "https://www.migdal.co.il"
+            },
+            {
+              "id": "2-2-4",
+              "type": "form",
+              "label": "טופס תביעה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "חינוך",
+      "icon": "school",
+      "description": "תעודות, קורסים, והשכלה",
+      "subcategories": [
+        {
+          "id": "3-1",
+          "name": "בית ספר",
+          "features": [
+            {
+              "id": "3-1-1",
+              "type": "upload",
+              "label": "העלאת תעודות"
+            },
+            {
+              "id": "3-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאסיפת הורים"
+            },
+            {
+              "id": "3-1-3",
+              "type": "external_link",
+              "label": "פורטל בית הספר",
+              "url": "https://www.edu.gov.il"
+            },
+            {
+              "id": "3-1-4",
+              "type": "form",
+              "label": "טופס רישום"
+            }
+          ]
+        },
+        {
+          "id": "3-2",
+          "name": "השכלה גבוהה",
+          "features": [
+            {
+              "id": "3-2-1",
+              "type": "upload",
+              "label": "העלאת תעודות אקדמיות"
+            },
+            {
+              "id": "3-2-2",
+              "type": "reminder",
+              "label": "תזכורת למועדי הרשמה"
+            },
+            {
+              "id": "3-2-3",
+              "type": "external_link",
+              "label": "אתר המוסד האקדמי",
+              "url": "https://www.tau.ac.il"
+            },
+            {
+              "id": "3-2-4",
+              "type": "form",
+              "label": "טופס בקשת מלגה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "פיננסים",
+      "icon": "account_balance",
+      "description": "ניהול חשבונות, השקעות, וחסכונות",
+      "subcategories": [
+        {
+          "id": "4-1",
+          "name": "חשבון בנק",
+          "features": [
+            {
+              "id": "4-1-1",
+              "type": "upload",
+              "label": "העלאת דפי חשבון"
+            },
+            {
+              "id": "4-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתשלומים קבועים"
+            },
+            {
+              "id": "4-1-3",
+              "type": "external_link",
+              "label": "אתר הבנק",
+              "url": "https://www.bankhapoalim.co.il"
+            },
+            {
+              "id": "4-1-4",
+              "type": "form",
+              "label": "טופס הוראת קבע"
+            }
+          ]
+        },
+        {
+          "id": "4-2",
+          "name": "השקעות",
+          "features": [
+            {
+              "id": "4-2-1",
+              "type": "upload",
+              "label": "העלאת דוחות השקעה"
+            },
+            {
+              "id": "4-2-2",
+              "type": "reminder",
+              "label": "תזכורת לבדיקת תיק השקעות"
+            },
+            {
+              "id": "4-2-3",
+              "type": "external_link",
+              "label": "אתר הבורסה",
+              "url": "https://www.tase.co.il"
+            },
+            {
+              "id": "4-2-4",
+              "type": "form",
+              "label": "טופס הוראת קנייה/מכירה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "נדל\"ן",
+      "icon": "home",
+      "description": "מסמכי דירה, משכנתא, וחוזי שכירות",
+      "subcategories": [
+        {
+          "id": "5-1",
+          "name": "דירה בבעלות",
+          "features": [
+            {
+              "id": "5-1-1",
+              "type": "upload",
+              "label": "העלאת חוזה רכישה"
+            },
+            {
+              "id": "5-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתשלום ארנונה"
+            },
+            {
+              "id": "5-1-3",
+              "type": "external_link",
+              "label": "אתר רשות המיסים",
+              "url": "https://www.gov.il/he/departments/israel_tax_authority"
+            },
+            {
+              "id": "5-1-4",
+              "type": "form",
+              "label": "טופס דיווח מס שבח"
+            }
+          ]
+        },
+        {
+          "id": "5-2",
+          "name": "שכירות",
+          "features": [
+            {
+              "id": "5-2-1",
+              "type": "upload",
+              "label": "העלאת חוזה שכירות"
+            },
+            {
+              "id": "5-2-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש חוזה"
+            },
+            {
+              "id": "5-2-3",
+              "type": "external_link",
+              "label": "מידע על זכויות שוכרים",
+              "url": "https://www.gov.il/he/departments/guides/rental_properties_guide"
+            },
+            {
+              "id": "5-2-4",
+              "type": "form",
+              "label": "טופס פניה לבעל הדירה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "משפחה",
+      "icon": "family_restroom",
+      "description": "מסמכים משפחתיים, אירועים, ותכנון",
+      "subcategories": [
+        {
+          "id": "6-1",
+          "name": "ילדים",
+          "features": [
+            {
+              "id": "6-1-1",
+              "type": "upload",
+              "label": "העלאת תעודות לידה"
+            },
+            {
+              "id": "6-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחיסונים"
+            },
+            {
+              "id": "6-1-3",
+              "type": "external_link",
+              "label": "טיפת חלב",
+              "url": "https://www.health.gov.il"
+            },
+            {
+              "id": "6-1-4",
+              "type": "form",
+              "label": "טופס רישום לגן"
+            }
+          ]
+        },
+        {
+          "id": "6-2",
+          "name": "נישואין",
+          "features": [
+            {
+              "id": "6-2-1",
+              "type": "upload",
+              "label": "העלאת תעודת נישואין"
+            },
+            {
+              "id": "6-2-2",
+              "type": "reminder",
+              "label": "תזכורת ליום נישואין"
+            },
+            {
+              "id": "6-2-3",
+              "type": "external_link",
+              "label": "הרבנות הראשית",
+              "url": "https://www.gov.il/he/departments/chief_rabbinate_of_israel"
+            },
+            {
+              "id": "6-2-4",
+              "type": "form",
+              "label": "טופס בקשה לתעודת רווקות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "קריירה",
+      "icon": "work",
+      "description": "קורות חיים, חוזי עבודה, והמלצות",
+      "subcategories": [
+        {
+          "id": "7-1",
+          "name": "עבודה נוכחית",
+          "features": [
+            {
+              "id": "7-1-1",
+              "type": "upload",
+              "label": "העלאת חוזה עבודה"
+            },
+            {
+              "id": "7-1-2",
+              "type": "reminder",
+              "label": "תזכורת לשיחת משוב"
+            },
+            {
+              "id": "7-1-3",
+              "type": "external_link",
+              "label": "פורטל עובדים",
+              "url": "https://www.gov.il/he/departments/ministry_of_labor"
+            },
+            {
+              "id": "7-1-4",
+              "type": "form",
+              "label": "טופס בקשה לחופשה"
+            }
+          ]
+        },
+        {
+          "id": "7-2",
+          "name": "חיפוש עבודה",
+          "features": [
+            {
+              "id": "7-2-1",
+              "type": "upload",
+              "label": "העלאת קורות חיים"
+            },
+            {
+              "id": "7-2-2",
+              "type": "reminder",
+              "label": "תזכורת לראיונות עבודה"
+            },
+            {
+              "id": "7-2-3",
+              "type": "external_link",
+              "label": "אתר חיפוש עבודה",
+              "url": "https://www.alljobs.co.il"
+            },
+            {
+              "id": "7-2-4",
+              "type": "form",
+              "label": "טופס מועמדות למשרה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "ביטוח",
+      "icon": "security",
+      "description": "ניהול פוליסות ביטוח מכל הסוגים",
+      "subcategories": [
+        {
+          "id": "8-1",
+          "name": "ביטוח חיים",
+          "features": [
+            {
+              "id": "8-1-1",
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח"
+            },
+            {
+              "id": "8-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש פוליסה"
+            },
+            {
+              "id": "8-1-3",
+              "type": "external_link",
+              "label": "אתר חברת הביטוח",
+              "url": "https://www.migdal.co.il"
+            },
+            {
+              "id": "8-1-4",
+              "type": "form",
+              "label": "טופס עדכון מוטבים"
+            }
+          ]
+        },
+        {
+          "id": "8-2",
+          "name": "ביטוח דירה",
+          "features": [
+            {
+              "id": "8-2-1",
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח"
+            },
+            {
+              "id": "8-2-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש פוליסה"
+            },
+            {
+              "id": "8-2-3",
+              "type": "external_link",
+              "label": "אתר חברת הביטוח",
+              "url": "https://www.harel-group.co.il"
+            },
+            {
+              "id": "8-2-4",
+              "type": "form",
+              "label": "טופס תביעה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "מסמכים אישיים",
+      "icon": "description",
+      "description": "תעודות זהות, דרכונים, ומסמכים רשמיים",
+      "subcategories": [
+        {
+          "id": "9-1",
+          "name": "תעודות זהות",
+          "features": [
+            {
+              "id": "9-1-1",
+              "type": "upload",
+              "label": "העלאת צילום ת.ז."
+            },
+            {
+              "id": "9-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש ת.ז. ביומטרית"
+            },
+            {
+              "id": "9-1-3",
+              "type": "external_link",
+              "label": "רשות האוכלוסין וההגירה",
+              "url": "https://www.gov.il/he/departments/population_and_immigration_authority"
+            },
+            {
+              "id": "9-1-4",
+              "type": "form",
+              "label": "טופס בקשה לת.ז. חדשה"
+            }
+          ]
+        },
+        {
+          "id": "9-2",
+          "name": "דרכונים",
+          "features": [
+            {
+              "id": "9-2-1",
+              "type": "upload",
+              "label": "העלאת צילום דרכון"
+            },
+            {
+              "id": "9-2-2",
+              "type": "reminder",
+              "label": "תזכורת לחידוש דרכון"
+            },
+            {
+              "id": "9-2-3",
+              "type": "external_link",
+              "label": "רשות האוכלוסין וההגירה",
+              "url": "https://www.gov.il/he/departments/population_and_immigration_authority"
+            },
+            {
+              "id": "9-2-4",
+              "type": "form",
+              "label": "טופס בקשה לדרכון"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "צבא ובטחון",
+      "icon": "military_tech",
+      "description": "שירות צבאי, מילואים, ומסמכים בטחוניים",
+      "subcategories": [
+        {
+          "id": "10-1",
+          "name": "שירות סדיר",
+          "features": [
+            {
+              "id": "10-1-1",
+              "type": "upload",
+              "label": "העלאת תעודת שחרור"
+            },
+            {
+              "id": "10-1-2",
+              "type": "reminder",
+              "label": "תזכורת לגיוס"
+            },
+            {
+              "id": "10-1-3",
+              "type": "external_link",
+              "label": "אתר צה\"ל",
+              "url": "https://www.idf.il"
+            },
+            {
+              "id": "10-1-4",
+              "type": "form",
+              "label": "טופס בקשה לדחיית גיוס"
+            }
+          ]
+        },
+        {
+          "id": "10-2",
+          "name": "מילואים",
+          "features": [
+            {
+              "id": "10-2-1",
+              "type": "upload",
+              "label": "העלאת צו מילואים"
+            },
+            {
+              "id": "10-2-2",
+              "type": "reminder",
+              "label": "תזכורת לשירות מילואים"
+            },
+            {
+              "id": "10-2-3",
+              "type": "external_link",
+              "label": "מיטב",
+              "url": "https://www.mitgaisim.idf.il"
+            },
+            {
+              "id": "10-2-4",
+              "type": "form",
+              "label": "טופס בקשה לפטור ממילואים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "תחביבים",
+      "icon": "sports_esports",
+      "description": "ניהול מידע על תחביבים ופעילויות פנאי",
+      "subcategories": [
+        {
+          "id": "11-1",
+          "name": "ספורט",
+          "features": [
+            {
+              "id": "11-1-1",
+              "type": "upload",
+              "label": "העלאת מנוי למועדון"
+            },
+            {
+              "id": "11-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאימון"
+            },
+            {
+              "id": "11-1-3",
+              "type": "external_link",
+              "label": "אתר מועדון הספורט",
+              "url": "https://www.holmes-place.co.il"
+            },
+            {
+              "id": "11-1-4",
+              "type": "form",
+              "label": "טופס הרשמה לחוג"
+            }
+          ]
+        },
+        {
+          "id": "11-2",
+          "name": "אמנות",
+          "features": [
+            {
+              "id": "11-2-1",
+              "type": "upload",
+              "label": "העלאת תעודות קורסים"
+            },
+            {
+              "id": "11-2-2",
+              "type": "reminder",
+              "label": "תזכורת לשיעור"
+            },
+            {
+              "id": "11-2-3",
+              "type": "external_link",
+              "label": "אתר גלריה",
+              "url": "https://www.tel-aviv-museum.com"
+            },
+            {
+              "id": "11-2-4",
+              "type": "form",
+              "label": "טופס הרשמה לסדנה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "חיות מחמד",
+      "icon": "pets",
+      "description": "ניהול מידע על חיות מחמד וטיפולים וטרינריים",
+      "subcategories": [
+        {
+          "id": "12-1",
+          "name": "כלבים",
+          "features": [
+            {
+              "id": "12-1-1",
+              "type": "upload",
+              "label": "העלאת רישיון כלב"
+            },
+            {
+              "id": "12-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחיסון שנתי"
+            },
+            {
+              "id": "12-1-3",
+              "type": "external_link",
+              "label": "השירותים הווטרינריים",
+              "url": "https://www.gov.il/he/departments/topics/moag-vet-dogs"
+            },
+            {
+              "id": "12-1-4",
+              "type": "form",
+              "label": "טופס רישום כלב"
+            }
+          ]
+        },
+        {
+          "id": "12-2",
+          "name": "חתולים",
+          "features": [
+            {
+              "id": "12-2-1",
+              "type": "upload",
+              "label": "העלאת פנקס חיסונים"
+            },
+            {
+              "id": "12-2-2",
+              "type": "reminder",
+              "label": "תזכורת לביקור וטרינר"
+            },
+            {
+              "id": "12-2-3",
+              "type": "external_link",
+              "label": "מרפאה וטרינרית",
+              "url": "https://www.vetpet.co.il"
+            },
+            {
+              "id": "12-2-4",
+              "type": "form",
+              "label": "טופס אימוץ חתול"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "תיירות ונסיעות",
+      "icon": "flight",
+      "description": "ניהול מידע על טיולים, נסיעות, וחופשות",
+      "subcategories": [
+        {
+          "id": "13-1",
+          "name": "ניהול תיירות ונסיעות",
+          "features": [
+            {
+              "id": "13-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תיירות ונסיעות"
+            },
+            {
+              "id": "13-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתיירות ונסיעות"
+            },
+            {
+              "id": "13-1-3",
+              "type": "external_link",
+              "label": "קישור לתיירות ונסיעות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "13-1-4",
+              "type": "form",
+              "label": "טופס תיירות ונסיעות"
+            }
+          ]
+        },
+        {
+          "id": "13-2",
+          "name": "מידע על תיירות ונסיעות",
+          "features": [
+            {
+              "id": "13-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תיירות ונסיעות"
+            },
+            {
+              "id": "13-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תיירות ונסיעות"
+            },
+            {
+              "id": "13-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תיירות ונסיעות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "13-2-4",
+              "type": "form",
+              "label": "טופס מידע על תיירות ונסיעות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "ניהול חשבונות טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "id": "14-1",
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "id": "14-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת"
+            },
+            {
+              "id": "14-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתקשורת"
+            },
+            {
+              "id": "14-1-3",
+              "type": "external_link",
+              "label": "קישור לתקשורת",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "14-1-4",
+              "type": "form",
+              "label": "טופס תקשורת"
+            }
+          ]
+        },
+        {
+          "id": "14-2",
+          "name": "מידע על תקשורת",
+          "features": [
+            {
+              "id": "14-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תקשורת"
+            },
+            {
+              "id": "14-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תקשורת"
+            },
+            {
+              "id": "14-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תקשורת",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "14-2-4",
+              "type": "form",
+              "label": "טופס מידע על תקשורת"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "קניות",
+      "icon": "shopping_cart",
+      "description": "ניהול קבלות, אחריות, והחזרות",
+      "subcategories": [
+        {
+          "id": "15-1",
+          "name": "ניהול קניות",
+          "features": [
+            {
+              "id": "15-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי קניות"
+            },
+            {
+              "id": "15-1-2",
+              "type": "reminder",
+              "label": "תזכורת לקניות"
+            },
+            {
+              "id": "15-1-3",
+              "type": "external_link",
+              "label": "קישור לקניות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "15-1-4",
+              "type": "form",
+              "label": "טופס קניות"
+            }
+          ]
+        },
+        {
+          "id": "15-2",
+          "name": "מידע על קניות",
+          "features": [
+            {
+              "id": "15-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על קניות"
+            },
+            {
+              "id": "15-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על קניות"
+            },
+            {
+              "id": "15-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על קניות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "15-2-4",
+              "type": "form",
+              "label": "טופס מידע על קניות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "אוכל ותזונה",
+      "icon": "restaurant",
+      "description": "ניהול מידע על תזונה, מתכונים, והזמנות",
+      "subcategories": [
+        {
+          "id": "16-1",
+          "name": "ניהול אוכל ותזונה",
+          "features": [
+            {
+              "id": "16-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אוכל ותזונה"
+            },
+            {
+              "id": "16-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאוכל ותזונה"
+            },
+            {
+              "id": "16-1-3",
+              "type": "external_link",
+              "label": "קישור לאוכל ותזונה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "16-1-4",
+              "type": "form",
+              "label": "טופס אוכל ותזונה"
+            }
+          ]
+        },
+        {
+          "id": "16-2",
+          "name": "מידע על אוכל ותזונה",
+          "features": [
+            {
+              "id": "16-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אוכל ותזונה"
+            },
+            {
+              "id": "16-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אוכל ותזונה"
+            },
+            {
+              "id": "16-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אוכל ותזונה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "16-2-4",
+              "type": "form",
+              "label": "טופס מידע על אוכל ותזונה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "ספורט וכושר",
+      "icon": "fitness_center",
+      "description": "ניהול מידע על אימונים, תחרויות, ותוצאות",
+      "subcategories": [
+        {
+          "id": "17-1",
+          "name": "ניהול ספורט וכושר",
+          "features": [
+            {
+              "id": "17-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי ספורט וכושר"
+            },
+            {
+              "id": "17-1-2",
+              "type": "reminder",
+              "label": "תזכורת לספורט וכושר"
+            },
+            {
+              "id": "17-1-3",
+              "type": "external_link",
+              "label": "קישור לספורט וכושר",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "17-1-4",
+              "type": "form",
+              "label": "טופס ספורט וכושר"
+            }
+          ]
+        },
+        {
+          "id": "17-2",
+          "name": "מידע על ספורט וכושר",
+          "features": [
+            {
+              "id": "17-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על ספורט וכושר"
+            },
+            {
+              "id": "17-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על ספורט וכושר"
+            },
+            {
+              "id": "17-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על ספורט וכושר",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "17-2-4",
+              "type": "form",
+              "label": "טופס מידע על ספורט וכושר"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "תרבות ובידור",
+      "icon": "movie",
+      "description": "ניהול מידע על סרטים, הצגות, וקונצרטים",
+      "subcategories": [
+        {
+          "id": "18-1",
+          "name": "ניהול תרבות ובידור",
+          "features": [
+            {
+              "id": "18-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תרבות ובידור"
+            },
+            {
+              "id": "18-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתרבות ובידור"
+            },
+            {
+              "id": "18-1-3",
+              "type": "external_link",
+              "label": "קישור לתרבות ובידור",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "18-1-4",
+              "type": "form",
+              "label": "טופס תרבות ובידור"
+            }
+          ]
+        },
+        {
+          "id": "18-2",
+          "name": "מידע על תרבות ובידור",
+          "features": [
+            {
+              "id": "18-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תרבות ובידור"
+            },
+            {
+              "id": "18-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תרבות ובידור"
+            },
+            {
+              "id": "18-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תרבות ובידור",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "18-2-4",
+              "type": "form",
+              "label": "טופס מידע על תרבות ובידור"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "דת ומסורת",
+      "icon": "church",
+      "description": "ניהול מידע על אירועים דתיים ומסורתיים",
+      "subcategories": [
+        {
+          "id": "19-1",
+          "name": "ניהול דת ומסורת",
+          "features": [
+            {
+              "id": "19-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי דת ומסורת"
+            },
+            {
+              "id": "19-1-2",
+              "type": "reminder",
+              "label": "תזכורת לדת ומסורת"
+            },
+            {
+              "id": "19-1-3",
+              "type": "external_link",
+              "label": "קישור לדת ומסורת",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "19-1-4",
+              "type": "form",
+              "label": "טופס דת ומסורת"
+            }
+          ]
+        },
+        {
+          "id": "19-2",
+          "name": "מידע על דת ומסורת",
+          "features": [
+            {
+              "id": "19-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על דת ומסורת"
+            },
+            {
+              "id": "19-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על דת ומסורת"
+            },
+            {
+              "id": "19-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על דת ומסורת",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "19-2-4",
+              "type": "form",
+              "label": "טופס מידע על דת ומסורת"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "התנדבות",
+      "icon": "volunteer_activism",
+      "description": "ניהול מידע על פעילויות התנדבות",
+      "subcategories": [
+        {
+          "id": "20-1",
+          "name": "ניהול התנדבות",
+          "features": [
+            {
+              "id": "20-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי התנדבות"
+            },
+            {
+              "id": "20-1-2",
+              "type": "reminder",
+              "label": "תזכורת להתנדבות"
+            },
+            {
+              "id": "20-1-3",
+              "type": "external_link",
+              "label": "קישור להתנדבות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "20-1-4",
+              "type": "form",
+              "label": "טופס התנדבות"
+            }
+          ]
+        },
+        {
+          "id": "20-2",
+          "name": "מידע על התנדבות",
+          "features": [
+            {
+              "id": "20-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על התנדבות"
+            },
+            {
+              "id": "20-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על התנדבות"
+            },
+            {
+              "id": "20-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על התנדבות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "20-2-4",
+              "type": "form",
+              "label": "טופס מידע על התנדבות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "מחשבים וטכנולוגיה",
+      "icon": "computer",
+      "description": "ניהול מידע על מחשבים, תוכנות, ורישיונות",
+      "subcategories": [
+        {
+          "id": "21-1",
+          "name": "ניהול מחשבים וטכנולוגיה",
+          "features": [
+            {
+              "id": "21-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי מחשבים וטכנולוגיה"
+            },
+            {
+              "id": "21-1-2",
+              "type": "reminder",
+              "label": "תזכורת למחשבים וטכנולוגיה"
+            },
+            {
+              "id": "21-1-3",
+              "type": "external_link",
+              "label": "קישור למחשבים וטכנולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "21-1-4",
+              "type": "form",
+              "label": "טופס מחשבים וטכנולוגיה"
+            }
+          ]
+        },
+        {
+          "id": "21-2",
+          "name": "מידע על מחשבים וטכנולוגיה",
+          "features": [
+            {
+              "id": "21-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על מחשבים וטכנולוגיה"
+            },
+            {
+              "id": "21-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על מחשבים וטכנולוגיה"
+            },
+            {
+              "id": "21-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על מחשבים וטכנולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "21-2-4",
+              "type": "form",
+              "label": "טופס מידע על מחשבים וטכנולוגיה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "אמנות ויצירה",
+      "icon": "palette",
+      "description": "ניהול מידע על יצירות אמנות ופרויקטים",
+      "subcategories": [
+        {
+          "id": "22-1",
+          "name": "ניהול אמנות ויצירה",
+          "features": [
+            {
+              "id": "22-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אמנות ויצירה"
+            },
+            {
+              "id": "22-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאמנות ויצירה"
+            },
+            {
+              "id": "22-1-3",
+              "type": "external_link",
+              "label": "קישור לאמנות ויצירה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "22-1-4",
+              "type": "form",
+              "label": "טופס אמנות ויצירה"
+            }
+          ]
+        },
+        {
+          "id": "22-2",
+          "name": "מידע על אמנות ויצירה",
+          "features": [
+            {
+              "id": "22-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אמנות ויצירה"
+            },
+            {
+              "id": "22-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אמנות ויצירה"
+            },
+            {
+              "id": "22-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אמנות ויצירה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "22-2-4",
+              "type": "form",
+              "label": "טופס מידע על אמנות ויצירה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "גינון",
+      "icon": "yard",
+      "description": "ניהול מידע על צמחים, כלי גינון, ותחזוקה",
+      "subcategories": [
+        {
+          "id": "23-1",
+          "name": "ניהול גינון",
+          "features": [
+            {
+              "id": "23-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי גינון"
+            },
+            {
+              "id": "23-1-2",
+              "type": "reminder",
+              "label": "תזכורת לגינון"
+            },
+            {
+              "id": "23-1-3",
+              "type": "external_link",
+              "label": "קישור לגינון",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "23-1-4",
+              "type": "form",
+              "label": "טופס גינון"
+            }
+          ]
+        },
+        {
+          "id": "23-2",
+          "name": "מידע על גינון",
+          "features": [
+            {
+              "id": "23-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על גינון"
+            },
+            {
+              "id": "23-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על גינון"
+            },
+            {
+              "id": "23-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על גינון",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "23-2-4",
+              "type": "form",
+              "label": "טופס מידע על גינון"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "בנייה ושיפוצים",
+      "icon": "construction",
+      "description": "ניהול מידע על פרויקטי בנייה ושיפוצים",
+      "subcategories": [
+        {
+          "id": "24-1",
+          "name": "ניהול בנייה ושיפוצים",
+          "features": [
+            {
+              "id": "24-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי בנייה ושיפוצים"
+            },
+            {
+              "id": "24-1-2",
+              "type": "reminder",
+              "label": "תזכורת לבנייה ושיפוצים"
+            },
+            {
+              "id": "24-1-3",
+              "type": "external_link",
+              "label": "קישור לבנייה ושיפוצים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "24-1-4",
+              "type": "form",
+              "label": "טופס בנייה ושיפוצים"
+            }
+          ]
+        },
+        {
+          "id": "24-2",
+          "name": "מידע על בנייה ושיפוצים",
+          "features": [
+            {
+              "id": "24-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על בנייה ושיפוצים"
+            },
+            {
+              "id": "24-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על בנייה ושיפוצים"
+            },
+            {
+              "id": "24-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על בנייה ושיפוצים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "24-2-4",
+              "type": "form",
+              "label": "טופס מידע על בנייה ושיפוצים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "ביגוד ואופנה",
+      "icon": "checkroom",
+      "description": "ניהול מידע על בגדים, אביזרים, וקניות",
+      "subcategories": [
+        {
+          "id": "25-1",
+          "name": "ניהול ביגוד ואופנה",
+          "features": [
+            {
+              "id": "25-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי ביגוד ואופנה"
+            },
+            {
+              "id": "25-1-2",
+              "type": "reminder",
+              "label": "תזכורת לביגוד ואופנה"
+            },
+            {
+              "id": "25-1-3",
+              "type": "external_link",
+              "label": "קישור לביגוד ואופנה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "25-1-4",
+              "type": "form",
+              "label": "טופס ביגוד ואופנה"
+            }
+          ]
+        },
+        {
+          "id": "25-2",
+          "name": "מידע על ביגוד ואופנה",
+          "features": [
+            {
+              "id": "25-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על ביגוד ואופנה"
+            },
+            {
+              "id": "25-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על ביגוד ואופנה"
+            },
+            {
+              "id": "25-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על ביגוד ואופנה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "25-2-4",
+              "type": "form",
+              "label": "טופס מידע על ביגוד ואופנה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "תחבורה ציבורית",
+      "icon": "directions_bus",
+      "description": "ניהול מידע על כרטיסים, מנויים, ולוחות זמנים",
+      "subcategories": [
+        {
+          "id": "26-1",
+          "name": "ניהול תחבורה ציבורית",
+          "features": [
+            {
+              "id": "26-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תחבורה ציבורית"
+            },
+            {
+              "id": "26-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתחבורה ציבורית"
+            },
+            {
+              "id": "26-1-3",
+              "type": "external_link",
+              "label": "קישור לתחבורה ציבורית",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "26-1-4",
+              "type": "form",
+              "label": "טופס תחבורה ציבורית"
+            }
+          ]
+        },
+        {
+          "id": "26-2",
+          "name": "מידע על תחבורה ציבורית",
+          "features": [
+            {
+              "id": "26-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תחבורה ציבורית"
+            },
+            {
+              "id": "26-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תחבורה ציבורית"
+            },
+            {
+              "id": "26-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תחבורה ציבורית",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "26-2-4",
+              "type": "form",
+              "label": "טופס מידע על תחבורה ציבורית"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "אירועים מיוחדים",
+      "icon": "event",
+      "description": "ניהול מידע על חתונות, בר מצוות, וימי הולדת",
+      "subcategories": [
+        {
+          "id": "27-1",
+          "name": "ניהול אירועים מיוחדים",
+          "features": [
+            {
+              "id": "27-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אירועים מיוחדים"
+            },
+            {
+              "id": "27-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאירועים מיוחדים"
+            },
+            {
+              "id": "27-1-3",
+              "type": "external_link",
+              "label": "קישור לאירועים מיוחדים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "27-1-4",
+              "type": "form",
+              "label": "טופס אירועים מיוחדים"
+            }
+          ]
+        },
+        {
+          "id": "27-2",
+          "name": "מידע על אירועים מיוחדים",
+          "features": [
+            {
+              "id": "27-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אירועים מיוחדים"
+            },
+            {
+              "id": "27-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אירועים מיוחדים"
+            },
+            {
+              "id": "27-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אירועים מיוחדים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "27-2-4",
+              "type": "form",
+              "label": "טופס מידע על אירועים מיוחדים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "מוזיקה",
+      "icon": "music_note",
+      "description": "ניהול מידע על כלי נגינה, שיעורים, והופעות",
+      "subcategories": [
+        {
+          "id": "28-1",
+          "name": "ניהול מוזיקה",
+          "features": [
+            {
+              "id": "28-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי מוזיקה"
+            },
+            {
+              "id": "28-1-2",
+              "type": "reminder",
+              "label": "תזכורת למוזיקה"
+            },
+            {
+              "id": "28-1-3",
+              "type": "external_link",
+              "label": "קישור למוזיקה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "28-1-4",
+              "type": "form",
+              "label": "טופס מוזיקה"
+            }
+          ]
+        },
+        {
+          "id": "28-2",
+          "name": "מידע על מוזיקה",
+          "features": [
+            {
+              "id": "28-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על מוזיקה"
+            },
+            {
+              "id": "28-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על מוזיקה"
+            },
+            {
+              "id": "28-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על מוזיקה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "28-2-4",
+              "type": "form",
+              "label": "טופס מידע על מוזיקה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "ספרים וקריאה",
+      "icon": "menu_book",
+      "description": "ניהול מידע על ספרים, ספריות, והשאלות",
+      "subcategories": [
+        {
+          "id": "29-1",
+          "name": "ניהול ספרים וקריאה",
+          "features": [
+            {
+              "id": "29-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי ספרים וקריאה"
+            },
+            {
+              "id": "29-1-2",
+              "type": "reminder",
+              "label": "תזכורת לספרים וקריאה"
+            },
+            {
+              "id": "29-1-3",
+              "type": "external_link",
+              "label": "קישור לספרים וקריאה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "29-1-4",
+              "type": "form",
+              "label": "טופס ספרים וקריאה"
+            }
+          ]
+        },
+        {
+          "id": "29-2",
+          "name": "מידע על ספרים וקריאה",
+          "features": [
+            {
+              "id": "29-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על ספרים וקריאה"
+            },
+            {
+              "id": "29-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על ספרים וקריאה"
+            },
+            {
+              "id": "29-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על ספרים וקריאה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "29-2-4",
+              "type": "form",
+              "label": "טופס מידע על ספרים וקריאה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "יופי וטיפוח",
+      "icon": "spa",
+      "description": "ניהול מידע על טיפולי יופי, מוצרים, ותורים",
+      "subcategories": [
+        {
+          "id": "30-1",
+          "name": "ניהול יופי וטיפוח",
+          "features": [
+            {
+              "id": "30-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי יופי וטיפוח"
+            },
+            {
+              "id": "30-1-2",
+              "type": "reminder",
+              "label": "תזכורת ליופי וטיפוח"
+            },
+            {
+              "id": "30-1-3",
+              "type": "external_link",
+              "label": "קישור ליופי וטיפוח",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "30-1-4",
+              "type": "form",
+              "label": "טופס יופי וטיפוח"
+            }
+          ]
+        },
+        {
+          "id": "30-2",
+          "name": "מידע על יופי וטיפוח",
+          "features": [
+            {
+              "id": "30-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על יופי וטיפוח"
+            },
+            {
+              "id": "30-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על יופי וטיפוח"
+            },
+            {
+              "id": "30-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על יופי וטיפוח",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "30-2-4",
+              "type": "form",
+              "label": "טופס מידע על יופי וטיפוח"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "בריאות הנפש",
+      "icon": "psychology",
+      "description": "ניהול מידע על טיפולים, תרופות, ומפגשים",
+      "subcategories": [
+        {
+          "id": "31-1",
+          "name": "ניהול בריאות הנפש",
+          "features": [
+            {
+              "id": "31-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי בריאות הנפש"
+            },
+            {
+              "id": "31-1-2",
+              "type": "reminder",
+              "label": "תזכורת לבריאות הנפש"
+            },
+            {
+              "id": "31-1-3",
+              "type": "external_link",
+              "label": "קישור לבריאות הנפש",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "31-1-4",
+              "type": "form",
+              "label": "טופס בריאות הנפש"
+            }
+          ]
+        },
+        {
+          "id": "31-2",
+          "name": "מידע על בריאות הנפש",
+          "features": [
+            {
+              "id": "31-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על בריאות הנפש"
+            },
+            {
+              "id": "31-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על בריאות הנפש"
+            },
+            {
+              "id": "31-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על בריאות הנפש",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "31-2-4",
+              "type": "form",
+              "label": "טופס מידע על בריאות הנפש"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "קהילה ושכונה",
+      "icon": "people",
+      "description": "ניהול מידע על פעילויות קהילתיות ושכונתיות",
+      "subcategories": [
+        {
+          "id": "32-1",
+          "name": "ניהול קהילה ושכונה",
+          "features": [
+            {
+              "id": "32-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי קהילה ושכונה"
+            },
+            {
+              "id": "32-1-2",
+              "type": "reminder",
+              "label": "תזכורת לקהילה ושכונה"
+            },
+            {
+              "id": "32-1-3",
+              "type": "external_link",
+              "label": "קישור לקהילה ושכונה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "32-1-4",
+              "type": "form",
+              "label": "טופס קהילה ושכונה"
+            }
+          ]
+        },
+        {
+          "id": "32-2",
+          "name": "מידע על קהילה ושכונה",
+          "features": [
+            {
+              "id": "32-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על קהילה ושכונה"
+            },
+            {
+              "id": "32-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על קהילה ושכונה"
+            },
+            {
+              "id": "32-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על קהילה ושכונה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "32-2-4",
+              "type": "form",
+              "label": "טופס מידע על קהילה ושכונה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "איכות הסביבה",
+      "icon": "eco",
+      "description": "ניהול מידע על פעילויות סביבתיות ומיחזור",
+      "subcategories": [
+        {
+          "id": "33-1",
+          "name": "ניהול איכות הסביבה",
+          "features": [
+            {
+              "id": "33-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי איכות הסביבה"
+            },
+            {
+              "id": "33-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאיכות הסביבה"
+            },
+            {
+              "id": "33-1-3",
+              "type": "external_link",
+              "label": "קישור לאיכות הסביבה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "33-1-4",
+              "type": "form",
+              "label": "טופס איכות הסביבה"
+            }
+          ]
+        },
+        {
+          "id": "33-2",
+          "name": "מידע על איכות הסביבה",
+          "features": [
+            {
+              "id": "33-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על איכות הסביבה"
+            },
+            {
+              "id": "33-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על איכות הסביבה"
+            },
+            {
+              "id": "33-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על איכות הסביבה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "33-2-4",
+              "type": "form",
+              "label": "טופס מידע על איכות הסביבה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "משפט וחוק",
+      "icon": "gavel",
+      "description": "ניהול מידע על הליכים משפטיים, חוזים, ותביעות",
+      "subcategories": [
+        {
+          "id": "34-1",
+          "name": "ניהול משפט וחוק",
+          "features": [
+            {
+              "id": "34-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי משפט וחוק"
+            },
+            {
+              "id": "34-1-2",
+              "type": "reminder",
+              "label": "תזכורת למשפט וחוק"
+            },
+            {
+              "id": "34-1-3",
+              "type": "external_link",
+              "label": "קישור למשפט וחוק",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "34-1-4",
+              "type": "form",
+              "label": "טופס משפט וחוק"
+            }
+          ]
+        },
+        {
+          "id": "34-2",
+          "name": "מידע על משפט וחוק",
+          "features": [
+            {
+              "id": "34-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על משפט וחוק"
+            },
+            {
+              "id": "34-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על משפט וחוק"
+            },
+            {
+              "id": "34-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על משפט וחוק",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "34-2-4",
+              "type": "form",
+              "label": "טופס מידע על משפט וחוק"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "פוליטיקה",
+      "icon": "how_to_vote",
+      "description": "ניהול מידע על בחירות, מפלגות, ופעילות פוליטית",
+      "subcategories": [
+        {
+          "id": "35-1",
+          "name": "ניהול פוליטיקה",
+          "features": [
+            {
+              "id": "35-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי פוליטיקה"
+            },
+            {
+              "id": "35-1-2",
+              "type": "reminder",
+              "label": "תזכורת לפוליטיקה"
+            },
+            {
+              "id": "35-1-3",
+              "type": "external_link",
+              "label": "קישור לפוליטיקה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "35-1-4",
+              "type": "form",
+              "label": "טופס פוליטיקה"
+            }
+          ]
+        },
+        {
+          "id": "35-2",
+          "name": "מידע על פוליטיקה",
+          "features": [
+            {
+              "id": "35-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על פוליטיקה"
+            },
+            {
+              "id": "35-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על פוליטיקה"
+            },
+            {
+              "id": "35-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על פוליטיקה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "35-2-4",
+              "type": "form",
+              "label": "טופס מידע על פוליטיקה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "מדע וטכנולוגיה",
+      "icon": "science",
+      "description": "ניהול מידע על מחקרים, פרויקטים, וחידושים",
+      "subcategories": [
+        {
+          "id": "36-1",
+          "name": "ניהול מדע וטכנולוגיה",
+          "features": [
+            {
+              "id": "36-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי מדע וטכנולוגיה"
+            },
+            {
+              "id": "36-1-2",
+              "type": "reminder",
+              "label": "תזכורת למדע וטכנולוגיה"
+            },
+            {
+              "id": "36-1-3",
+              "type": "external_link",
+              "label": "קישור למדע וטכנולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "36-1-4",
+              "type": "form",
+              "label": "טופס מדע וטכנולוגיה"
+            }
+          ]
+        },
+        {
+          "id": "36-2",
+          "name": "מידע על מדע וטכנולוגיה",
+          "features": [
+            {
+              "id": "36-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על מדע וטכנולוגיה"
+            },
+            {
+              "id": "36-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על מדע וטכנולוגיה"
+            },
+            {
+              "id": "36-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על מדע וטכנולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "36-2-4",
+              "type": "form",
+              "label": "טופס מידע על מדע וטכנולוגיה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "חלל ואסטרונומיה",
+      "icon": "rocket",
+      "description": "ניהול מידע על תצפיות, אירועים, וחידושים",
+      "subcategories": [
+        {
+          "id": "37-1",
+          "name": "ניהול חלל ואסטרונומיה",
+          "features": [
+            {
+              "id": "37-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי חלל ואסטרונומיה"
+            },
+            {
+              "id": "37-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחלל ואסטרונומיה"
+            },
+            {
+              "id": "37-1-3",
+              "type": "external_link",
+              "label": "קישור לחלל ואסטרונומיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "37-1-4",
+              "type": "form",
+              "label": "טופס חלל ואסטרונומיה"
+            }
+          ]
+        },
+        {
+          "id": "37-2",
+          "name": "מידע על חלל ואסטרונומיה",
+          "features": [
+            {
+              "id": "37-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על חלל ואסטרונומיה"
+            },
+            {
+              "id": "37-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על חלל ואסטרונומיה"
+            },
+            {
+              "id": "37-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על חלל ואסטרונומיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "37-2-4",
+              "type": "form",
+              "label": "טופס מידע על חלל ואסטרונומיה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "ים וימאות",
+      "icon": "sailing",
+      "description": "ניהול מידע על סירות, רישיונות, ופעילויות ימיות",
+      "subcategories": [
+        {
+          "id": "38-1",
+          "name": "ניהול ים וימאות",
+          "features": [
+            {
+              "id": "38-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי ים וימאות"
+            },
+            {
+              "id": "38-1-2",
+              "type": "reminder",
+              "label": "תזכורת לים וימאות"
+            },
+            {
+              "id": "38-1-3",
+              "type": "external_link",
+              "label": "קישור לים וימאות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "38-1-4",
+              "type": "form",
+              "label": "טופס ים וימאות"
+            }
+          ]
+        },
+        {
+          "id": "38-2",
+          "name": "מידע על ים וימאות",
+          "features": [
+            {
+              "id": "38-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על ים וימאות"
+            },
+            {
+              "id": "38-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על ים וימאות"
+            },
+            {
+              "id": "38-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על ים וימאות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "38-2-4",
+              "type": "form",
+              "label": "טופס מידע על ים וימאות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "טיסה ותעופה",
+      "icon": "flight_takeoff",
+      "description": "ניהול מידע על רישיונות טיס, קורסים, וטיסות",
+      "subcategories": [
+        {
+          "id": "39-1",
+          "name": "ניהול טיסה ותעופה",
+          "features": [
+            {
+              "id": "39-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי טיסה ותעופה"
+            },
+            {
+              "id": "39-1-2",
+              "type": "reminder",
+              "label": "תזכורת לטיסה ותעופה"
+            },
+            {
+              "id": "39-1-3",
+              "type": "external_link",
+              "label": "קישור לטיסה ותעופה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "39-1-4",
+              "type": "form",
+              "label": "טופס טיסה ותעופה"
+            }
+          ]
+        },
+        {
+          "id": "39-2",
+          "name": "מידע על טיסה ותעופה",
+          "features": [
+            {
+              "id": "39-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על טיסה ותעופה"
+            },
+            {
+              "id": "39-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על טיסה ותעופה"
+            },
+            {
+              "id": "39-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על טיסה ותעופה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "39-2-4",
+              "type": "form",
+              "label": "טופס מידע על טיסה ותעופה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "צילום",
+      "icon": "photo_camera",
+      "description": "ניהול מידע על ציוד צילום, קורסים, ותערוכות",
+      "subcategories": [
+        {
+          "id": "40-1",
+          "name": "ניהול צילום",
+          "features": [
+            {
+              "id": "40-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי צילום"
+            },
+            {
+              "id": "40-1-2",
+              "type": "reminder",
+              "label": "תזכורת לצילום"
+            },
+            {
+              "id": "40-1-3",
+              "type": "external_link",
+              "label": "קישור לצילום",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "40-1-4",
+              "type": "form",
+              "label": "טופס צילום"
+            }
+          ]
+        },
+        {
+          "id": "40-2",
+          "name": "מידע על צילום",
+          "features": [
+            {
+              "id": "40-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על צילום"
+            },
+            {
+              "id": "40-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על צילום"
+            },
+            {
+              "id": "40-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על צילום",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "40-2-4",
+              "type": "form",
+              "label": "טופס מידע על צילום"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "וידאו וקולנוע",
+      "icon": "videocam",
+      "description": "ניהול מידע על ציוד וידאו, פרויקטים, והקרנות",
+      "subcategories": [
+        {
+          "id": "41-1",
+          "name": "ניהול וידאו וקולנוע",
+          "features": [
+            {
+              "id": "41-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי וידאו וקולנוע"
+            },
+            {
+              "id": "41-1-2",
+              "type": "reminder",
+              "label": "תזכורת לוידאו וקולנוע"
+            },
+            {
+              "id": "41-1-3",
+              "type": "external_link",
+              "label": "קישור לוידאו וקולנוע",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "41-1-4",
+              "type": "form",
+              "label": "טופס וידאו וקולנוע"
+            }
+          ]
+        },
+        {
+          "id": "41-2",
+          "name": "מידע על וידאו וקולנוע",
+          "features": [
+            {
+              "id": "41-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על וידאו וקולנוע"
+            },
+            {
+              "id": "41-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על וידאו וקולנוע"
+            },
+            {
+              "id": "41-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על וידאו וקולנוע",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "41-2-4",
+              "type": "form",
+              "label": "טופס מידע על וידאו וקולנוע"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "רדיו ושידור",
+      "icon": "radio",
+      "description": "ניהול מידע על ציוד שידור, תוכניות, ורישיונות",
+      "subcategories": [
+        {
+          "id": "42-1",
+          "name": "ניהול רדיו ושידור",
+          "features": [
+            {
+              "id": "42-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי רדיו ושידור"
+            },
+            {
+              "id": "42-1-2",
+              "type": "reminder",
+              "label": "תזכורת לרדיו ושידור"
+            },
+            {
+              "id": "42-1-3",
+              "type": "external_link",
+              "label": "קישור לרדיו ושידור",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "42-1-4",
+              "type": "form",
+              "label": "טופס רדיו ושידור"
+            }
+          ]
+        },
+        {
+          "id": "42-2",
+          "name": "מידע על רדיו ושידור",
+          "features": [
+            {
+              "id": "42-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על רדיו ושידור"
+            },
+            {
+              "id": "42-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על רדיו ושידור"
+            },
+            {
+              "id": "42-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על רדיו ושידור",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "42-2-4",
+              "type": "form",
+              "label": "טופס מידע על רדיו ושידור"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "אופניים",
+      "icon": "pedal_bike",
+      "description": "ניהול מידע על אופניים, ציוד, ומסלולים",
+      "subcategories": [
+        {
+          "id": "43-1",
+          "name": "ניהול אופניים",
+          "features": [
+            {
+              "id": "43-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אופניים"
+            },
+            {
+              "id": "43-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאופניים"
+            },
+            {
+              "id": "43-1-3",
+              "type": "external_link",
+              "label": "קישור לאופניים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "43-1-4",
+              "type": "form",
+              "label": "טופס אופניים"
+            }
+          ]
+        },
+        {
+          "id": "43-2",
+          "name": "מידע על אופניים",
+          "features": [
+            {
+              "id": "43-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אופניים"
+            },
+            {
+              "id": "43-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אופניים"
+            },
+            {
+              "id": "43-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אופניים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "43-2-4",
+              "type": "form",
+              "label": "טופס מידע על אופניים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "אופנועים",
+      "icon": "two_wheeler",
+      "description": "ניהול מידע על אופנועים, רישיונות, וטיפולים",
+      "subcategories": [
+        {
+          "id": "44-1",
+          "name": "ניהול אופנועים",
+          "features": [
+            {
+              "id": "44-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אופנועים"
+            },
+            {
+              "id": "44-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאופנועים"
+            },
+            {
+              "id": "44-1-3",
+              "type": "external_link",
+              "label": "קישור לאופנועים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "44-1-4",
+              "type": "form",
+              "label": "טופס אופנועים"
+            }
+          ]
+        },
+        {
+          "id": "44-2",
+          "name": "מידע על אופנועים",
+          "features": [
+            {
+              "id": "44-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אופנועים"
+            },
+            {
+              "id": "44-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אופנועים"
+            },
+            {
+              "id": "44-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אופנועים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "44-2-4",
+              "type": "form",
+              "label": "טופס מידע על אופנועים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "קמפינג וטיולים",
+      "icon": "hiking",
+      "description": "ניהול מידע על ציוד קמפינג, מסלולים, וטיולים",
+      "subcategories": [
+        {
+          "id": "45-1",
+          "name": "ניהול קמפינג וטיולים",
+          "features": [
+            {
+              "id": "45-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי קמפינג וטיולים"
+            },
+            {
+              "id": "45-1-2",
+              "type": "reminder",
+              "label": "תזכורת לקמפינג וטיולים"
+            },
+            {
+              "id": "45-1-3",
+              "type": "external_link",
+              "label": "קישור לקמפינג וטיולים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "45-1-4",
+              "type": "form",
+              "label": "טופס קמפינג וטיולים"
+            }
+          ]
+        },
+        {
+          "id": "45-2",
+          "name": "מידע על קמפינג וטיולים",
+          "features": [
+            {
+              "id": "45-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על קמפינג וטיולים"
+            },
+            {
+              "id": "45-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על קמפינג וטיולים"
+            },
+            {
+              "id": "45-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על קמפינג וטיולים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "45-2-4",
+              "type": "form",
+              "label": "טופס מידע על קמפינג וטיולים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "דיג",
+      "icon": "phishing",
+      "description": "ניהול מידע על ציוד דיג, רישיונות, ומקומות דיג",
+      "subcategories": [
+        {
+          "id": "46-1",
+          "name": "ניהול דיג",
+          "features": [
+            {
+              "id": "46-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי דיג"
+            },
+            {
+              "id": "46-1-2",
+              "type": "reminder",
+              "label": "תזכורת לדיג"
+            },
+            {
+              "id": "46-1-3",
+              "type": "external_link",
+              "label": "קישור לדיג",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "46-1-4",
+              "type": "form",
+              "label": "טופס דיג"
+            }
+          ]
+        },
+        {
+          "id": "46-2",
+          "name": "מידע על דיג",
+          "features": [
+            {
+              "id": "46-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על דיג"
+            },
+            {
+              "id": "46-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על דיג"
+            },
+            {
+              "id": "46-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על דיג",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "46-2-4",
+              "type": "form",
+              "label": "טופס מידע על דיג"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "ציד",
+      "icon": "sports_handball",
+      "description": "ניהול מידע על ציוד ציד, רישיונות, ועונות ציד",
+      "subcategories": [
+        {
+          "id": "47-1",
+          "name": "ניהול ציד",
+          "features": [
+            {
+              "id": "47-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי ציד"
+            },
+            {
+              "id": "47-1-2",
+              "type": "reminder",
+              "label": "תזכורת לציד"
+            },
+            {
+              "id": "47-1-3",
+              "type": "external_link",
+              "label": "קישור לציד",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "47-1-4",
+              "type": "form",
+              "label": "טופס ציד"
+            }
+          ]
+        },
+        {
+          "id": "47-2",
+          "name": "מידע על ציד",
+          "features": [
+            {
+              "id": "47-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על ציד"
+            },
+            {
+              "id": "47-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על ציד"
+            },
+            {
+              "id": "47-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על ציד",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "47-2-4",
+              "type": "form",
+              "label": "טופס מידע על ציד"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "אוספים",
+      "icon": "collections",
+      "description": "ניהול מידע על אוספים, פריטים, ותערוכות",
+      "subcategories": [
+        {
+          "id": "48-1",
+          "name": "ניהול אוספים",
+          "features": [
+            {
+              "id": "48-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אוספים"
+            },
+            {
+              "id": "48-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאוספים"
+            },
+            {
+              "id": "48-1-3",
+              "type": "external_link",
+              "label": "קישור לאוספים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "48-1-4",
+              "type": "form",
+              "label": "טופס אוספים"
+            }
+          ]
+        },
+        {
+          "id": "48-2",
+          "name": "מידע על אוספים",
+          "features": [
+            {
+              "id": "48-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אוספים"
+            },
+            {
+              "id": "48-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אוספים"
+            },
+            {
+              "id": "48-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אוספים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "48-2-4",
+              "type": "form",
+              "label": "טופס מידע על אוספים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "מטבעות ובולים",
+      "icon": "money",
+      "description": "ניהול מידע על אוספי מטבעות, בולים, ומכירות",
+      "subcategories": [
+        {
+          "id": "49-1",
+          "name": "ניהול מטבעות ובולים",
+          "features": [
+            {
+              "id": "49-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי מטבעות ובולים"
+            },
+            {
+              "id": "49-1-2",
+              "type": "reminder",
+              "label": "תזכורת למטבעות ובולים"
+            },
+            {
+              "id": "49-1-3",
+              "type": "external_link",
+              "label": "קישור למטבעות ובולים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "49-1-4",
+              "type": "form",
+              "label": "טופס מטבעות ובולים"
+            }
+          ]
+        },
+        {
+          "id": "49-2",
+          "name": "מידע על מטבעות ובולים",
+          "features": [
+            {
+              "id": "49-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על מטבעות ובולים"
+            },
+            {
+              "id": "49-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על מטבעות ובולים"
+            },
+            {
+              "id": "49-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על מטבעות ובולים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "49-2-4",
+              "type": "form",
+              "label": "טופס מידע על מטבעות ובולים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "אמנות לחימה",
+      "icon": "sports_martial_arts",
+      "description": "ניהול מידע על אימונים, תחרויות, ודרגות",
+      "subcategories": [
+        {
+          "id": "50-1",
+          "name": "ניהול אמנות לחימה",
+          "features": [
+            {
+              "id": "50-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אמנות לחימה"
+            },
+            {
+              "id": "50-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאמנות לחימה"
+            },
+            {
+              "id": "50-1-3",
+              "type": "external_link",
+              "label": "קישור לאמנות לחימה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "50-1-4",
+              "type": "form",
+              "label": "טופס אמנות לחימה"
+            }
+          ]
+        },
+        {
+          "id": "50-2",
+          "name": "מידע על אמנות לחימה",
+          "features": [
+            {
+              "id": "50-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אמנות לחימה"
+            },
+            {
+              "id": "50-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אמנות לחימה"
+            },
+            {
+              "id": "50-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אמנות לחימה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "50-2-4",
+              "type": "form",
+              "label": "טופס מידע על אמנות לחימה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "יוגה ומדיטציה",
+      "icon": "self_improvement",
+      "description": "ניהול מידע על שיעורים, סדנאות, ותרגולים",
+      "subcategories": [
+        {
+          "id": "51-1",
+          "name": "ניהול יוגה ומדיטציה",
+          "features": [
+            {
+              "id": "51-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי יוגה ומדיטציה"
+            },
+            {
+              "id": "51-1-2",
+              "type": "reminder",
+              "label": "תזכורת ליוגה ומדיטציה"
+            },
+            {
+              "id": "51-1-3",
+              "type": "external_link",
+              "label": "קישור ליוגה ומדיטציה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "51-1-4",
+              "type": "form",
+              "label": "טופס יוגה ומדיטציה"
+            }
+          ]
+        },
+        {
+          "id": "51-2",
+          "name": "מידע על יוגה ומדיטציה",
+          "features": [
+            {
+              "id": "51-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על יוגה ומדיטציה"
+            },
+            {
+              "id": "51-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על יוגה ומדיטציה"
+            },
+            {
+              "id": "51-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על יוגה ומדיטציה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "51-2-4",
+              "type": "form",
+              "label": "טופס מידע על יוגה ומדיטציה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "ריקוד",
+      "icon": "nightlife",
+      "description": "ניהול מידע על שיעורים, הופעות, ותחרויות",
+      "subcategories": [
+        {
+          "id": "52-1",
+          "name": "ניהול ריקוד",
+          "features": [
+            {
+              "id": "52-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי ריקוד"
+            },
+            {
+              "id": "52-1-2",
+              "type": "reminder",
+              "label": "תזכורת לריקוד"
+            },
+            {
+              "id": "52-1-3",
+              "type": "external_link",
+              "label": "קישור לריקוד",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "52-1-4",
+              "type": "form",
+              "label": "טופס ריקוד"
+            }
+          ]
+        },
+        {
+          "id": "52-2",
+          "name": "מידע על ריקוד",
+          "features": [
+            {
+              "id": "52-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על ריקוד"
+            },
+            {
+              "id": "52-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על ריקוד"
+            },
+            {
+              "id": "52-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על ריקוד",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "52-2-4",
+              "type": "form",
+              "label": "טופס מידע על ריקוד"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "תיאטרון",
+      "icon": "theater_comedy",
+      "description": "ניהול מידע על הצגות, קורסים, ואודישנים",
+      "subcategories": [
+        {
+          "id": "53-1",
+          "name": "ניהול תיאטרון",
+          "features": [
+            {
+              "id": "53-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תיאטרון"
+            },
+            {
+              "id": "53-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתיאטרון"
+            },
+            {
+              "id": "53-1-3",
+              "type": "external_link",
+              "label": "קישור לתיאטרון",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "53-1-4",
+              "type": "form",
+              "label": "טופס תיאטרון"
+            }
+          ]
+        },
+        {
+          "id": "53-2",
+          "name": "מידע על תיאטרון",
+          "features": [
+            {
+              "id": "53-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תיאטרון"
+            },
+            {
+              "id": "53-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תיאטרון"
+            },
+            {
+              "id": "53-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תיאטרון",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "53-2-4",
+              "type": "form",
+              "label": "טופס מידע על תיאטרון"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "קולינריה ובישול",
+      "icon": "restaurant_menu",
+      "description": "ניהול מידע על קורסי בישול, מתכונים, וכלים",
+      "subcategories": [
+        {
+          "id": "54-1",
+          "name": "ניהול קולינריה ובישול",
+          "features": [
+            {
+              "id": "54-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי קולינריה ובישול"
+            },
+            {
+              "id": "54-1-2",
+              "type": "reminder",
+              "label": "תזכורת לקולינריה ובישול"
+            },
+            {
+              "id": "54-1-3",
+              "type": "external_link",
+              "label": "קישור לקולינריה ובישול",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "54-1-4",
+              "type": "form",
+              "label": "טופס קולינריה ובישול"
+            }
+          ]
+        },
+        {
+          "id": "54-2",
+          "name": "מידע על קולינריה ובישול",
+          "features": [
+            {
+              "id": "54-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על קולינריה ובישול"
+            },
+            {
+              "id": "54-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על קולינריה ובישול"
+            },
+            {
+              "id": "54-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על קולינריה ובישול",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "54-2-4",
+              "type": "form",
+              "label": "טופס מידע על קולינריה ובישול"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "אפייה",
+      "icon": "cake",
+      "description": "ניהול מידע על קורסי אפייה, מתכונים, וכלים",
+      "subcategories": [
+        {
+          "id": "55-1",
+          "name": "ניהול אפייה",
+          "features": [
+            {
+              "id": "55-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אפייה"
+            },
+            {
+              "id": "55-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאפייה"
+            },
+            {
+              "id": "55-1-3",
+              "type": "external_link",
+              "label": "קישור לאפייה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "55-1-4",
+              "type": "form",
+              "label": "טופס אפייה"
+            }
+          ]
+        },
+        {
+          "id": "55-2",
+          "name": "מידע על אפייה",
+          "features": [
+            {
+              "id": "55-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אפייה"
+            },
+            {
+              "id": "55-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אפייה"
+            },
+            {
+              "id": "55-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אפייה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "55-2-4",
+              "type": "form",
+              "label": "טופס מידע על אפייה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "יין ואלכוהול",
+      "icon": "wine_bar",
+      "description": "ניהול מידע על יינות, משקאות, וטעימות",
+      "subcategories": [
+        {
+          "id": "56-1",
+          "name": "ניהול יין ואלכוהול",
+          "features": [
+            {
+              "id": "56-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי יין ואלכוהול"
+            },
+            {
+              "id": "56-1-2",
+              "type": "reminder",
+              "label": "תזכורת ליין ואלכוהול"
+            },
+            {
+              "id": "56-1-3",
+              "type": "external_link",
+              "label": "קישור ליין ואלכוהול",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "56-1-4",
+              "type": "form",
+              "label": "טופס יין ואלכוהול"
+            }
+          ]
+        },
+        {
+          "id": "56-2",
+          "name": "מידע על יין ואלכוהול",
+          "features": [
+            {
+              "id": "56-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על יין ואלכוהול"
+            },
+            {
+              "id": "56-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על יין ואלכוהול"
+            },
+            {
+              "id": "56-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על יין ואלכוהול",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "56-2-4",
+              "type": "form",
+              "label": "טופס מידע על יין ואלכוהול"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "קפה ותה",
+      "icon": "coffee",
+      "description": "ניהול מידע על סוגי קפה, תה, וכלים",
+      "subcategories": [
+        {
+          "id": "57-1",
+          "name": "ניהול קפה ותה",
+          "features": [
+            {
+              "id": "57-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי קפה ותה"
+            },
+            {
+              "id": "57-1-2",
+              "type": "reminder",
+              "label": "תזכורת לקפה ותה"
+            },
+            {
+              "id": "57-1-3",
+              "type": "external_link",
+              "label": "קישור לקפה ותה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "57-1-4",
+              "type": "form",
+              "label": "טופס קפה ותה"
+            }
+          ]
+        },
+        {
+          "id": "57-2",
+          "name": "מידע על קפה ותה",
+          "features": [
+            {
+              "id": "57-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על קפה ותה"
+            },
+            {
+              "id": "57-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על קפה ותה"
+            },
+            {
+              "id": "57-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על קפה ותה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "57-2-4",
+              "type": "form",
+              "label": "טופס מידע על קפה ותה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "גידול צמחים",
+      "icon": "grass",
+      "description": "ניהול מידע על צמחים, זרעים, וטיפול",
+      "subcategories": [
+        {
+          "id": "58-1",
+          "name": "ניהול גידול צמחים",
+          "features": [
+            {
+              "id": "58-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי גידול צמחים"
+            },
+            {
+              "id": "58-1-2",
+              "type": "reminder",
+              "label": "תזכורת לגידול צמחים"
+            },
+            {
+              "id": "58-1-3",
+              "type": "external_link",
+              "label": "קישור לגידול צמחים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "58-1-4",
+              "type": "form",
+              "label": "טופס גידול צמחים"
+            }
+          ]
+        },
+        {
+          "id": "58-2",
+          "name": "מידע על גידול צמחים",
+          "features": [
+            {
+              "id": "58-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על גידול צמחים"
+            },
+            {
+              "id": "58-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על גידול צמחים"
+            },
+            {
+              "id": "58-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על גידול צמחים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "58-2-4",
+              "type": "form",
+              "label": "טופס מידע על גידול צמחים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "חקלאות",
+      "icon": "agriculture",
+      "description": "ניהול מידע על גידולים, ציוד, ועונות",
+      "subcategories": [
+        {
+          "id": "59-1",
+          "name": "ניהול חקלאות",
+          "features": [
+            {
+              "id": "59-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי חקלאות"
+            },
+            {
+              "id": "59-1-2",
+              "type": "reminder",
+              "label": "תזכורת לחקלאות"
+            },
+            {
+              "id": "59-1-3",
+              "type": "external_link",
+              "label": "קישור לחקלאות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "59-1-4",
+              "type": "form",
+              "label": "טופס חקלאות"
+            }
+          ]
+        },
+        {
+          "id": "59-2",
+          "name": "מידע על חקלאות",
+          "features": [
+            {
+              "id": "59-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על חקלאות"
+            },
+            {
+              "id": "59-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על חקלאות"
+            },
+            {
+              "id": "59-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על חקלאות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "59-2-4",
+              "type": "form",
+              "label": "טופס מידע על חקלאות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "מלאכת יד",
+      "icon": "build",
+      "description": "ניהול מידע על פרויקטים, כלים, וחומרים",
+      "subcategories": [
+        {
+          "id": "60-1",
+          "name": "ניהול מלאכת יד",
+          "features": [
+            {
+              "id": "60-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי מלאכת יד"
+            },
+            {
+              "id": "60-1-2",
+              "type": "reminder",
+              "label": "תזכורת למלאכת יד"
+            },
+            {
+              "id": "60-1-3",
+              "type": "external_link",
+              "label": "קישור למלאכת יד",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "60-1-4",
+              "type": "form",
+              "label": "טופס מלאכת יד"
+            }
+          ]
+        },
+        {
+          "id": "60-2",
+          "name": "מידע על מלאכת יד",
+          "features": [
+            {
+              "id": "60-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על מלאכת יד"
+            },
+            {
+              "id": "60-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על מלאכת יד"
+            },
+            {
+              "id": "60-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על מלאכת יד",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "60-2-4",
+              "type": "form",
+              "label": "טופס מידע על מלאכת יד"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "תפירה וסריגה",
+      "icon": "content_cut",
+      "description": "ניהול מידע על פרויקטים, כלים, וחומרים",
+      "subcategories": [
+        {
+          "id": "61-1",
+          "name": "ניהול תפירה וסריגה",
+          "features": [
+            {
+              "id": "61-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תפירה וסריגה"
+            },
+            {
+              "id": "61-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתפירה וסריגה"
+            },
+            {
+              "id": "61-1-3",
+              "type": "external_link",
+              "label": "קישור לתפירה וסריגה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "61-1-4",
+              "type": "form",
+              "label": "טופס תפירה וסריגה"
+            }
+          ]
+        },
+        {
+          "id": "61-2",
+          "name": "מידע על תפירה וסריגה",
+          "features": [
+            {
+              "id": "61-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תפירה וסריגה"
+            },
+            {
+              "id": "61-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תפירה וסריגה"
+            },
+            {
+              "id": "61-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תפירה וסריגה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "61-2-4",
+              "type": "form",
+              "label": "טופס מידע על תפירה וסריגה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "קרמיקה וחימר",
+      "icon": "design_services",
+      "description": "ניהול מידע על פרויקטים, כלים, וחומרים",
+      "subcategories": [
+        {
+          "id": "62-1",
+          "name": "ניהול קרמיקה וחימר",
+          "features": [
+            {
+              "id": "62-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי קרמיקה וחימר"
+            },
+            {
+              "id": "62-1-2",
+              "type": "reminder",
+              "label": "תזכורת לקרמיקה וחימר"
+            },
+            {
+              "id": "62-1-3",
+              "type": "external_link",
+              "label": "קישור לקרמיקה וחימר",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "62-1-4",
+              "type": "form",
+              "label": "טופס קרמיקה וחימר"
+            }
+          ]
+        },
+        {
+          "id": "62-2",
+          "name": "מידע על קרמיקה וחימר",
+          "features": [
+            {
+              "id": "62-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על קרמיקה וחימר"
+            },
+            {
+              "id": "62-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על קרמיקה וחימר"
+            },
+            {
+              "id": "62-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על קרמיקה וחימר",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "62-2-4",
+              "type": "form",
+              "label": "טופס מידע על קרמיקה וחימר"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "עבודות עץ",
+      "icon": "carpenter",
+      "description": "ניהול מידע על פרויקטים, כלים, וחומרים",
+      "subcategories": [
+        {
+          "id": "63-1",
+          "name": "ניהול עבודות עץ",
+          "features": [
+            {
+              "id": "63-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי עבודות עץ"
+            },
+            {
+              "id": "63-1-2",
+              "type": "reminder",
+              "label": "תזכורת לעבודות עץ"
+            },
+            {
+              "id": "63-1-3",
+              "type": "external_link",
+              "label": "קישור לעבודות עץ",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "63-1-4",
+              "type": "form",
+              "label": "טופס עבודות עץ"
+            }
+          ]
+        },
+        {
+          "id": "63-2",
+          "name": "מידע על עבודות עץ",
+          "features": [
+            {
+              "id": "63-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על עבודות עץ"
+            },
+            {
+              "id": "63-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על עבודות עץ"
+            },
+            {
+              "id": "63-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על עבודות עץ",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "63-2-4",
+              "type": "form",
+              "label": "טופס מידע על עבודות עץ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "עבודות מתכת",
+      "icon": "hardware",
+      "description": "ניהול מידע על פרויקטים, כלים, וחומרים",
+      "subcategories": [
+        {
+          "id": "64-1",
+          "name": "ניהול עבודות מתכת",
+          "features": [
+            {
+              "id": "64-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי עבודות מתכת"
+            },
+            {
+              "id": "64-1-2",
+              "type": "reminder",
+              "label": "תזכורת לעבודות מתכת"
+            },
+            {
+              "id": "64-1-3",
+              "type": "external_link",
+              "label": "קישור לעבודות מתכת",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "64-1-4",
+              "type": "form",
+              "label": "טופס עבודות מתכת"
+            }
+          ]
+        },
+        {
+          "id": "64-2",
+          "name": "מידע על עבודות מתכת",
+          "features": [
+            {
+              "id": "64-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על עבודות מתכת"
+            },
+            {
+              "id": "64-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על עבודות מתכת"
+            },
+            {
+              "id": "64-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על עבודות מתכת",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "64-2-4",
+              "type": "form",
+              "label": "טופס מידע על עבודות מתכת"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "תכשיטנות",
+      "icon": "diamond",
+      "description": "ניהול מידע על פרויקטים, כלים, וחומרים",
+      "subcategories": [
+        {
+          "id": "65-1",
+          "name": "ניהול תכשיטנות",
+          "features": [
+            {
+              "id": "65-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תכשיטנות"
+            },
+            {
+              "id": "65-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתכשיטנות"
+            },
+            {
+              "id": "65-1-3",
+              "type": "external_link",
+              "label": "קישור לתכשיטנות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "65-1-4",
+              "type": "form",
+              "label": "טופס תכשיטנות"
+            }
+          ]
+        },
+        {
+          "id": "65-2",
+          "name": "מידע על תכשיטנות",
+          "features": [
+            {
+              "id": "65-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תכשיטנות"
+            },
+            {
+              "id": "65-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תכשיטנות"
+            },
+            {
+              "id": "65-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תכשיטנות",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "65-2-4",
+              "type": "form",
+              "label": "טופס מידע על תכשיטנות"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "אלקטרוניקה",
+      "icon": "memory",
+      "description": "ניהול מידע על פרויקטים, רכיבים, וכלים",
+      "subcategories": [
+        {
+          "id": "66-1",
+          "name": "ניהול אלקטרוניקה",
+          "features": [
+            {
+              "id": "66-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אלקטרוניקה"
+            },
+            {
+              "id": "66-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאלקטרוניקה"
+            },
+            {
+              "id": "66-1-3",
+              "type": "external_link",
+              "label": "קישור לאלקטרוניקה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "66-1-4",
+              "type": "form",
+              "label": "טופס אלקטרוניקה"
+            }
+          ]
+        },
+        {
+          "id": "66-2",
+          "name": "מידע על אלקטרוניקה",
+          "features": [
+            {
+              "id": "66-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אלקטרוניקה"
+            },
+            {
+              "id": "66-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אלקטרוניקה"
+            },
+            {
+              "id": "66-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אלקטרוניקה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "66-2-4",
+              "type": "form",
+              "label": "טופס מידע על אלקטרוניקה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "תכנות ופיתוח",
+      "icon": "code",
+      "description": "ניהול מידע על פרויקטים, שפות, וכלים",
+      "subcategories": [
+        {
+          "id": "67-1",
+          "name": "ניהול תכנות ופיתוח",
+          "features": [
+            {
+              "id": "67-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי תכנות ופיתוח"
+            },
+            {
+              "id": "67-1-2",
+              "type": "reminder",
+              "label": "תזכורת לתכנות ופיתוח"
+            },
+            {
+              "id": "67-1-3",
+              "type": "external_link",
+              "label": "קישור לתכנות ופיתוח",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "67-1-4",
+              "type": "form",
+              "label": "טופס תכנות ופיתוח"
+            }
+          ]
+        },
+        {
+          "id": "67-2",
+          "name": "מידע על תכנות ופיתוח",
+          "features": [
+            {
+              "id": "67-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על תכנות ופיתוח"
+            },
+            {
+              "id": "67-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על תכנות ופיתוח"
+            },
+            {
+              "id": "67-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על תכנות ופיתוח",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "67-2-4",
+              "type": "form",
+              "label": "טופס מידע על תכנות ופיתוח"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "משחקי מחשב",
+      "icon": "sports_esports",
+      "description": "ניהול מידע על משחקים, ציוד, ותחרויות",
+      "subcategories": [
+        {
+          "id": "68-1",
+          "name": "ניהול משחקי מחשב",
+          "features": [
+            {
+              "id": "68-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי משחקי מחשב"
+            },
+            {
+              "id": "68-1-2",
+              "type": "reminder",
+              "label": "תזכורת למשחקי מחשב"
+            },
+            {
+              "id": "68-1-3",
+              "type": "external_link",
+              "label": "קישור למשחקי מחשב",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "68-1-4",
+              "type": "form",
+              "label": "טופס משחקי מחשב"
+            }
+          ]
+        },
+        {
+          "id": "68-2",
+          "name": "מידע על משחקי מחשב",
+          "features": [
+            {
+              "id": "68-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על משחקי מחשב"
+            },
+            {
+              "id": "68-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על משחקי מחשב"
+            },
+            {
+              "id": "68-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על משחקי מחשב",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "68-2-4",
+              "type": "form",
+              "label": "טופס מידע על משחקי מחשב"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "משחקי לוח",
+      "icon": "casino",
+      "description": "ניהול מידע על משחקים, אוספים, ותחרויות",
+      "subcategories": [
+        {
+          "id": "69-1",
+          "name": "ניהול משחקי לוח",
+          "features": [
+            {
+              "id": "69-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי משחקי לוח"
+            },
+            {
+              "id": "69-1-2",
+              "type": "reminder",
+              "label": "תזכורת למשחקי לוח"
+            },
+            {
+              "id": "69-1-3",
+              "type": "external_link",
+              "label": "קישור למשחקי לוח",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "69-1-4",
+              "type": "form",
+              "label": "טופס משחקי לוח"
+            }
+          ]
+        },
+        {
+          "id": "69-2",
+          "name": "מידע על משחקי לוח",
+          "features": [
+            {
+              "id": "69-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על משחקי לוח"
+            },
+            {
+              "id": "69-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על משחקי לוח"
+            },
+            {
+              "id": "69-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על משחקי לוח",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "69-2-4",
+              "type": "form",
+              "label": "טופס מידע על משחקי לוח"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "פאזלים",
+      "icon": "extension",
+      "description": "ניהול מידע על פאזלים, אוספים, ותחרויות",
+      "subcategories": [
+        {
+          "id": "70-1",
+          "name": "ניהול פאזלים",
+          "features": [
+            {
+              "id": "70-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי פאזלים"
+            },
+            {
+              "id": "70-1-2",
+              "type": "reminder",
+              "label": "תזכורת לפאזלים"
+            },
+            {
+              "id": "70-1-3",
+              "type": "external_link",
+              "label": "קישור לפאזלים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "70-1-4",
+              "type": "form",
+              "label": "טופס פאזלים"
+            }
+          ]
+        },
+        {
+          "id": "70-2",
+          "name": "מידע על פאזלים",
+          "features": [
+            {
+              "id": "70-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על פאזלים"
+            },
+            {
+              "id": "70-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על פאזלים"
+            },
+            {
+              "id": "70-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על פאזלים",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "70-2-4",
+              "type": "form",
+              "label": "טופס מידע על פאזלים"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "אסטרולוגיה",
+      "icon": "auto_awesome",
+      "description": "ניהול מידע על מפות אסטרולוגיות, תחזיות, וקורסים",
+      "subcategories": [
+        {
+          "id": "71-1",
+          "name": "ניהול אסטרולוגיה",
+          "features": [
+            {
+              "id": "71-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי אסטרולוגיה"
+            },
+            {
+              "id": "71-1-2",
+              "type": "reminder",
+              "label": "תזכורת לאסטרולוגיה"
+            },
+            {
+              "id": "71-1-3",
+              "type": "external_link",
+              "label": "קישור לאסטרולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "71-1-4",
+              "type": "form",
+              "label": "טופס אסטרולוגיה"
+            }
+          ]
+        },
+        {
+          "id": "71-2",
+          "name": "מידע על אסטרולוגיה",
+          "features": [
+            {
+              "id": "71-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על אסטרולוגיה"
+            },
+            {
+              "id": "71-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על אסטרולוגיה"
+            },
+            {
+              "id": "71-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על אסטרולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "71-2-4",
+              "type": "form",
+              "label": "טופס מידע על אסטרולוגיה"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "נומרולוגיה",
+      "icon": "tag",
+      "description": "ניהול מידע על חישובים, תחזיות, וקורסים",
+      "subcategories": [
+        {
+          "id": "72-1",
+          "name": "ניהול נומרולוגיה",
+          "features": [
+            {
+              "id": "72-1-1",
+              "type": "upload",
+              "label": "העלאת מסמכי נומרולוגיה"
+            },
+            {
+              "id": "72-1-2",
+              "type": "reminder",
+              "label": "תזכורת לנומרולוגיה"
+            },
+            {
+              "id": "72-1-3",
+              "type": "external_link",
+              "label": "קישור לנומרולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "72-1-4",
+              "type": "form",
+              "label": "טופס נומרולוגיה"
+            }
+          ]
+        },
+        {
+          "id": "72-2",
+          "name": "מידע על נומרולוגיה",
+          "features": [
+            {
+              "id": "72-2-1",
+              "type": "upload",
+              "label": "העלאת מידע על נומרולוגיה"
+            },
+            {
+              "id": "72-2-2",
+              "type": "reminder",
+              "label": "תזכורת למידע על נומרולוגיה"
+            },
+            {
+              "id": "72-2-3",
+              "type": "external_link",
+              "label": "מידע נוסף על נומרולוגיה",
+              "url": "https://www.gov.il"
+            },
+            {
+              "id": "72-2-4",
+              "type": "form",
+              "label": "טופס מידע על נומרולוגיה"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
