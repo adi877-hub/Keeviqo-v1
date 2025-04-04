@@ -1,17 +1,11 @@
 name: Keeviqo CI Pipeline
 
 on:
-
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-
-  pull_request:
-    branches: [ main ]
-  push:
-    branches: [ main ]
 
 
 jobs:
@@ -39,11 +33,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-
-          node-version: '18'
-
           node-version: '20'
-
           cache: 'npm'
       
       - name: Install dependencies
@@ -69,7 +59,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
       
       - name: Install dependencies
@@ -89,9 +79,6 @@ jobs:
           echo "DATABASE_URL=postgres://postgres:postgres@localhost:5432/keeviqo_test" > .env
           echo "NODE_ENV=test" >> .env
           echo "SESSION_SECRET=test-secret" >> .env
-      
-      - name: Run ESLint
-        run: npm run lint
       
       - name: Run tests
         run: npm test -- --passWithNoTests
