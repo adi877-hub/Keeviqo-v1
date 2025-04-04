@@ -20,17 +20,17 @@ categories.forEach(category => {
   if (smartFeaturesUpdates[category.id]) {
     category.smartFeatures = smartFeaturesUpdates[category.id];
     updatedCount++;
-    console.log(`Updated smart features for category: ${category.id} - ${category.name}`);
+    globalThis.console.log(`Updated smart features for category: ${category.id} - ${category.name}`);
   }
   
   // עדכון includes אם צריך
   if (category.id === 82 && (!category.includes || category.includes.trim() === '')) {
     category.includes = "פרטי תביעות מתמשכות • פרוטוקולים מבית המשפט • מסמכי עדויות ותצהירים • התכתבויות עם עורכי דין • מסמכי הגשה לבית משפט • תאריכי דיונים עתידיים • כתבי תביעה וכתבי הגנה • החלטות ביניים ופסקי דין";
-    console.log(`Updated includes for category: ${category.id} - ${category.name}`);
+    globalThis.console.log(`Updated includes for category: ${category.id} - ${category.name}`);
   }
 });
 
 // שמירת הקובץ המעודכן
 fs.writeFileSync('./categories.json', JSON.stringify(categories, null, 2));
 
-console.log(`Updated ${updatedCount} categories with missing information.`);
+globalThis.console.log(`Updated ${updatedCount} categories with missing information.`);

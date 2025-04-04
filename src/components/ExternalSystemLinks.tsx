@@ -4,7 +4,6 @@ import { getExternalSystemLinks } from '../utils/api';
 
 interface ExternalSystemLinksProps {
   category: string;
-  userId?: number;
 }
 
 function ExternalSystemLinks({ category }: ExternalSystemLinksProps) {

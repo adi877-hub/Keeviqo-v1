@@ -51,11 +51,11 @@ categories.forEach(category => {
   if (includesUpdates[category.id] && (!category.includes || category.includes.trim() === '')) {
     category.includes = includesUpdates[category.id];
     updatedCount++;
-    console.log(`Updated includes for category: ${category.id} - ${category.name}`);
+    globalThis.console.log(`Updated includes for category: ${category.id} - ${category.name}`);
   }
 });
 
 // שמירת הקובץ המעודכן
 fs.writeFileSync('./categories.json', JSON.stringify(categories, null, 2));
 
-console.log(`Updated ${updatedCount} categories with includes information.`);
+globalThis.console.log(`Updated ${updatedCount} categories with includes information.`);

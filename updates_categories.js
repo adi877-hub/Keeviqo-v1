@@ -52,11 +52,11 @@ categories.forEach(category => {
   if (smartFeaturesUpdates[category.id]) {
     category.smartFeatures = smartFeaturesUpdates[category.id];
     updatedCount++;
-    console.log(`Updated category: ${category.id} - ${category.name}`);
+    globalThis.console.log(`Updated category: ${category.id} - ${category.name}`);
   }
 });
 
 // שמירת הקובץ המעודכן
 fs.writeFileSync('./categories.json', JSON.stringify(categories, null, 2));
 
-console.log(`Updated ${updatedCount} categories with smart features.`);
+globalThis.console.log(`Updated ${updatedCount} categories with smart features.`);
