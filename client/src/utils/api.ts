@@ -82,7 +82,7 @@ export async function uploadDocument(file: File, featureId: number, metadata?: R
     formData.append('metadata', JSON.stringify(metadata));
   }
   
-  return fetchFromAPI('/uploads', {
+  return fetchFromAPI<UploadResponse>('/uploads', {
     method: 'POST',
     headers: {}, // Let the browser set the content type for FormData
     body: formData,
@@ -105,14 +105,22 @@ export interface ReminderResponse extends Reminder {
 }
 
 export async function createReminder(reminder: Reminder): Promise<ReminderResponse> {
+
   return fetchFromAPI('/reminders', {
+
+  return fetchFromAPI<ReminderResponse>('/reminders', {
+
     method: 'POST',
     body: JSON.stringify(reminder),
   });
 }
 
 export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<ReminderResponse> {
+
   return fetchFromAPI(`/reminders/${id}`, {
+
+  return fetchFromAPI<ReminderResponse>(`/reminders/${id}`, {
+
     method: 'PUT',
     body: JSON.stringify(reminder),
   });
@@ -127,7 +135,11 @@ export interface FormDataResponse {
 }
 
 export async function submitFormData(data: Record<string, unknown>, featureId: number): Promise<FormDataResponse> {
+
   return fetchFromAPI('/forms', {
+
+  return fetchFromAPI<FormDataResponse>('/forms', {
+
     method: 'POST',
     body: JSON.stringify({ data, featureId }),
   });

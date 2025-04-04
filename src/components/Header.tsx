@@ -6,6 +6,10 @@ import SmartSearch from './SmartSearch';
 function Header() {
   const { t } = useTranslation();
   const [location, setLocation] = useLocation();
+
+
+  useTheme();
+
   
   const navItems = [
     { path: '/', label: t('nav.home') },

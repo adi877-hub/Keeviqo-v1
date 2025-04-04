@@ -82,7 +82,7 @@ export async function uploadDocument(file: File, featureId: number, metadata?: R
     formData.append('metadata', JSON.stringify(metadata));
   }
   
-  return fetchFromAPI('/uploads', {
+  return fetchFromAPI<UploadResponse>('/uploads', {
     method: 'POST',
     headers: {}, // Let the browser set the content type for FormData
     body: formData,
@@ -105,14 +105,21 @@ export interface ReminderResponse extends Reminder {
 }
 
 export async function createReminder(reminder: Reminder): Promise<ReminderResponse> {
+
   return fetchFromAPI('/reminders', {
+
+  return fetchFromAPI<ReminderResponse>('/reminders', {
+
     method: 'POST',
     body: JSON.stringify(reminder),
   });
 }
 
 export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<ReminderResponse> {
+
   return fetchFromAPI(`/reminders/${id}`, {
+
+  return fetchFromAPI<ReminderResponse>(`/reminders/${id}`, {
     method: 'PUT',
     body: JSON.stringify(reminder),
   });
@@ -127,7 +134,11 @@ export interface FormDataResponse {
 }
 
 export async function submitFormData(data: Record<string, unknown>, featureId: number): Promise<FormDataResponse> {
+
   return fetchFromAPI('/forms', {
+
+  return fetchFromAPI<FormDataResponse>('/forms', {
+
     method: 'POST',
     body: JSON.stringify({ data, featureId }),
   });
@@ -152,7 +163,11 @@ export interface ContactFormResponse {
 }
 
 export async function sendContactForm(data: ContactFormData): Promise<ContactFormResponse> {
+
   return fetchFromAPI('/contact', {
+
+  return fetchFromAPI<ContactFormResponse>('/contact', {
+
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -175,11 +190,19 @@ export interface PaymentResponse {
   transactionId: string;
   amount: number;
   currency: string;
+
+
+  method: string;
+
   createdAt: string;
 }
 
 export async function processPayment(data: PaymentData): Promise<PaymentResponse> {
+
   return fetchFromAPI('/payments/process', {
+
+  return fetchFromAPI<PaymentResponse>('/payments/process', {
+
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -193,7 +216,11 @@ export interface QRCodeResponse {
 }
 
 export async function generateQRCode(data: string): Promise<QRCodeResponse> {
+
   return fetchFromAPI('/qr/generate', {
+
+  return fetchFromAPI<QRCodeResponse>('/qr/generate', {
+
     method: 'POST',
     body: JSON.stringify({ data }),
   });
@@ -224,10 +251,18 @@ export interface ThemeResponse {
   success: boolean;
   theme: 'light' | 'dark';
   userId: number;
+
 }
 
 export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
   return fetchFromAPI('/user/theme', {
+
+updatedAt: string;
+}
+
+export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
+  return fetchFromAPI<ThemeResponse>('/user/theme', {
+
     method: 'POST',
     body: JSON.stringify({ theme }),
   });
@@ -237,10 +272,18 @@ export interface LanguageResponse {
   success: boolean;
   language: 'he' | 'en';
   userId: number;
+
 }
 
 export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
   return fetchFromAPI('/user/language', {
+
+  updatedAt: string;
+}
+
+export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
+  return fetchFromAPI<LanguageResponse>('/user/language', {
+
     method: 'POST',
     body: JSON.stringify({ language }),
   });
@@ -248,14 +291,24 @@ export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageRe
 
 export interface InvoiceResponse {
   id: number;
+
   paymentId: number;
   invoiceNumber: string;
   downloadUrl: string;
+
+  invoiceNumber: string;
+  paymentId: number;
+  url: string;
+
   createdAt: string;
 }
 
 export async function generateInvoice(paymentId: number): Promise<InvoiceResponse> {
+
   return fetchFromAPI(`/payments/${paymentId}/invoice`, {
+
+  return fetchFromAPI<InvoiceResponse>(`/payments/${paymentId}/invoice`, {
+
     method: 'POST',
   });
 }
@@ -275,12 +328,22 @@ export interface EmergencyContact {
 
 export interface EmergencyContactResponse {
   success: boolean;
+
   message: string;
   contacts: EmergencyContact[];
 }
 
 export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
   return fetchFromAPI('/user/emergency-contacts', {
+
+  contacts: EmergencyContact[];
+  userId: number;
+  updatedAt: string;
+}
+
+export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
+  return fetchFromAPI<EmergencyContactResponse>('/user/emergency-contacts', {
+
     method: 'POST',
     body: JSON.stringify({ contacts }),
   });

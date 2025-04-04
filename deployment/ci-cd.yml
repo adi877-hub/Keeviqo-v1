@@ -1,18 +1,11 @@
-name: Keeviqo CI Pipeline
+name: Keeviqo CI/CD Pipeline
 
 on:
-
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-
-  pull_request:
-    branches: [ main ]
-  push:
-    branches: [ main ]
-
 
 jobs:
   test:
@@ -39,17 +32,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-
           node-version: '18'
-
-          node-version: '20'
-
           cache: 'npm'
       
       - name: Install dependencies
         run: npm ci
       
-
       - name: Lint code
         run: npm run lint
       
@@ -83,18 +71,45 @@ jobs:
         with:
           name: build
           path: dist
-
-      - name: Create .env file
-        run: |
-          echo "DATABASE_URL=postgres://postgres:postgres@localhost:5432/keeviqo_test" > .env
-          echo "NODE_ENV=test" >> .env
-          echo "SESSION_SECRET=test-secret" >> .env
+  
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
       
-      - name: Run ESLint
-        run: npm run lint
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
       
-      - name: Run tests
-        run: npm test -- --passWithNoTests
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: dist
+      
+      - name: Install Fly.io CLI
+        run: curl -L https://fly.io/install.sh | sh
+      
+      - name: Add Fly.io to PATH
+        run: echo "/home/runner/.fly/bin" >> $GITHUB_PATH
+      
+      - name: Deploy to Fly.io
+        run: flyctl deploy --remote-only
         env:
-          DATABASE_URL: postgres://postgres:postgres@localhost:5432/keeviqo_test
-          NODE_ENV: test
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      
+      - name: Run database migrations
+        run: npm run migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      
+      - name: Verify deployment
+        run: |
+          echo "Verifying deployment..."
+          curl --fail https://keeviqo.fly.dev/api/health || exit 1
+          echo "Deployment verified successfully!"

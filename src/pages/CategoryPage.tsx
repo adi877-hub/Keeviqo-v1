@@ -84,7 +84,7 @@ function CategoryPage() {
       <p className="text-gray-600 mb-6">{category.description}</p>
       
       <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">פיצ'רים חכמים:</h2>
+        <h2 className="text-xl font-semibold mb-3">פיצ&apos;רים חכמים:</h2>
         <p>{category.smartFeatures}</p>
       </div>
       
