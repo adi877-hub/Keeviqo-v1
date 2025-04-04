@@ -63,6 +63,7 @@ export interface EmergencyRequest extends Request {
     id: string;
     uuid: string;
   };
+}
 
 /**
  * Shared TypeScript interfaces for the Keeviqo platform

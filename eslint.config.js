@@ -6,9 +6,26 @@ import globals from "globals";
 import pluginReact from "eslint-plugin-react";
 
 export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   { 
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"], 
+    files: ["**/*.{js,mjs,cjs}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.jest
+      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
+    plugins: { js },
+    extends: ["js/recommended"],
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+    }
+  },
+  { 
+    files: ["**/*.{ts,tsx,jsx}"], 
     languageOptions: { 
       globals: {
         ...globals.browser, 
@@ -17,7 +34,7 @@ export default defineConfig([
       },
       parser: tseslint.parser,
       parserOptions: {
-        project: true,
+        project: './tsconfig.json',
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
@@ -31,10 +48,9 @@ export default defineConfig([
       'no-unused-vars': 'off',
     },
   },
-  { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"], plugins: { js }, extends: ["js/recommended"] },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
-    ignores: ['dist/**', 'node_modules/**', 'jest.config.js', 'jest.setup.js'],
+    ignores: ['dist/**', 'node_modules/**', 'jest.config.js', 'jest.setup.js', 'babel.config.js', 'babel.config.cjs', 'postcss.config.js'],
   }
 ]);
