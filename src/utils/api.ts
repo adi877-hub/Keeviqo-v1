@@ -545,3 +545,18 @@ export async function revokeShareLink(linkId: number): Promise<{ success: boolea
     method: 'POST',
   });
 }
+
+export interface Recommendation {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  priority: 'high' | 'medium' | 'low';
+  actionType: 'form' | 'document' | 'reminder' | 'link' | 'grant';
+  actionPath: string;
+  expiresAt?: string;
+}
+
+export async function getRecommendations(): Promise<Recommendation[]> {
+  return fetchFromAPI<Recommendation[]>('/recommendations');
+}
