@@ -1,0 +1,340 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "בריאות",
+      "icon": "health_and_safety",
+      "description": "ניהול מידע רפואי, ביטוחים, ותיעוד בדיקות",
+      "subcategories": [
+        {
+          "id": "1-1",
+          "name": "קופת חולים",
+          "features": [
+            { "id": "1-1-1", "type": "upload", "label": "העלאת מסמך רפואי" },
+            { "id": "1-1-2", "type": "reminder", "label": "תזכורת לחידוש תרופות" },
+            { "id": "1-1-3", "type": "external_link", "label": "שירותים של קופת חולים", "url": "https://www.clalit.co.il" },
+            { "id": "1-1-4", "type": "form", "label": "טופס החזר כספי" }
+          ]
+        },
+        {
+          "id": "1-2",
+          "name": "ביטוח בריאות",
+          "features": [
+            { "id": "1-2-1", "type": "upload", "label": "העלאת פוליסת ביטוח" },
+            { "id": "1-2-2", "type": "reminder", "label": "תזכורת לחידוש ביטוח" },
+            { "id": "1-2-3", "type": "external_link", "label": "אתר חברת הביטוח", "url": "https://www.harel-group.co.il" },
+            { "id": "1-2-4", "type": "form", "label": "טופס תביעה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "חינוך",
+      "icon": "school",
+      "description": "תעודות, קורסים, והשכלה",
+      "subcategories": [
+        {
+          "id": "2-1",
+          "name": "בית ספר",
+          "features": [
+            { "id": "2-1-1", "type": "upload", "label": "העלאת תעודות" },
+            { "id": "2-1-2", "type": "reminder", "label": "תזכורת לאסיפת הורים" },
+            { "id": "2-1-3", "type": "external_link", "label": "פורטל בית הספר", "url": "https://www.edu.gov.il" },
+            { "id": "2-1-4", "type": "form", "label": "טופס רישום" }
+          ]
+        },
+        {
+          "id": "2-2",
+          "name": "השכלה גבוהה",
+          "features": [
+            { "id": "2-2-1", "type": "upload", "label": "העלאת תעודת תואר" },
+            { "id": "2-2-2", "type": "reminder", "label": "תזכורת לתשלום שכר לימוד" },
+            { "id": "2-2-3", "type": "external_link", "label": "אתר האוניברסיטה", "url": "https://www.tau.ac.il" },
+            { "id": "2-2-4", "type": "form", "label": "טופס בקשת מלגה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "פיננסים",
+      "icon": "account_balance",
+      "description": "ניהול חשבונות, השקעות, וחסכונות",
+      "subcategories": [
+        {
+          "id": "3-1",
+          "name": "חשבון בנק",
+          "features": [
+            { "id": "3-1-1", "type": "upload", "label": "העלאת דפי חשבון" },
+            { "id": "3-1-2", "type": "reminder", "label": "תזכורת לתשלום הלוואה" },
+            { "id": "3-1-3", "type": "external_link", "label": "אתר הבנק", "url": "https://www.bankhapoalim.co.il" },
+            { "id": "3-1-4", "type": "form", "label": "טופס הוראת קבע" }
+          ]
+        },
+        {
+          "id": "3-2",
+          "name": "השקעות",
+          "features": [
+            { "id": "3-2-1", "type": "upload", "label": "העלאת דוחות השקעה" },
+            { "id": "3-2-2", "type": "reminder", "label": "תזכורת לבדיקת תיק השקעות" },
+            { "id": "3-2-3", "type": "external_link", "label": "אתר הבורסה", "url": "https://www.tase.co.il" },
+            { "id": "3-2-4", "type": "form", "label": "טופס הוראת קנייה/מכירה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "בריאות",
+      "icon": "health_and_safety",
+      "description": "ניהול מידע רפואי, ביטוחים, ותיעוד בדיקות",
+      "subcategories": [
+        {
+          "id": "4-1",
+          "name": "רופא משפחה",
+          "features": [
+            { "id": "4-1-1", "type": "upload", "label": "העלאת תוצאות בדיקות" },
+            { "id": "4-1-2", "type": "reminder", "label": "תזכורת לביקור רופא" },
+            { "id": "4-1-3", "type": "external_link", "label": "זימון תור", "url": "https://www.clalit.co.il" },
+            { "id": "4-1-4", "type": "form", "label": "טופס הצהרת בריאות" }
+          ]
+        },
+        {
+          "id": "4-2",
+          "name": "רופא שיניים",
+          "features": [
+            { "id": "4-2-1", "type": "upload", "label": "העלאת צילומי שיניים" },
+            { "id": "4-2-2", "type": "reminder", "label": "תזכורת לבדיקה תקופתית" },
+            { "id": "4-2-3", "type": "external_link", "label": "מרפאת שיניים", "url": "https://www.dental-clinic.co.il" },
+            { "id": "4-2-4", "type": "form", "label": "טופס תביעת ביטוח שיניים" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "רכב ותחבורה",
+      "icon": "directions_car",
+      "description": "רישיונות, ביטוחים, וטיפולים לרכב",
+      "subcategories": [
+        {
+          "id": "5-1",
+          "name": "משרד הרישוי",
+          "features": [
+            { "id": "5-1-1", "type": "upload", "label": "העלאת רישיון" },
+            { "id": "5-1-2", "type": "reminder", "label": "תזכורת לטסט" },
+            { "id": "5-1-3", "type": "external_link", "label": "חידוש רישיון", "url": "https://www.gov.il/he/service/renew_driving_license" },
+            { "id": "5-1-4", "type": "form", "label": "בקשה להעברת בעלות" }
+          ]
+        },
+        {
+          "id": "5-2",
+          "name": "ביטוח רכב",
+          "features": [
+            { "id": "5-2-1", "type": "upload", "label": "העלאת פוליסת ביטוח" },
+            { "id": "5-2-2", "type": "reminder", "label": "תזכורת לחידוש ביטוח" },
+            { "id": "5-2-3", "type": "external_link", "label": "אתר חברת הביטוח", "url": "https://www.migdal.co.il" },
+            { "id": "5-2-4", "type": "form", "label": "טופס תביעה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "משפחה",
+      "icon": "family_restroom",
+      "description": "מסמכים משפחתיים, אירועים, ותכנון",
+      "subcategories": [
+        {
+          "id": "6-1",
+          "name": "תעודות",
+          "features": [
+            { "id": "6-1-1", "type": "upload", "label": "העלאת תעודת לידה" },
+            { "id": "6-1-2", "type": "reminder", "label": "תזכורת ליום הולדת" },
+            { "id": "6-1-3", "type": "external_link", "label": "משרד הפנים", "url": "https://www.gov.il/he/departments/ministry_of_interior" },
+            { "id": "6-1-4", "type": "form", "label": "טופס בקשת תעודה" }
+          ]
+        },
+        {
+          "id": "6-2",
+          "name": "אירועים משפחתיים",
+          "features": [
+            { "id": "6-2-1", "type": "upload", "label": "העלאת תמונות אירוע" },
+            { "id": "6-2-2", "type": "reminder", "label": "תזכורת לאירוע משפחתי" },
+            { "id": "6-2-3", "type": "external_link", "label": "אולמות אירועים", "url": "https://www.event-halls.co.il" },
+            { "id": "6-2-4", "type": "form", "label": "טופס תכנון אירוע" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "קריירה",
+      "icon": "work",
+      "description": "קורות חיים, חוזי עבודה, והמלצות",
+      "subcategories": [
+        {
+          "id": "7-1",
+          "name": "חיפוש עבודה",
+          "features": [
+            { "id": "7-1-1", "type": "upload", "label": "העלאת קורות חיים" },
+            { "id": "7-1-2", "type": "reminder", "label": "תזכורת לראיון עבודה" },
+            { "id": "7-1-3", "type": "external_link", "label": "אתר חיפוש עבודה", "url": "https://www.alljobs.co.il" },
+            { "id": "7-1-4", "type": "form", "label": "טופס הגשת מועמדות" }
+          ]
+        },
+        {
+          "id": "7-2",
+          "name": "מקום עבודה נוכחי",
+          "features": [
+            { "id": "7-2-1", "type": "upload", "label": "העלאת חוזה עבודה" },
+            { "id": "7-2-2", "type": "reminder", "label": "תזכורת לשיחת משוב" },
+            { "id": "7-2-3", "type": "external_link", "label": "פורטל עובדים", "url": "https://www.company-portal.co.il" },
+            { "id": "7-2-4", "type": "form", "label": "טופס בקשת חופשה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "נדל\"ן",
+      "icon": "home",
+      "description": "מסמכי דירה, משכנתא, וחוזי שכירות",
+      "subcategories": [
+        {
+          "id": "8-1",
+          "name": "רכישת דירה",
+          "features": [
+            { "id": "8-1-1", "type": "upload", "label": "העלאת חוזה רכישה" },
+            { "id": "8-1-2", "type": "reminder", "label": "תזכורת לתשלום משכנתא" },
+            { "id": "8-1-3", "type": "external_link", "label": "אתר טאבו", "url": "https://www.gov.il/he/departments/land_registry" },
+            { "id": "8-1-4", "type": "form", "label": "טופס בקשת משכנתא" }
+          ]
+        },
+        {
+          "id": "8-2",
+          "name": "שכירות",
+          "features": [
+            { "id": "8-2-1", "type": "upload", "label": "העלאת חוזה שכירות" },
+            { "id": "8-2-2", "type": "reminder", "label": "תזכורת לחידוש חוזה" },
+            { "id": "8-2-3", "type": "external_link", "label": "אתר תיווך", "url": "https://www.yad2.co.il" },
+            { "id": "8-2-4", "type": "form", "label": "טופס פניה לבעל הדירה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "ביטוחים",
+      "icon": "security",
+      "description": "ניהול ביטוחים, פוליסות, ותביעות",
+      "subcategories": [
+        {
+          "id": "9-1",
+          "name": "ביטוח חיים",
+          "features": [
+            { "id": "9-1-1", "type": "upload", "label": "העלאת פוליסת ביטוח" },
+            { "id": "9-1-2", "type": "reminder", "label": "תזכורת לחידוש ביטוח" },
+            { "id": "9-1-3", "type": "external_link", "label": "אתר חברת הביטוח", "url": "https://www.migdal.co.il" },
+            { "id": "9-1-4", "type": "form", "label": "טופס תביעה" }
+          ]
+        },
+        {
+          "id": "9-2",
+          "name": "ביטוח דירה",
+          "features": [
+            { "id": "9-2-1", "type": "upload", "label": "העלאת פוליסת ביטוח" },
+            { "id": "9-2-2", "type": "reminder", "label": "תזכורת לחידוש ביטוח" },
+            { "id": "9-2-3", "type": "external_link", "label": "אתר חברת הביטוח", "url": "https://www.harel-group.co.il" },
+            { "id": "9-2-4", "type": "form", "label": "טופס תביעה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "מיסים",
+      "icon": "receipt_long",
+      "description": "דוחות מס, קבלות, וניהול הוצאות",
+      "subcategories": [
+        {
+          "id": "10-1",
+          "name": "מס הכנסה",
+          "features": [
+            { "id": "10-1-1", "type": "upload", "label": "העלאת דוח שנתי" },
+            { "id": "10-1-2", "type": "reminder", "label": "תזכורת להגשת דוח" },
+            { "id": "10-1-3", "type": "external_link", "label": "רשות המיסים", "url": "https://www.gov.il/he/departments/israel_tax_authority" },
+            { "id": "10-1-4", "type": "form", "label": "טופס 101" }
+          ]
+        },
+        {
+          "id": "10-2",
+          "name": "מע\"מ",
+          "features": [
+            { "id": "10-2-1", "type": "upload", "label": "העלאת דוח מע\"מ" },
+            { "id": "10-2-2", "type": "reminder", "label": "תזכורת להגשת דוח" },
+            { "id": "10-2-3", "type": "external_link", "label": "רשות המיסים", "url": "https://www.gov.il/he/departments/israel_tax_authority" },
+            { "id": "10-2-4", "type": "form", "label": "טופס עוסק מורשה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "חיות מחמד",
+      "icon": "pets",
+      "description": "ניהול מידע על חיות מחמד, חיסונים, וטיפולים",
+      "subcategories": [
+        {
+          "id": "11-1",
+          "name": "וטרינר",
+          "features": [
+            { "id": "11-1-1", "type": "upload", "label": "העלאת כרטיס חיסונים" },
+            { "id": "11-1-2", "type": "reminder", "label": "תזכורת לחיסון" },
+            { "id": "11-1-3", "type": "external_link", "label": "מרפאה וטרינרית", "url": "https://www.vetclinic.co.il" },
+            { "id": "11-1-4", "type": "form", "label": "טופס רישום חיה" }
+          ]
+        },
+        {
+          "id": "11-2",
+          "name": "מזון וציוד",
+          "features": [
+            { "id": "11-2-1", "type": "upload", "label": "העלאת קבלות" },
+            { "id": "11-2-2", "type": "reminder", "label": "תזכורת להזמנת מזון" },
+            { "id": "11-2-3", "type": "external_link", "label": "חנות מוצרים לחיות", "url": "https://www.pet-shop.co.il" },
+            { "id": "11-2-4", "type": "form", "label": "טופס הזמנה" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "תחביבים",
+      "icon": "sports_esports",
+      "description": "ניהול מידע על תחביבים, קורסים, וציוד",
+      "subcategories": [
+        {
+          "id": "12-1",
+          "name": "ספורט",
+          "features": [
+            { "id": "12-1-1", "type": "upload", "label": "העלאת תעודות" },
+            { "id": "12-1-2", "type": "reminder", "label": "תזכורת לאימון" },
+            { "id": "12-1-3", "type": "external_link", "label": "מועדון ספורט", "url": "https://www.sport-club.co.il" },
+            { "id": "12-1-4", "type": "form", "label": "טופס רישום לחוג" }
+          ]
+        },
+        {
+          "id": "12-2",
+          "name": "אמנות",
+          "features": [
+            { "id": "12-2-1", "type": "upload", "label": "העלאת יצירות" },
+            { "id": "12-2-2", "type": "reminder", "label": "תזכורת לקורס" },
+            { "id": "12-2-3", "type": "external_link", "label": "חנות אמנות", "url": "https://www.art-store.co.il" },
+            { "id": "12-2-4", "type": "form", "label": "טופס רישום לסדנה" }
+          ]
+        }
+      ]
+    }
+  ]
+}
