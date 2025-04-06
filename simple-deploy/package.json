@@ -1,0 +1,14 @@
+{
+  "name": "keeviqo-platform",
+  "version": "1.0.0",
+  "description": "Keeviqo Platform - Personal Information Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "body-parser": "^1.20.2"
+  }
+}
