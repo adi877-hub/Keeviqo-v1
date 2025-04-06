@@ -1,0 +1,4468 @@
+{
+  "categories": [
+    {
+      "name": "בריאות",
+      "icon": "health_and_safety",
+      "description": "ניהול מידע רפואי, ביטוחים, ותיעוד בדיקות",
+      "subcategories": [
+        {
+          "name": "קופת חולים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמך רפואי",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש תרופות",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "שירותים של כללית",
+              "url": "https://www.clalit.co.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס החזר כספי",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "ביטוח בריאות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש ביטוח",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל הביטוח",
+              "url": "https://www.insurance.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תביעת ביטוח",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "פיננסים",
+      "icon": "account_balance",
+      "description": "ניהול חשבונות, השקעות, וחסכונות",
+      "subcategories": [
+        {
+          "name": "חשבונות בנק",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת דפי חשבון",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתשלומים",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "בנק לאומי",
+              "url": "https://www.leumi.co.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס העברה בנקאית",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "השקעות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת דוחות השקעה",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת למעקב תיק השקעות",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "הבורסה לניירות ערך",
+              "url": "https://www.tase.co.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס הוראת קנייה/מכירה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "חינוך",
+      "icon": "school",
+      "description": "תעודות, קורסים, והשכלה",
+      "subcategories": [
+        {
+          "name": "בית ספר",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תעודות",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לאסיפת הורים",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל הורים",
+              "url": "https://parents.education.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לחוגים",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "לימודים גבוהים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תעודת תואר",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתשלום שכר לימוד",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "המועצה להשכלה גבוהה",
+              "url": "https://che.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס בקשת מלגה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "נדל\"ן",
+      "icon": "home",
+      "description": "מסמכי דירה, משכנתא, וחוזי שכירות",
+      "subcategories": [
+        {
+          "name": "דירה בבעלות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת חוזה רכישה",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתשלום ארנונה",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "רשות המיסים",
+              "url": "https://taxes.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס דיווח מס שבח",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "שכירות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת חוזה שכירות",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש חוזה",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "מדד מחירי שכירות",
+              "url": "https://www.cbs.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס פניה לבעל הדירה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "משפחה",
+      "icon": "family_restroom",
+      "description": "מסמכים משפחתיים, אירועים, ותכנון",
+      "subcategories": [
+        {
+          "name": "ילדים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תעודות לידה",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחיסונים",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "טיפת חלב",
+              "url": "https://www.health.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לגן",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "נישואין",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תעודת נישואין",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת ליום נישואין",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד הפנים",
+              "url": "https://www.gov.il/he/departments/ministry_of_interior",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס שינוי שם משפחה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "קריירה",
+      "icon": "work",
+      "description": "קורות חיים, חוזי עבודה, והמלצות",
+      "subcategories": [
+        {
+          "name": "עבודה נוכחית",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת חוזה עבודה",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לשיחת משוב",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד העבודה",
+              "url": "https://www.gov.il/he/departments/ministry_of_labor",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס בקשת חופשה",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "קורות חיים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת קורות חיים",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לעדכון קו\"ח",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "לשכת התעסוקה",
+              "url": "https://www.taasuka.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס פרטים אישיים",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "רכב ותחבורה",
+      "icon": "directions_car",
+      "description": "רישיונות, ביטוחים, ותחזוקת רכב",
+      "subcategories": [
+        {
+          "name": "רכב פרטי",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת רישיון רכב",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לטסט שנתי",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד התחבורה",
+              "url": "https://www.gov.il/he/departments/ministry_of_transport",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס העברת בעלות",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "ביטוח רכב",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש ביטוח",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פול ביטוח",
+              "url": "https://www.pool.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תביעת ביטוח",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 7
+    },
+    {
+      "name": "ביטוח",
+      "icon": "security",
+      "description": "ביטוחי חיים, דירה, ובריאות",
+      "subcategories": [
+        {
+          "name": "ביטוח חיים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש ביטוח",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "הפניקס ביטוח",
+              "url": "https://www.fnx.co.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס עדכון מוטבים",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "ביטוח דירה",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת פוליסת ביטוח",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש ביטוח",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "מגדל ביטוח",
+              "url": "https://www.migdal.co.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תביעה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 8
+    },
+    {
+      "name": "מסמכים אישיים",
+      "icon": "assignment_ind",
+      "description": "תעודות זהות, דרכונים, ורישיונות",
+      "subcategories": [
+        {
+          "name": "תעודת זהות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת צילום ת.ז.",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש ת.ז. ביומטרית",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "רשות האוכלוסין",
+              "url": "https://www.gov.il/he/departments/population_and_immigration_authority",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס בקשת ת.ז. חדשה",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "דרכון",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת צילום דרכון",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחידוש דרכון",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד החוץ",
+              "url": "https://www.gov.il/he/departments/ministry_of_foreign_affairs",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס בקשת דרכון",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 9
+    },
+    {
+      "name": "בריאות הנפש",
+      "icon": "psychology",
+      "description": "טיפול פסיכולוגי, מעקב רפואי, ותרופות",
+      "subcategories": [
+        {
+          "name": "טיפול פסיכולוגי",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת סיכומי טיפול",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לפגישה הבאה",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "הסתדרות הפסיכולוגים",
+              "url": "https://www.psychology.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס הפניה לטיפול",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "מעקב רפואי",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תוצאות בדיקות",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לנטילת תרופות",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד הבריאות",
+              "url": "https://www.health.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס דיווח תופעות לוואי",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 10
+    },
+    {
+      "name": "תחביבים",
+      "icon": "sports_esports",
+      "description": "ספורט, אמנות, ופנאי",
+      "subcategories": [
+        {
+          "name": "ספורט",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מנוי למועדון",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לאימון",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "מכון וינגייט",
+              "url": "https://www.wingate.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס הרשמה לחוג",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "אמנות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תעודות קורסים",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתערוכה",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד התרבות",
+              "url": "https://www.gov.il/he/departments/ministry_of_culture_and_sport",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס הרשמה לסדנה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 11
+    },
+    {
+      "name": "חיות מחמד",
+      "icon": "pets",
+      "description": "טיפול בחיות מחמד, חיסונים, ומזון",
+      "subcategories": [
+        {
+          "name": "כלבים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת רישיון כלב",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לחיסון שנתי",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "השירותים הווטרינריים",
+              "url": "https://www.moag.gov.il/vet/Pages/default.aspx",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום כלב",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "חתולים",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תעודת חיסון",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לביקור וטרינר",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "עמותת תנו לחיות לחיות",
+              "url": "https://www.letlive.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס אימוץ חתול",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 12
+    },
+    {
+      "name": "טיולים ונסיעות",
+      "icon": "flight",
+      "description": "טיסות, מלונות, וביטוח נסיעות",
+      "subcategories": [
+        {
+          "name": "טיסות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת כרטיסי טיסה",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לצ'ק אין",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "רשות שדות התעופה",
+              "url": "https://www.iaa.gov.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס הצהרת בריאות",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "מלונות",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת הזמנת מלון",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לצ'ק אאוט",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "משרד התיירות",
+              "url": "https://www.gov.il/he/departments/ministry_of_tourism",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס ביטול הזמנה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 13
+    },
+    {
+      "name": "קניות",
+      "icon": "shopping_cart",
+      "description": "אלקטרוניקה, ביגוד, ומוצרי צריכה",
+      "subcategories": [
+        {
+          "name": "אלקטרוניקה",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת חשבוניות",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לסיום אחריות",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "המועצה לצרכנות",
+              "url": "https://www.consumers.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תביעת אחריות",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "ביגוד",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת קבלות",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת להחזרת פריט",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "מועצת האופנה",
+              "url": "https://www.fashion.org.il",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס החלפה/החזרה",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 14
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 15
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 16
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 17
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 18
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 19
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 20
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 21
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 22
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 23
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 24
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 25
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 26
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 27
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 28
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 29
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 30
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 31
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 32
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 33
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 34
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 35
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 36
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 37
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 38
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 39
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 40
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 41
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 42
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 43
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 44
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 45
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 46
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 47
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 48
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 49
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 50
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 51
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 52
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 53
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 54
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 55
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 56
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 57
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 58
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 59
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 60
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 61
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 62
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 63
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 64
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 65
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 66
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 67
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 68
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 69
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 70
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 71
+    },
+    {
+      "name": "תקשורת",
+      "icon": "phone",
+      "description": "טלפון, אינטרנט, וטלוויזיה",
+      "subcategories": [
+        {
+          "name": "ניהול תקשורת",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת מסמכי תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת לתקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "אתרי תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס תקשורת",
+              "id": 4
+            }
+          ],
+          "id": 1
+        },
+        {
+          "name": "תקשורת מתקדם",
+          "features": [
+            {
+              "type": "upload",
+              "label": "העלאת תיעוד תקשורת",
+              "id": 1
+            },
+            {
+              "type": "reminder",
+              "label": "תזכורת אירועי תקשורת",
+              "id": 2
+            },
+            {
+              "type": "external_link",
+              "label": "פורטל תקשורת",
+              "url": "https://www.example.com",
+              "id": 3
+            },
+            {
+              "type": "form",
+              "label": "טופס רישום לתקשורת",
+              "id": 4
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 72
+    }
+  ]
+}
