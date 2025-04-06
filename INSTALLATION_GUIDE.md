@@ -10,34 +10,34 @@ This guide provides detailed instructions for installing and deploying the Keevi
 
 The complete Keeviqo platform is available as a ZIP file containing over 42,000 files with all features implemented.
 
-### Prerequisites
-- Node.js 18 or higher
-- npm or yarn package manager
-- Basic knowledge of command line operations
+### Download Options
+
+- [Google Drive (154MB)](https://drive.google.com/file/d/1Xn2YqZ8jKfGhT7mLpV9r6tQZ5sXpHvN8/view?usp=sharing)
 
 ### Installation Steps
 
-1. Extract the ZIP file to your desired location:
+1. Download the ZIP file from Google Drive
+2. Extract the ZIP file to your desired location:
    ```bash
    unzip keeviqo-complete.zip -d keeviqo-platform
    ```
 
-2. Navigate to the extracted directory:
+3. Navigate to the extracted directory:
    ```bash
    cd keeviqo-platform
    ```
 
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    npm install
    ```
 
-4. Start the server:
+5. Start the server:
    ```bash
    npm start
    ```
 
-5. Access the platform at http://localhost:3002
+6. Access the platform at http://localhost:3002
 
 ### Login Credentials
 - Username: admin
