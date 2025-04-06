@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keeviqo - צור קשר</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .logo {
+      color: #1976D2;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      color: #666;
+      font-size: 18px;
+    }
+    .content-card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .content-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #1976D2, #64B5F6);
+    }
+    h1 {
+      color: #1976D2;
+      margin-top: 0;
+      font-size: 28px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #1976D2;
+    }
+    h2 {
+      color: #333;
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      color: #1976D2;
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-weight: 500;
+      transition: transform 0.3s;
+      font-size: 16px;
+    }
+    .back-button:hover {
+      transform: translateX(5px);
+    }
+    .back-button .material-icons {
+      margin-left: 5px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+    .language-selector {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .language-selector a {
+      margin: 0 5px;
+      color: #666;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .language-selector a:hover {
+      color: #1976D2;
+      background-color: rgba(25, 118, 210, 0.1);
+    }
+    .language-selector a.active {
+      color: #1976D2;
+      font-weight: bold;
+      background-color: rgba(25, 118, 210, 0.1);
+    }
+    .contact-form {
+      margin-top: 30px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+      direction: rtl;
+    }
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    button {
+      background-color: #1976D2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1565C0;
+    }
+    .contact-info {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .contact-item {
+      flex: 1;
+      min-width: 250px;
+      background-color: #f5f7fa;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+    }
+    .contact-item .material-icons {
+      margin-left: 15px;
+      color: #1976D2;
+      font-size: 24px;
+    }
+    .contact-item-content h3 {
+      margin: 0 0 5px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .contact-item-content p {
+      margin: 0;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .content-card {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .contact-item {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/dashboard" class="back-button">
+      <span class="material-icons">arrow_forward</span>
+      חזרה ללוח הבקרה
+    </a>
+    
+    <header>
+      <div class="logo">Keeviqo</div>
+      <div class="tagline">ניהול מידע אישי חכם</div>
+    </header>
+    
+    <div class="content-card">
+      <h1>צור קשר</h1>
+      <p>אנו כאן כדי לעזור לך בכל שאלה, בקשה או משוב. אנא מלא את הטופס למטה ונחזור אליך בהקדם האפשרי.</p>
+      
+      <div class="contact-form">
+        <form id="contactForm" action="/api/contact" method="POST">
+          <div class="form-group">
+            <label for="name">שם מלא *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">דואר אלקטרוני *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">מספר טלפון</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">נושא *</label>
+            <select id="subject" name="subject" required>
+              <option value="">בחר נושא</option>
+              <option value="general">שאלה כללית</option>
+              <option value="technical">תמיכה טכנית</option>
+              <option value="billing">חיוב ותשלומים</option>
+              <option value="feedback">משוב ורעיונות</option>
+              <option value="partnership">שיתוף פעולה עסקי</option>
+              <option value="other">אחר</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">הודעה *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          
+          <button type="submit">שלח הודעה</button>
+        </form>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="material-icons">email</span>
+          <div class="contact-item-content">
+            <h3>דואר אלקטרוני</h3>
+            <p>support@keeviqo.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <span class="material-icons">phone</span>
+          <div class="contact-item-content">
+            <h3>טלפון</h3>
+            <p>+972-3-123-4567</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <span class="material-icons">location_on</span>
+          <div class="contact-item-content">
+            <h3>כתובת</h3>
+            <p>רח' הברזל 30, תל אביב, ישראל</p>
+          </div>
+        </div>
+      </div>
+      
+      <h2>שעות פעילות</h2>
+      <p>צוות התמיכה שלנו זמין בימים א'-ה', בין השעות 9:00-18:00.</p>
+      <p>בימי שישי וערבי חג: 9:00-13:00.</p>
+      <p>מענה לפניות דרך דואר אלקטרוני יינתן תוך 24 שעות בימי עסקים.</p>
+    </div>
+    
+    <div class="language-selector">
+      <a href="/contact?lang=he" class="active">עברית</a> | 
+      <a href="/contact?lang=en">English</a>
+    </div>
+  </div>
+</body>
+</html>
