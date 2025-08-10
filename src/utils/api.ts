@@ -2,23 +2,16 @@
 const API_BASE_URL = '/api';
 
 async function fetchFromAPI<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      ...options,
-    });
+  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
 
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status} ${response.statusText}`);
-    }
-
-    return await response.json() as T;
-  } catch (error) {
-    console.error('API request failed:', error);
-    throw error;
+  if (!response.ok) {
+    throw new Error(`API error: ${response.status} ${response.statusText}`);
   }
+
+  return (await response.json()) as T;
 }
 
 export interface Category {
@@ -73,20 +66,23 @@ export interface UploadResponse {
   createdAt: string;
 }
 
-export async function uploadDocument(file: File, featureId: number, metadata?: Record<string, unknown>): Promise<UploadResponse> {
+export async function uploadDocument(
+  file: File,
+  featureId: number,
+  metadata?: Record<string, unknown>
+): Promise<UploadResponse> {
   const formData = new FormData();
   formData.append('file', file);
-  formData.append('featureId', featureId.toString());
-  
-  if (metadata) {
-    formData.append('metadata', JSON.stringify(metadata));
-  }
-  
-  return fetchFromAPI<UploadResponse>('/uploads', {
+  formData.append('featureId', String(featureId));
+  if (metadata) formData.append('metadata', JSON.stringify(metadata));
+
+  // Let the browser set the multipart boundary
+  const response = await fetch(`${API_BASE_URL}/uploads`, {
     method: 'POST',
-    headers: {}, // Let the browser set the content type for FormData
     body: formData,
   });
+  if (!response.ok) throw new Error('Upload failed');
+  return (await response.json()) as UploadResponse;
 }
 
 export interface Reminder {
@@ -105,20 +101,16 @@ export interface ReminderResponse extends Reminder {
 }
 
 export async function createReminder(reminder: Reminder): Promise<ReminderResponse> {
-
-  return fetchFromAPI('/reminders', {
-
   return fetchFromAPI<ReminderResponse>('/reminders', {
-
     method: 'POST',
     body: JSON.stringify(reminder),
   });
 }
 
-export async function updateReminder(id: number, reminder: Partial<Reminder>): Promise<ReminderResponse> {
-
-  return fetchFromAPI(`/reminders/${id}`, {
-
+export async function updateReminder(
+  id: number,
+  reminder: Partial<Reminder>
+): Promise<ReminderResponse> {
   return fetchFromAPI<ReminderResponse>(`/reminders/${id}`, {
     method: 'PUT',
     body: JSON.stringify(reminder),
@@ -133,12 +125,11 @@ export interface FormDataResponse {
   createdAt: string;
 }
 
-export async function submitFormData(data: Record<string, unknown>, featureId: number): Promise<FormDataResponse> {
-
-  return fetchFromAPI('/forms', {
-
+export async function submitFormData(
+  data: Record<string, unknown>,
+  featureId: number
+): Promise<FormDataResponse> {
   return fetchFromAPI<FormDataResponse>('/forms', {
-
     method: 'POST',
     body: JSON.stringify({ data, featureId }),
   });
@@ -163,11 +154,7 @@ export interface ContactFormResponse {
 }
 
 export async function sendContactForm(data: ContactFormData): Promise<ContactFormResponse> {
-
-  return fetchFromAPI('/contact', {
-
   return fetchFromAPI<ContactFormResponse>('/contact', {
-
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -178,10 +165,7 @@ export interface PaymentData {
   currency: string;
   method: 'paypal' | 'stripe';
   description: string;
-  customerInfo: {
-    name: string;
-    email: string;
-  };
+  customerInfo: { name: string; email: string };
 }
 
 export interface PaymentResponse {
@@ -190,19 +174,12 @@ export interface PaymentResponse {
   transactionId: string;
   amount: number;
   currency: string;
-
-
   method: string;
-
   createdAt: string;
 }
 
 export async function processPayment(data: PaymentData): Promise<PaymentResponse> {
-
-  return fetchFromAPI('/payments/process', {
-
   return fetchFromAPI<PaymentResponse>('/payments/process', {
-
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -216,11 +193,7 @@ export interface QRCodeResponse {
 }
 
 export async function generateQRCode(data: string): Promise<QRCodeResponse> {
-
-  return fetchFromAPI('/qr/generate', {
-
   return fetchFromAPI<QRCodeResponse>('/qr/generate', {
-
     method: 'POST',
     body: JSON.stringify({ data }),
   });
@@ -230,10 +203,7 @@ export interface UserProfile {
   id: number;
   name: string;
   email: string;
-  preferences: {
-    theme: 'light' | 'dark';
-    language: 'he' | 'en';
-  };
+  preferences: { theme: 'light' | 'dark'; language: 'he' | 'en' };
 }
 
 export async function getUserProfile(): Promise<UserProfile> {
@@ -251,18 +221,11 @@ export interface ThemeResponse {
   success: boolean;
   theme: 'light' | 'dark';
   userId: number;
-
-}
-
-export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
-  return fetchFromAPI('/user/theme', {
-
-updatedAt: string;
+  updatedAt: string;
 }
 
 export async function setUserTheme(theme: 'light' | 'dark'): Promise<ThemeResponse> {
   return fetchFromAPI<ThemeResponse>('/user/theme', {
-
     method: 'POST',
     body: JSON.stringify({ theme }),
   });
@@ -272,18 +235,11 @@ export interface LanguageResponse {
   success: boolean;
   language: 'he' | 'en';
   userId: number;
-
-}
-
-export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
-  return fetchFromAPI('/user/language', {
-
   updatedAt: string;
 }
 
 export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageResponse> {
   return fetchFromAPI<LanguageResponse>('/user/language', {
-
     method: 'POST',
     body: JSON.stringify({ language }),
   });
@@ -291,24 +247,14 @@ export async function setUserLanguage(language: 'he' | 'en'): Promise<LanguageRe
 
 export interface InvoiceResponse {
   id: number;
-
   paymentId: number;
   invoiceNumber: string;
   downloadUrl: string;
-
-  invoiceNumber: string;
-  paymentId: number;
-  url: string;
-
   createdAt: string;
 }
 
 export async function generateInvoice(paymentId: number): Promise<InvoiceResponse> {
-
-  return fetchFromAPI(`/payments/${paymentId}/invoice`, {
-
   return fetchFromAPI<InvoiceResponse>(`/payments/${paymentId}/invoice`, {
-
     method: 'POST',
   });
 }
@@ -328,22 +274,14 @@ export interface EmergencyContact {
 
 export interface EmergencyContactResponse {
   success: boolean;
-
   message: string;
   contacts: EmergencyContact[];
 }
 
-export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
-  return fetchFromAPI('/user/emergency-contacts', {
-
-  contacts: EmergencyContact[];
-  userId: number;
-  updatedAt: string;
-}
-
-export async function saveEmergencyContacts(contacts: EmergencyContact[]): Promise<EmergencyContactResponse> {
+export async function saveEmergencyContacts(
+  contacts: EmergencyContact[]
+): Promise<EmergencyContactResponse> {
   return fetchFromAPI<EmergencyContactResponse>('/user/emergency-contacts', {
-
     method: 'POST',
     body: JSON.stringify({ contacts }),
   });
@@ -365,20 +303,9 @@ export interface MedicalInfo {
 }
 
 export interface EmergencyData {
-  user: {
-    name: string;
-    id: string;
-    dateOfBirth: string;
-    address: string;
-    phone: string;
-  };
+  user: { name: string; id: string; dateOfBirth: string; address: string; phone: string };
   medicalInfo: MedicalInfo;
-  documents: {
-    id: number;
-    name: string;
-    type: string;
-    url: string;
-  }[];
+  documents: { id: number; name: string; type: string; url: string }[];
 }
 
 export async function getUserEmergencyData(): Promise<EmergencyData> {

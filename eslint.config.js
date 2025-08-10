@@ -18,7 +18,8 @@ export default [
       "jest.setup.js",
       "preview-server.js",
       "shared/**",
-      "src/**"
+      "src/**",
+      "server/**"
     ]
   },
   js.configs.recommended,
