@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/auth/login":{},"/dashboard":{},"/auth/signup":{},"/api/health-ping":{},"/upload":{},"/categories":{}}}
+{"version":1,"functions":{"/api/health-ping":{},"/auth/signup":{},"/categories":{},"/dashboard":{},"/upload":{},"/auth/login":{}}}

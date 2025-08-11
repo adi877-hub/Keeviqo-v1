@@ -7,28 +7,29 @@ import { createClient } from '../../../../lib/supabaseClient'
 import { Button } from '../../../../components/ui/button'
 import { Input } from '../../../../components/ui/input'
 import { Label } from '../../../../components/ui/label'
-import { SITE_URL } from '../../../../lib/siteUrl'
 
 export default function LoginPage() {
   const supabase = createClient()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [code, setCode] = useState('')
   const [message, setMessage] = useState<string | null>(null)
-  const [mode, setMode] = useState<'magic' | 'password'>('magic')
+  const [mode, setMode] = useState<'otp' | 'password'>('otp')
 
-  const redirectTo = `${SITE_URL}/auth/callback`
-  console.log('[AUTH] SITE_URL =', SITE_URL)
-  console.log('[AUTH] redirectTo =', redirectTo)
-
-  async function handleSendMagicLink(e: React.FormEvent) {
+  async function handleSendOtp(e: React.FormEvent) {
     e.preventDefault()
     setMessage(null)
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: redirectTo },
-    })
+    const { error } = await supabase.auth.signInWithOtp({ email })
     if (error) setMessage(error.message)
-    else setMessage('שלחנו לכם קישור התחברות למייל. בדקו את הדואר ולחצו על הקישור.')
+    else setMessage('קוד בן 6 ספרות נשלח אליכם למייל. הזינו אותו להשלמת ההתחברות.')
+  }
+
+  async function handleVerifyOtp(e: React.FormEvent) {
+    e.preventDefault()
+    setMessage(null)
+    const { data, error } = await supabase.auth.verifyOtp({ email, token: code, type: 'email' })
+    if (error) setMessage(error.message)
+    else if (data?.user) window.location.href = '/dashboard'
   }
 
   async function handlePasswordLogin(e: React.FormEvent) {
@@ -42,7 +43,7 @@ export default function LoginPage() {
   async function handlePasswordSignup(e: React.FormEvent) {
     e.preventDefault()
     setMessage(null)
-    const { data, error } = await supabase.auth.signUp({ email, password, options: { emailRedirectTo: redirectTo } })
+    const { data, error } = await supabase.auth.signUp({ email, password })
     if (error) setMessage(error.message)
     else if (data?.user && !data.user.email_confirmed_at) setMessage('נשלח מייל לאימות. יש לאשר את הכתובת לפני התחברות.')
     else setMessage('נרשמתם בהצלחה!')
@@ -53,18 +54,27 @@ export default function LoginPage() {
       <h1 className="text-2xl font-bold">התחברות</h1>
 
       <div className="flex gap-2 text-sm">
-        <Button variant={mode === 'magic' ? 'default' : 'outline'} onClick={() => setMode('magic')}>קישור במייל</Button>
+        <Button variant={mode === 'otp' ? 'default' : 'outline'} onClick={() => setMode('otp')}>קוד חד-פעמי</Button>
         <Button variant={mode === 'password' ? 'default' : 'outline'} onClick={() => setMode('password')}>אימייל + סיסמה</Button>
       </div>
 
-      {mode === 'magic' ? (
-        <form onSubmit={handleSendMagicLink} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="email">אימייל</Label>
-            <Input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@example.com" />
-          </div>
-          <Button type="submit">שליחת קישור</Button>
-        </form>
+      {mode === 'otp' ? (
+        <div className="space-y-6">
+          <form onSubmit={handleSendOtp} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">אימייל</Label>
+              <Input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@example.com" />
+            </div>
+            <Button type="submit">שליחת קוד</Button>
+          </form>
+          <form onSubmit={handleVerifyOtp} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="code">קוד בן 6 ספרות</Label>
+              <Input id="code" inputMode="numeric" pattern="[0-9]{6}" maxLength={6} required value={code} onChange={(e) => setCode(e.target.value)} placeholder="123456" />
+            </div>
+            <Button type="submit">אימות והמשך</Button>
+          </form>
+        </div>
       ) : (
         <form onSubmit={handlePasswordLogin} className="space-y-4">
           <div className="space-y-2">
