@@ -8,8 +8,12 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const isProd = process.env.NODE_ENV === 'production'
   return (
     <html lang="he" dir="rtl">
+      <head>
+        {!isProd && <meta name="robots" content="noindex,nofollow" />}
+      </head>
       <body className="min-h-screen bg-background text-foreground">
         <header className="border-b bg-white sticky top-0 z-50">
           <nav className="container mx-auto flex items-center justify-between py-4">

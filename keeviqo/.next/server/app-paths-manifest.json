@@ -1,10 +1,13 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
+  "/(auth)/auth/callback/page": "app/(auth)/auth/callback/page.js",
+  "/health/page": "app/health/page.js",
   "/vision/page": "app/vision/page.js",
+  "/page": "app/page.js",
+  "/(auth)/auth/signup/page": "app/(auth)/auth/signup/page.js",
+  "/(protected)/categories/page": "app/(protected)/categories/page.js",
+  "/api/health-ping/route": "app/api/health-ping/route.js",
   "/(protected)/dashboard/page": "app/(protected)/dashboard/page.js",
   "/(auth)/auth/login/page": "app/(auth)/auth/login/page.js",
-  "/(protected)/categories/page": "app/(protected)/categories/page.js",
-  "/(auth)/auth/signup/page": "app/(auth)/auth/signup/page.js",
   "/(protected)/upload/page": "app/(protected)/upload/page.js"
 }
